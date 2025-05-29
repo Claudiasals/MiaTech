@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<HTML LANG="IT">
+
+    <HEader>
+        <H1> LE IMMAGINI</H1>
+    </HEader>
+    <body>
+        <h3> Aggiungiamo un immagine </h3>
+        <img src="lezione-immagine.jpg" alt="immagine corso" widht="500" height="333">
+    </body>
+
+    <h2> Gli elementi "figure" e "figcaption" </h2>
+<p>Facciamo un markup della nostra immagine con il tag semantico <b>"figure"</b>, 
+che conterrà al suo interno, oltre agli attributi <b>"alt"</b> e <b>"src"</b>, il tag <b>"figcaption"</b>. 
+Il tag "figcaption" serve per aggiungere del testo sotto alla nostra immagine.</p>
+   
+        <figure> 
+           <img src="lezione-immagine.jpg" alt="immagine corso" widht="500" height="333">
+           <figcaption>Fig.1 - la mia bellissima immagine </figcaption>
+        </figure>
+ 
+<h2>LE IMMAGINI RESPONSIVE</h2>
+<p>Immagini che si devono adattare alle diverse dimensioni dei dispositivi dai quali vengono visualizzate. 
+
+
+<img 
+
+alt="la mia bellissima immagine"
+
+srcset="la-mia-bellissima-immagine-s.jpg 300w,
+la-mia-bellissima-immagine-m.jpg 600w,
+la-mia-bellissima-immagine-l.jpg 1200w,
+baby-xl.jpg 2000w"
+
+sizes="70vmin"
+>
+
+70vmin => stiamo dicendo al browser che l’immagine avrà una larghezza massima del 70% della dimensione minima del viewport. 
+Il browser terra in considerazione la larghezza o l’altezza a seconda di quale sia la più piccola. </p>
+
+<h2>Perché ci sono diversi url:</h2>
+<p>Gli attributi: <b>"srcset"</b> serve ad indicare al browser versioni di dimensioni diverse della nostra immagine; 
+    “sizes” indica al browser in quanto spazio verrà visualizzata l’immagine.
+    
+    Saranno quindi presenti diversi url con diverse inmagini con i valori N.w oppure N.x
+    <br>
+    <br> 
+    <b>Possiamo usare 2 decoratori: </b>
+    
+    <b>W</b>= indichiamo con il decoratore W dobbiamo aggiungere necessariamente l’attributo sizes per dirgli quanto spazio riservere per le nostre immagini.
+    <br>
+    <br>
+    <b>70vmin</b> => stiamo dicendo al browser che l’immagine avrà una larghezza massima del 70% della dimensione minima del viewport. 
+    Il browser terra in considerazione la larghezza o l’altezza a seconda di quale sia la più piccola. 
+    
+    <b>X</b>=con il decoratore "x" andiamo a specificare la densità dell’immagine. 
+    In questo esempio abbiamo 5 immagini con differenti densità e il browser la sceglierà in base alla risoluzione dello schermo. 
+    Il browser visualizzerà l’immagine con la risoluzione che si adatta meglio alla risoluzione del dispositivo dove deve essere aperta.</p>
+
+    
+<img alt="la mia bellissima immagine"
+srcset=
+"la-mia-bellissima-high-1.jpg 1.5x,
+la-mia-bellissima-high-2.jpg 2x,
+la-mia-bellissima-high-3.jpg 3x,
+la-mia-bellissima-high-4.jpg 4x
+la-mia-bellissima-high-5.jpg 100x"
+>
+
+
+<p>Con il tag img conviene sempre passare la stessa immagine però con densità e risoluzione differente. Quindi NON url di immagini diverse.</p>
+
+<h2>il tag "picture"</h2>
+
+<p>Un tag che ci aiuta molto con immagini responsive è il <b>"picture"</b>, che fa da contenitore ad altri due elementi: </p>
+
+<ul>
+    <li><b>img</b></li>
+    <li><b>source</b>: per specificare al browser quale immagine deve utilizzare ad una specifica risoluzione. 
+        In questo caso vediamo l’attributo “media” che approfondiremo quando studieremo il mediaquery. 
+        Stiamo dicendo di prendere l’immagine “fiori rossi” quando il nostro dispositivo ha una minima larghezza di 650 pixel oppure prendere 
+        l’immagine “fiori bianchi” quando la larghezza minima è 440pixel e quando non supporterà le due situazioni precedenti 
+        prenderà l’immagine “fiori colorati”.</li>
+</ul>
+
+<picture>
+
+<source media="(min-width:650px)" srcset="img-fiori-rossi.jpg">
+<source media="(min-width:465)" srcset="img-fiori-bianchi.jpg">
+<img src="img-fiori-colorati.jpg" alt="fiori" style="width:uto">
+
+</picture>
+
+
+<H2>DOMANDE</H2>
+- Cos’è il viewport?
+- perché proprio il 70%? Con quale criterio si sceglie questo valore?
+- Perché fiori colorati va bene come risoluzione? Perché è l’ultima scelta se non vanno bene le prime due?
+
+</body>
+</HTML>
