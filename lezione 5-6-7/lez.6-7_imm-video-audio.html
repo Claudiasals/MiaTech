@@ -97,5 +97,31 @@ la-mia-bellissima-high-5.jpg 100x"
 - perché proprio il 70%? Con quale criterio si sceglie questo valore?
 - Perché fiori colorati va bene come risoluzione? Perché è l’ultima scelta se non vanno bene le prime due?
 
+<H2> LEZIONE VIDEO e AUDIO </H2>
+<H3> IL TAG "VIDEO"</H3>
+<P> Il tag <b>"video</b> ci permette di visualizzare video sulla nostra pagina web. 
+    Oltre agli attributi <b>"width"</b>(larghezza) e <b>"height"</b>(altezza) 
+    abbiamo l'attributo <b>"controls"</b> che dice al browser di visualizzare i controlli: play, stop, avanti e indietro per il video.
+    Tra il tag di apertura e il tag di chiusura abbiamo anche degi elementi <b>"source"</b>;
+    Ogni eleento <b>source</b> specifica un formato diverso del video. Nel caso in cui il browser non supporti nessuno dei formati presenti
+    verrà inserito il testo specificato prima del tag di chiusura "video". </P>
+
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+<h3>IL TAG "AUDIO"</h3>
+<P> Nel tag <b>"audio</b> troviamo sempre l'attributo <b>control</b> per inserire i comandi : play, avanti ecc.
+Per il resto è uguale al tag video, con i <b>source</b> per inserire i diversi formati del file audio e la frase prima
+del tag di chiusura, che verrà mostrata nel caso in cui il browser non supporti nessuno dei formati audio.</P>
+
+<audio controls>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the audio tag.
+</audio>
+
 </body>
 </HTML>
