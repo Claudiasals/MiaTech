@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<HTML LANG="IT">
+   <HEAD>
+    <meta charset="UTF-8">
+    <title>ESERCIZIO SVG</title>
+   </HEAD> 
+
+   <body>
+<p> <b>widht</b> e <b>height</b> all'interno del tag "svg" indicano lo spazio nel quale deve essere disegnato l'svg. 
+    Gli elementi "rect", "circle", "polygon, "ellipse" , indicano la forma che dovrà avere l'svg. Come per i tag "video", "audio" e "immagini", 
+    è possibile inserire una frase prima del tag di chiusura "svg" che verrà visualizzata qualora il browser non supporti l'svg 
+    (es.: Spiacenti, il tuo browser non supporta svg).
+</p>
+<h3>Alcuni Attributi all'interno degli elementi</h3>
+<p>  
+Width e Height danno le dimensioni alla forma, style gli da caratteristiche come per esempio il colore. 
+All'interno dell'attributo style troviamo per esempio "fill" per definire il colore di riempimento della forma, 
+"stroke" per definire il colore del bordo, "stroke-width" per definire lo spessore del borso, "opacity" per definire l'opacità del disegno.
+<br>
+
+</p>
+    <h2>rettangolo fucsia</h2>
+    <svg width="100" height="30">
+        <rect width="200" height="10" style="fill: rgb(227, 1, 129)"/>
+    </svg>
+
+    <h2>cerchio giallo e verde</h2>
+    <svg width="400" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"/>
+    </svg>
+
+    <h2>cerchio verde e nero</h2>
+    <svg width="400" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" style="fill: rgb(23, 195, 86)"/>
+    </svg>
+
+    <h2>rettangolo rosa e azzurro</h2>
+    <svg widht="170" height="130">
+        <rect width="80" height="20"  stroke=" rgb(246, 143, 201)" style="fill: rgb(0, 225, 255)"/>
+    </svg>
+    <h2>rettangolo viola e blu</h2>
+    <svg width="130" height="170">
+        <rect x="10" y="10" width="80" height="20"  stroke="purple" stroke-width="6" fill="blue"/>
+    </svg>
+
+    <h2>rettangolo con angoli arrotondati</h2>
+    <svg width="400" height="180">
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="180"  style="fill:rgb(30, 0, 255); stroke:rgb(231, 121, 3);stroke-width:5; opacity:1"/>
+    </svg>
+<p> Attenzione ad inserire le dimensioni della figura inferiori o uguali alle dimensioni dello spazio disponibile per l'svg. </p>
+   
+   </body>
+
+</HTML>
