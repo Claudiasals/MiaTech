@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<HTML> 
+    <HEADER> 
+        <H1> LEZIONE 8 - SVG</H1>
+    </HEADER>
+    <body>
+<h2>LA GRAFICA VETTORIALE</h2>
+<P> SVG (Scalable Vector Graphics) , grafica vettoriale scalabile, è usato per definire elementi grafici per il web.
+    Il formato SVG è indipendente dalal risoluzione, si tratta di immmmagini calcolate che contengono dei valori 
+    per cui il browser fa dei calcoli e ridisegna la nostra grafica.
+    È </P>
+
+<H3>IL TAG SVG</H3>
+<P> All'interno del tag <b>"svg"</b> troviamo gli attributi altezza, larghezza e colore di riempimento, 
+    ma potremmo avere anche elementi tipo circle o altri tipi di elementi. </p>
+
+   <svg widht="400" height="100">
+       <rect width="400" height="100" style="fill: rgb(0,0,225)"/>
+   </svg>
+<p> <i>Il tag <b>svg</b> da direttamente al browser le indicazioni su quale grafica deve disegnare.</i>
+    Potremmo anche aver salvato un immagine in svg e volerla linkare nella pagina web, 
+    in quel caso potremmo utilizzare anche il tag <b>img</b> specificando l'url dell'immagine, in questo caso però non staimo
+    dando direttamente al browser e coordinate di ciò che dobbiamo disegnare, ma gli stiamo dando un link, 
+    quindi gli faremo faremouna chiamata in http che andrà a prelevare questa informazione 
+    e andrà a prendere in questo modo la grafica che vogliamo fargli visualizzare. <br> 
+L'<b>svg</b> è un formato grafico che non risente della risoluzione del nostro schermo o della nostra 
+visualizzazione, potremmo dunque visualizzarlo con dimensioni variabii e lui non perderà mai la sua <b>definizione</b>.
+solitanente si utilizza per <b>icone</b> o per <b>loghi</b> che potrebbero essere inseriti in dimensioni differenti.</p>
+
+</BODY>
+</HTML>
