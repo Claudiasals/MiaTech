@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <!--L'ELEMENTO FORM-->
+    <h1> L'ELEMENTO "FORM"</h1>
+    <p>Gli elementi caratteristici dei nostri form sono: "label" e "input".
+        Label ci permette di dare una label al nostro campo in modo da indicare al nostro utente cosa ci aspettiamo di
+        ricevere dal nostro input.
+        Input è il tag che troveremo nel 99% del form che andremo a creare perché caratterizza l'input del nostro
+        utente. <br>
+        Con l'attributo "for" associamo la tag label al nostro input, infatti avrà lo stesso valore dell'id
+        dell'elemento "input".
+        In questo esempio abbiamo il label associato all'id "nome" e poi all'id "cognome".
+    <p>
+
+    <form action="" method="">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+        <br><br>
+        <label for="cognome"> Cognome: </label>
+        <input type="text" id="cognome" name="cognome">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <!--ELEMENTI CHE POSSIAMO INSERIRE NEL FORM-->
+
+    <h2>Gli elementi che possiamo inserire nel form</h2>
+    <ul>
+
+        <li>input:</li>
+        <li>textarea: ci permette di inserire un testo abbastanza lungo in un'area riservata all'interno della nostra
+            form;</li>
+        <li>button: ci permette di inserire bottoni; select: da all'utente la possibilità di selezionare tra una lista
+            di
+            optioni;</li>
+        <li>optgroup (option group): ci permette di raggruppare le opzioni contenute nell'elemento select, una
+            sottocategoria seleionabile tra le categoria.</li>
+        <li>selected: è l'attributo che ci permette di selezionare un'opzione tra le optgroup;</li>
+        <li>option:</li>
+        <li>fieldest: la possibilità di raggruppare all'interno di un bordo contenitre una serie di elementi della
+            nostra form, questo permette di
+            dare anche un avisualizzazione con delle separazioni logiche al nostro form in modo da agevolare
+            l'inserimento dele informazioni da parte dell'utente;</li>
+        <li>datalist: ci permette di digitare le informazioni ma proponendocele all'interno dea selezione come se fosse
+            una
+            nota porponendoci un suggerimento;</li>
+        <li>label:</li>
+        <li>output: elemento che ci permette di dare un risultato direttamente applicando un calcolo all'interno della
+            nostra form. </li>
+    </ul>
+    <br><br>
+
+    <h4>bottom</h4>
+    <button type="button">Click Me!</button>
+    <br>
+
+    <h4>select</h4>
+    <select name="Abbigliamento">
+        <optgroup label="Scarpe">
+            <option value="sneackers">Sneackers</option>
+            <option value="mocassini">Mocassini</option>
+        </optgroup>
+        <option value="pantaloni" selected>Pantaloni</option>
+        <option value="magliette" selected>Magliette</option>
+    </select>
+    <br><br>
+
+    <!--non era visibile il codice completo
+    <h4>fieldset</h4>
+    <fieldset> Persona: 
+        <input type="text" id="nome">
+        <input type="text" id="cognome">
+        <input type="data" id="birtday">
+    </fieldset> 
+    <br>
+
+    <h4>datalist</h4>
+    <datalist>Click Me!</datalist>
+    <br>
+-->
+
+
+    <!--L'elemento INPUT e i suoi attributi-->
+
+    <h2>L'elemento "input" e i suoi attributi</h2>
+    <p>L'elemento input ha alcuni attibuti che lo caratterizzano, per esempio l'attributo "type". Type indica al nostro
+        input di che tipo di input si tratta,
+        cioè quale specifica dovrà assumere il nostro campo quando lo andremo a visualizare e quali valori dovremo
+        inserire.</p>
+    <br>
+
+    <!--ATTRIBUTO TYPE e alcuni dei suoi valori-->
+
+    <b>
+        <h3> L'attributo "type"</h3>
+    </b>
+    <p>quali valori possiamo specificare all'interno dell'attributo type?</p>
+
+    <h4>Il type "text" </h4>
+    <p>È il type di default del nostro tag input, se non viene specificato il type. il typo type è quell'attributo che
+        dice al nostro browser di che tipo di input si tratta.
+    </p>
+    <input type="text">
+    <br>
+
+    <h4>Il type "button" </h4>
+    <p>È il type per inserire un bottone.
+    </p>
+    <input type="button">
+    <br>
+
+    <h4>Il type "checkbox" </h4>
+    <p>È il type per inserire un checkbox per segnare per esempio i check di una lista.
+    </p>
+    <input type="checkbox">
+    <br>
+
+    <h4>Il type "color" </h4>
+    <p>È il type per selezionare un colore.
+    </p>
+    <input type="color">
+    Choose the color
+    <br>
+
+    <h4>Il type "date" </h4>
+    <p>È il type per selezionare una data.
+    </p>
+    <input type="date">
+    <br>
+
+
+    <h4>Il type "email" </h4>
+    <p>È il type per selezionare una data.
+    </p>
+    <input type="email" placeholder="Enter Your Mail">
+    <br>
+
+
+    <h4>Il type "date" </h4>
+    <p>È il type per selezionare una data.
+    </p>
+    <input type="date">
+    <br>
+
+
+    <h4>Il type "file" </h4>
+    <p>È il type per selezionare una data.
+    </p>
+    <input type="file">
+    <br>
+
+
+    <h4>Il type "month" </h4>
+    <p>È il type per selezionare un mese.
+    </p>
+    <input type="month">
+    <br>
+
+
+    <h4>Il type "password" </h4>
+    <p>È il type per inserire una password coprendo con gli asterischi i caratteri digitati.
+    </p>
+    <input type="password">
+    <br>
+
+
+    <h4>Il type "radio" </h4>
+    <p>È il type per selezionare un check, come per esempio "Click if you agree", con un radio buttom.
+    </p>
+    <input type="radio">
+    "Click if you agree"
+    <br>
+
+    <h4>Il type "range" </h4>
+    <p>È il type per selezionare su una barra per esempio il grado di esperienza.
+    </p>
+    <input type="range">
+    "Enter your experience level"
+    <br>
+
+    <h4>Il type "search" </h4>
+    <p>È il type per inserire una barra di ricerca.
+    </p>
+    <input type="search" placeholder="search the world">
+    <br>
+
+    <h4>Il type "reset" </h4>
+    <p>Per reimpostare qualcosa attraverso un bottone
+    </p>
+    <input type="reset">
+    "Reset the form"
+    <br>
+
+    <h4>Il type "submit" </h4>
+    <p>È il type per selezionare un check, come per esempio "Click if you agree", con un radio buttom.
+    </p>
+    <input type="submit">
+    Submit the form
+    <br>
+
+    <!--ALTRI ATTRIBUTI DELL'INPUT-->
+
+    <h3>L'attriuto "value"</h3>
+    <p> Serve ad impostare il valore del nostro input. Nel nostro esempio abbiamo impostato il valore "Pippo" </p>
+    <input type="text" name="nome" value="Pippo">
+    <br>
+    <h3>L'attriuto "placeholder"</h3>
+    <p> Serve a visualizzare direttamente detro al campo di input quale valore vogliamo che il nostro utente vada ad
+        inserire. Talvolta può sostotuire una label. </p>
+    <input type="text" name="nome" placeholder="Il tuo nome">
+    <br>
+    <h3>L'attriuto "redonly"</h3>
+    <p> Ci permette di vedere il contenuto del nostro tag input ma non ci permette di modificarlo. </p>
+    <input type="text" name="nome" value="Pippo" redonly>
+    <br>
+
+    <h3>L'attriuto "disabled"</h3>
+    <p> Il contenuto del nostro input appare con un colore che fa capire che è disabilitato, infatti è incliccabile </p>
+    <input type="text" name="nome" value="Pippo" disabled>
+    <br>
+
+    <h3>L'attriuto "size"</h3>
+    <p> Esprime la dimensione del nostro tag input in caratteri, più grande sarà il size più grande sarà lo spazio
+        riservato al nostro tag input </p>
+    <input type="text" name="nome" value="Pippo" size="40">
+    <br>
+
+    <h3>L'attriuto "maxlenght"</h3>
+    <p> Imposta un numero massimo di caratteri da poter inserire nel nostro input </p>
+    <input type="text" name="nome" value="Pippo" maxlenght="10">
+    <br>
+
+
+
+
+
+
+
+</body>
+
+</html>
