@@ -1,0 +1,32 @@
+<h1>SUBMIT DEL FORM</h1>
+
+<form action="/actin_page.php"></form>
+<label for="nome">Nome:</label><input type="text" id="nome" name="nome"><br><br>
+<input type="submit" value="invio">
+
+
+<p> L'utente fa click sul pulsante <b>submit</b>.
+    Le info vengono mandate a server che si occuperà del salvataggio dei dati o dell'elaborazione dei dati inseriti nel
+    form.
+    L'attributo <b>"method" </b>specifica quale attributo http deve essere gestito per inviare i dati al server. 
+    Quando per l'attributo "method" settiamo il valore <b>"get"</b>, 
+    i dati inseriti dall'utente saranno visibili nella stringa dell'url e verranno inviati al
+    server.
+    Con il valore <b>"post"</b> i dati verranno inviati al server ma si troveranno nel corpo della richiesta che viene fatta.
+    La scelta del metodo tra "get" e "post" deve essere dettata dall'esigenza di rendere o non rendere visibili
+    i dati all'interno della chiamata che faremo al nostro server (esigenze di progetto).
+    <br><br>
+    <b>Come specifichiamo al nostro form dove deve invirare i nostri dati?</b>
+    lo facciamo con l'attributo <b>"action"</b>, che contiene l'url del server e dell'end point che gestirà i dati che gli
+    utenti hanno inserito nel form.
+    <br><br>
+    È importante sapere che i dati verranno inviati come coppia <b>"chiave-valore"</b>, dove la <b>chiave</b> sarà l'attributo <b>"name"</b>
+    che abbiamo dato ai nostri input e il <b>valore</b>> sarà effettivamente il <b>valore contenuto dal controler</b>.
+    <br><br>
+    Riassumendo possiamo dire che gli elementi che ci permettono di inviare i dati del nostro form sono 3:
+<ul>
+    <li>Action</li>
+    <li>Methot</li>
+    <li>Submit</li>
+</ul>
+</p>
