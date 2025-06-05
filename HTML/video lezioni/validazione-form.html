@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> LEZIONE 2 SUI FORM </title>
+</head>
+
+<body>
+    <h1> VALIDAZIONE DEI DATI DI UN FORM </h1>
+    <h2><i>Attributi di validazione </i> </h2>
+    <p> Attributi che ci permettono di stabilire delle regole per la compilazione del format. 
+        Sono regole che se rispettate "rendono valide" le risposte del form, altrimenti non verranno accettate.</p>
+    <div class="elenco-attributi">
+        <ul>
+            <li>REQUIRED: rende <b>obbligatoria</b> la compilazione dell'elemento a cui è applicato. 
+                In fase di submit della form quest'ultima non andrà avanti se non sono stati completati i campi "required" </li>
+            <li>AUTOCOMPLETE: non è un vero e proprio attributo di validazione, 
+                ma serve per <b>abilitare</b> o <b>disabilitare</b> una particolare funzione del nostro browser, 
+                cioè quella di compilare in maniera automatica i campi della form.</li>
+            <li>MULTIPLE: per permettere all'utente di inserire più valori nello stesso input.</li>
+            <li>PATTERN: ci permette di impostare delle <b>"espressioni regolari"</b> (o <b>"regolar espression"</b>) 
+                per il nostro campo inupt. Specifica un particolare formato per il nostro input, 
+            per esempio se può contenere numeri, lettere, simboli o se deve essere tutto maiuscolo o minuscolo ecc.</li>
+            <li>MIN: imposta un <b>valore minimo</b> al di sotto del quale non possiamo accettare l'input. </li>
+            <li>MAX: imposta un <b>valore massimo </b>al di sopra del quale non possiamo accettare l'input.</li>
+            <li>STEP: ci permette di impostare di quanto possiamo incrementare un valore numerico. 
+                Di quanto si può spostare la nostra selezione, se va avanti di un numero alla volta o di più.</li>
+            <li>NOVALIDATE: questo attributo è a livello di form, e  non a livello di tag , di input o di elemento interno alla form. 
+                se impostato dice alla form di <b>"non applicare"</b> le regole di validazione che sono state inserite nei propri campi. </li>
+        </ul>
+    </div>
+
+
+    <p>Esempi:</p>
+    
+    <h3>Required, autocomplete e pattern</h3>
+    <br>
+    <label> 
+        <input type="text" name="nickname" autocomplete="on" required pattern="[a-z]{1}[a-z]{2,19}" title="Un nickname è composto da lettere minuscole e '_'; Sono consentiti da 3 a 20 caratteri">
+    </label>
+
+    <br>
+    <h3>multiple</h3>
+    <label> 
+        eMail a cui inviare l'invito:
+        <input type="email" multiple name="friendEmail">
+    </label>
+    <p> Permette di inserire più di un dato, in questo caso più di un indirizzo email.</p>
+
+    <br>
+    <h3>Min, Max e Step </h3>
+    <label>
+        Età:
+        <input type="number" name="age" min="18" max="90" step="1">
+    </label>
+    <p> Min e max non ti permettono di inserire un valore fuori di requisiti; 
+        mentre step è lo scatto che fa il numero, cioè procede avanti e indietro di 1 numero</p>
+</body>
+
+</html>
