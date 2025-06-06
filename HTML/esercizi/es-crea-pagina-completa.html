@@ -17,7 +17,7 @@
                 <a href="https://www.kongcompany.com/it/">
                     <img width="162" height="51.3"
                         src="https://www.kongcompany.com/wp-content/uploads/2022/09/KONG-Logo_Red.png" data-sizes="auto"
-                        alt="Logo KONG">
+                        alt="Logo KONG" />
                 </a>
             </div>
 
@@ -32,7 +32,8 @@
 
             <div class="search">
                 <form>
-                    <label for="search-bar"> </label>
+                    <label for="search-bar"> <img alt="icona-search" src="HTML/IMG/icona-search.png" width="15px"
+                            height="15px"></label>
                     <input type="search" id="search-bar" placeholder="research">
                 </form>
             </div>
@@ -42,16 +43,20 @@
     </nav>
 
     <header>
-        <article>
-            <h1>Solo il meglio dal 1976</h1>
-            <p>Crediamo che i cani abbiano bisogno di giocare. Ecco perché lavoriamo dal 1976 per offrire a te e al tuo
-                animale domestico i giocattoli più innovativi e sicuri, realizzati con i migliori materiali che
-                dureranno nel tempo. Dall'attenzione ossessiva ai dettagli e da un'incessante ricerca dell'educazione,
-                ci dedichiamo a dare ai proprietari di animali domestici un modo per entrare in contatto con i loro
-                cani.</p>
-            <img src="https://www.kongcompany.com/wp-content/uploads/2024/05/KONG-Website-Hero-10-e1717187219450-1536x573.jpg"
-                alt="foto-cane-con-kong" weigth="658px" height="413px">
-        </article>
+        <section>
+            <article>
+                <h1>Solo il meglio dal 1976</h1>
+                <p>Crediamo che i cani abbiano bisogno di giocare. Ecco perché lavoriamo dal 1976 per offrire a te e al
+                    tuo
+                    animale domestico i giocattoli più innovativi e sicuri, realizzati con i migliori materiali che
+                    dureranno nel tempo. Dall'attenzione ossessiva ai dettagli e da un'incessante ricerca
+                    dell'educazione,
+                    ci dedichiamo a dare ai proprietari di animali domestici un modo per entrare in contatto con i loro
+                    cani.</p>
+                <img src="https://www.kongcompany.com/wp-content/uploads/2024/05/KONG-Website-Hero-10-e1717187219450-1536x573.jpg"
+                    alt="foto-cane-con-kong" weigth="658px" height="413px">
+            </article>
+        </section>
         <br><br>
     </header>
 
@@ -81,30 +86,55 @@
     </section>
 
     <section>
-        <article>
-
-        </article>
-        <img>
-
-    </section>
-
-    <section>
-        <p> </p>
-    </section>
-
-    <section>
-        <form>
-
+        <h2>Inserisci qui i tuoi dati:</h2>
+        <form action="url.com" method="post">
+            <label for="email">Indirizzo email</label>
+            <input type="text" id="email" size="40" placeholder="email" required>
+            <br><br>
+            <label for="gender">Genere</label required>
+            <br>
+            <input type="radio" class="gender">
+            Donna
+            <br>
+            <input type="radio" class="gender">
+            Uomo
+            <br>
+            <input type="radio" class="gender">
+            Non specificato
+            <br><br>
+            <input type="checkbox" required>
+            Accetto i termini e le condizioni descritte nella privacy policy
+            <br>
+            <input type="checkbox" required>
+            Accetto le condizioni della privacy policy
+            <br><br>
+            <button type="submit">Invia</button>
         </form>
     </section>
+    <br><br><br>
+
 
     <footer>
-        <p> ggg</p>
+        <div class="newsletter">
+            <p><b>UNA MIGLIORE CONNESSIONE CON I VOSTRI ANIMALLI DOMESTICI.
+                    Iscriviti alla nostra newsletter.</b></p>
+            <form id="newsletter">
+                <label for="newsletter"></label>
+                <input type="email" id="newsletter" size="40" placeholder="Indirizzo email" required>
+            </form>
+        </div>
+        <p> </p>
         <ul>
-            <p> </p>
-            <p> </p>
-            <p> </p>
+            <p>Contatti</p>
+            <p>Carriere</p>
+            <p>Legale</p>
         </ul>
+        <br><br><br>
+        <span>© 2025 KONG Company - Tutti i diritti riservati</span>
+        <br><br><br>
+        <p>By subscribing, you agree to KONG's privacy policy and terms of use. </p>
+        <br><br><br>
+        <button type="submit" form="newsletter">Iscriviti</button>
     </footer>
 </body>
 
