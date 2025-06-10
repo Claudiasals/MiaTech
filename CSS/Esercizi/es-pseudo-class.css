@@ -10,3 +10,6 @@ ul li:last-child {
 }
 
 p {color: rgba(225, 0, 0, 70%); }
+
+#p {color: rgb(225, 0, 0); }
+
