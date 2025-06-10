@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title> Modulo CSS</title>
+    <link rel="stylesheet" href="nome-file-css" type="text/css">
+</head>
+
+<body>
+    <h1> MODULO CSS</h1>
+    <h2>COME SI COLLEGA UN FILE CSS?</h2>
+
+    <p> <b>rel</b> specifica che si tratta di un foglio di stile, <b>href</b> specifica il link del file a cui
+        collegarsi e in fine type specifica che si tratta di un file di testo di css</p>
+
+    <h2>TIPI DI SELETTORI</h2>
+    <ul> 
+        <li>SELETTORI SEMPLICI: selezionano gli elementi in base a nome, ID, classe.</li>
+        <li>SELETTORI COMBINATORI: selezionano gli elementi in base ad una relazione specifica tra loro.</li>
+        <li>SELETTORI DI PSEUDO-CLASSI: selezionano gli elementi in base a un determinato stato.</li>
+        <li>SELETTORI DI PSEUDO-ELEMENTI: selezionano una parte di un elemento.</li>
+        <li>SELETTORI DI ATTRIBUTO: selezionano gli elementi in base ad un attributo p valore di attributo.</li> 
+
+    </ul>
+    <h3> SELETTORI SEMPLICI</h3>
+    <h4>Per NOME</h4>
+     <pre>
+        p {
+            text-align: center;
+            color: red;
+        }
+     </pre>
+     <h4> per ID</h4>
+     <p> esempio html: </p>
+     <br><br>
+     < p id="para1"> Hello World! < /p >
+     <br><br>
+     <pre>
+        #para1 {
+            text-align: center;
+            color: red;
+        }
+     </pre>
+     <br><br>
+     <h4> per CLASSE</h4>
+     <p> esempio html: </p>
+     <br><br>
+     < p class="center"> Hello World! < /p >
+     <br><br>
+     <pre>
+        .center {
+            text-align: center;
+            color: red;
+        }
+     </pre>
+     <br><br>
+     <h4> per una CLASSE in uno specifico ELEMENTO</h4>
+     <p> esempio html: </p>
+     <br><br>
+     < p class="center"> Hello World! < /p >
+     <br><br>
+     <pre>
+        p.center {
+            text-align: center;
+            color: red;
+        }
+     </pre>
+
+    <br><br>
+
+    <h4> Selettore UNIVERSALE</h4>
+    <p> Con l'* va a selezionare tutti gli elementi della pagina html </p>
+    <br><br>
+   
+    <pre>
+       * {
+           text-align: center;
+           color: red;
+       }
+    </pre>
+
+    <h4> Selettore di GRUPPO</h4>
+    <p> per selezionare più di un elemento insieme </p>
+    <br><br>
+   
+    <pre>
+       p, h1, h2 {
+           text-align: center;
+           color: red;
+       }
+    </pre>
+    <h3> SELETTORI COMBINATORI</h3>
+
+
+    <h3> SELETTORI DI PSEUDO-ELEMENTI</h3>
+
+
+    <h3> SELETTORI DI PSEUDO-CLASSI</h3>
+
+
+    <h3> SELETTORI DI ATTRIBUTI</h3>
+
+
+    <body>
+
+</html>
