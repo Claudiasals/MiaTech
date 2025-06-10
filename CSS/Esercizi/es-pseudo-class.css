@@ -9,4 +9,4 @@ ul li:last-child {
     background-color: yellowgreen;
 }
 
-p {color: rgba(225, 0, 0, 1); }
+p {color: rgba(225, 0, 0, 70%); }
