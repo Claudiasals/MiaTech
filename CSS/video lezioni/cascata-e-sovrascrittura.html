@@ -1,0 +1,50 @@
+<h2>CONCETTI FONDAMENTALI DELL'APPLICAZIONE CSS:</h2>
+
+
+<p><b>1. CASCATA:</b> il browser terrà in considerazione l'ultim regola css, 
+quindi partendo dal basso le regole css andranno a sovrascrivere quelle superiori.</p>
+
+
+<p><b>2. SPECIFICITÀ:</b> è un peso , un punteggio, che il nostro browser associa alle nostre 
+regole del CSS. Esiste una GERARCHIA DELLA SPECIFICITÀ e il peso per effettare 
+il calcolo della spefcificità dipende dalla gerarchia, 
+vediamo i metodi del CSS in ordine gerarchico e con i loro rispettivi punteggi(pesi):</p>
+<ul>
+<li>INLINE STYLES : specificità=1000</li>
+<li>IDs : specificità=100</li>
+<li>CLASSI, PSEUDO-CLASSI, ATTRIBUTE SELECTOR : specificità=10</li>
+<li>ELEMENT E PSEUDO-ELEMENT : specificità=1</li>
+</ul>
+
+<p>In breve più ci allontaniamo dalla specificità racchiudendo un gruppo più grande, 
+più si abbassa il peso e quindi l'importanza per il browser. 
+Più è specifico e palese più è importante per il browser.</p>
+
+<p><b>!IMPORTANT:</b> si utilizza per eliminare questi criteri di calcolo su una specifica proprietà 
+    e dire al browser di utilizzare la regola che segnaliamo con "!IMPORTANT". Nell'esempio 
+qui sotto darà comunque riorità alla regola dell'elemento paragrafo anche se 
+di norma dovrebbe avere la priorità la regola dell'id. Solitamente è sconsigliata
+questa pratica, soprattutto su grandi progetti per evitare problematiche. </p>
+    <p>es.:</p>
+    <pre>
+        < style >
+            #myid {
+                background-color: blue;
+            }
+            #myid {
+                background-color: pink;
+            }
+            #myid {
+                background-color: red !important;
+            
+            }
+        < /style >
+    </pre>
+
+<p><b>3. EREDITARIETÀ</b>: Alcun regole CSS vengono ereditate da elementi figli rispetto 
+all'elemento madre (cioè un elemento all'interno di un altro). 
+Non tutte le regole seguono questo comportamento. Oppure possiamo dire al browser 
+di non applicare le regole dell'elemento madre.</p>
+
+
+
