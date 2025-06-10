@@ -17,3 +17,7 @@ p {color: rgba(225, 0, 0, 70%); }
 #p-hex {background-color: #FF0000; color: #FFFFFF;}
 
 #p-name {color: red }
+
+p {background-color: yellow;}
+.p-class {background-color: pink;}
+#p-id {background-color: purple;}
