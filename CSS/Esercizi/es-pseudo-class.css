@@ -13,3 +13,5 @@ p {color: rgba(225, 0, 0, 70%); }
 
 #p-rgb {color: rgb(225, 0, 0); }
 
+
+#p-hex {background-color: #FF0000; color: #FFFFFF;}
