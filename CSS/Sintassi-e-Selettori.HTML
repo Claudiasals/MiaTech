@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title> Modulo CSS</title>
+    <link rel="stylesheet" href="nome-file-css" type="text/css">
+</head>
+
+<body>
+    <h1> MODULO CSS</h1>
+    <h2>COME SI COLLEGA UN FILE CSS?</h2>
+
+    <p> <b>rel</b> specifica che si tratta di un foglio di stile, <b>href</b> specifica il link del file a cui
+        collegarsi e in fine type specifica che si tratta di un file di testo di css</p>
+
+    <h2>TIPI DI SELETTORI</h2>
+    <ul>
+        <li>SELETTORI SEMPLICI: selezionano gli elementi in base a nome, ID, classe.</li>
+        <li>SELETTORI COMBINATORI: selezionano gli elementi in base ad una relazione specifica tra loro.</li>
+        <li>SELETTORI DI PSEUDO-CLASSI: selezionano gli elementi in base a un determinato stato.</li>
+        <li>SELETTORI DI PSEUDO-ELEMENTI: selezionano una parte di un elemento.</li>
+        <li>SELETTORI DI ATTRIBUTO: selezionano gli elementi in base ad un attributo p valore di attributo.</li>
+
+    </ul>
+    <h3> SELETTORI SEMPLICI</h3>
+    <h4>Per NOME</h4>
+    <pre>
+        p {
+            text-align: center;
+            color: red;
+        }
+     </pre>
+    <h4> per ID</h4>
+    <p> esempio html: </p>
+    <br>
+    < p id="para1"> Hello World! < /p>
+            <br><br>
+            <pre>
+        #para1 {
+            text-align: center;
+            color: red;
+        }
+     </pre>
+            <br><br>
+            <h4> per CLASSE</h4>
+            <p> esempio html: </p>
+            <br>
+            < p class="center"> Hello World! < /p>
+                    <br><br>
+                    <pre>
+        .center {
+            text-align: center;
+            color: red;
+        }
+     </pre>
+                    <br><br>
+                    <h4> per una CLASSE in uno specifico ELEMENTO</h4>
+                    <p> esempio html: </p>
+                    <br>
+                    < p class="center"> Hello World! < /p>
+                            <br><br>
+                            <pre>
+        p.center {
+            text-align: center;
+            color: red;
+        }
+     </pre>
+
+                            <br><br>
+
+                            <h4> Selettore UNIVERSALE</h4>
+                            <p> Con l'* va a selezionare tutti gli elementi della pagina html </p>
+                            <br><br>
+
+                            <pre>
+       * {
+           text-align: center;
+           color: red;
+       }
+    </pre>
+
+                            <h4> Selettore di GRUPPO</h4>
+                            <p> per selezionare più di un elemento insieme </p>
+                            <br><br>
+
+                            <pre>
+       p, h1, h2 {
+           text-align: center;
+           color: red;
+       }
+    </pre>
+                            <br><br>
+                            <h3> SELETTORI COMBINATORI</h3>
+                            <h4>SELETTORE DISCENTENTE</h4>
+                            <p> seleziona gli elementi che discendono in un altro elemento: in questo caso i paragrafi
+                                contenuti nei div:</p><br>
+                            <pre> div p {
+            background-color: yellow;
+        }
+        </pre>
+
+                            <br><br>
+                            <h4>CHILD SELECTOR</h4>
+                            </p> Assegna un aregola css ai figli di un altro elemento. In questo caso a tutti i "p"
+                            figli dell'elemento "div" <br>
+                            <pre>
+div > p {
+    background-color: yellow;
+}
+</pre>
+                            <br><br>
+                            <h4>ADJACENT SIBLING SELECTOR </h4>
+                            </p> L'elemento immediatamente successivo, in questo caso al primo elemento paragrafo
+                            successivo al div </p><br>
+                            <pre>
+div + p {
+    background-color: yellow;
+}
+</pre>
+                            <br><br>
+                            <h4>GENERAL SIBLING SELECTOR (simbolo tilde)</h4>
+                            <pre>
+div ~ p {
+    background-color: yellow;
+}
+</pre>
+                            <br><br>
+
+                            <h3> SELETTORI DI PSEUDO-CLASSI</h3>
+                            <p> si basano sullo stato di un elemento</p>
+                            <p>Sintassi:</p>
+                            <pre>
+        selector:pseudo-class {
+            proprerty: value;
+        }
+    </pre>
+                            <br><br>
+                            <p>Esempio:</p>
+                            <pre>
+        div:hover {
+            display: block;
+        }
+    </pre>
+                            <p>Questa regola significa che passando con il mouse sul div resta invariato, "bloccato" (
+                                anche se è una caratteristica già di default dei div). Hover comunuqe è una
+                                pseudo-classe che serve per applicare uno stile quando il mouse passa sopra ad un
+                                elemento. </p>
+
+
+
+
+                            <h3> SELETTORI DI PSEUDO-ELEMENTI</h3>
+                            <p>Mentre le pseudo classi si basano sullo stato di un elemento, i selettori PSEUDO-ELEMENT
+                                ci permettono di applicare una regola css solo ad una parte del nosto elemento.
+                            </p>
+                            <p>Sintassi:</p>
+                            <pre>
+        selector:pseudo-element {
+            proprerty: value;
+        }
+    </pre>
+                            <br><br>
+                            <p>Esempio:</p>
+                            <pre>
+        p::first-line {
+            color: blue;
+            font-variant: small-caps;
+        }
+    </pre>
+                            <p>Questa regola significa che la prima linea dei paragrafi sarà di colore rosso e con un
+                                font di tipo small-caps.</p>
+                            <br><br>
+
+                            <h3> ATTRIBUTE-SELECTOR</h3>
+                            <p>Sintassi:</p>
+                            <pre>
+        selector[attribute] {
+            proprerty: value;
+        }
+    </pre>
+                            <br><br>
+                            <p>Esempio:</p>
+                            <pre>
+        a[target] {
+            color: blue;
+            font-variant: small-caps;
+        }
+    </pre>
+                            <p>In questo esempio stiamo applicando la regola dello sfondo giallo a tutti i link "a" che
+                                possiedono un attributo target.</p>
+                            <br><br>
+                            <p>Esempio:</p>
+                            <pre>
+        a[target="_blank"] {
+            color: blue;
+            font-variant: small-caps;
+        }
+    </pre>
+                            <p>In questo esempio invece stiamo applicando la regola dello sfondo giallo a tutti i link "a" che
+                                possiedono un attributo target che è uguale al valore "_blanc".</p>
+                            <br><br>
+
+</body>
+
+</html>
