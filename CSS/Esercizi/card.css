@@ -41,5 +41,6 @@
 
 }
 
-hr {color:black;
+.card-top__riga {
+border: 2px; height: 1px; background-color: black;
 }
