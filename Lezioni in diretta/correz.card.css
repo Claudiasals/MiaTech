@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+  }
+  
+  .card {
+    width: 220px;
+    max-width: 100%;
+    margin: 1rem auto;
+    border: 1px;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0 4px 10px grey;
+  }
+  
+  .card .card__header .card__header-image {
+    width: 100%;
+    min-height: 200px;
+    max-height: 170px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card .card__header .card__header-image img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card .card__body {
+    padding: 15px 15px 0 15px;
+  }
+  
+  .card .card__body .card__body-title {
+    font-family: "DM Serif Display";
+    margin-bottom: 10px;
+  }
+  
+  .card .card__body .card__body-topic-title {
+    font-family: "Roboto";
+  }
+  
+  .card .card__body .card__body-separator {
+    border: 2px;
+    height: 1px;
+    background-color: black;
+    margin: 5px 0;
+  }
+  
+  .card .card__footer {
+    padding: 0 15px;
+  }
+  
+  .card .card__footer .card__footer-author {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  

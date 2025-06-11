@@ -12,7 +12,7 @@
 }
 
 
-.card-top__image {
+.card-header__image {
     width: 100%;
     max-height: 200px%;
     object-fit: cover;
@@ -20,27 +20,28 @@
 }
 
 
-.card-top__image img {
+.card-header__image img {
     width: 100%;
     max-height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.card-top__title {
+.card-header__title {
     font-family: "DM Serif Display";
 }
 
-.card-top__topic-title {
+.card-header__topic-title {
     font-family: "Roboto";
 }
 
-.card-bottom-author {
+.card-header__riga {
+    border: 2px; height: 1px; background-color: black;
+    }
+    
+.card-footer-author {
     padding-top: 15px;
     padding-bottom: 15px;
 
 }
 
-.card-top__riga {
-border: 2px; height: 1px; background-color: black;
-}
