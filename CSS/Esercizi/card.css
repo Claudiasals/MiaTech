@@ -1,0 +1,45 @@
+.card {
+    width: 220px;
+    max-width: 100%;
+    padding: 15px;
+    margin: 1rem auto;
+    border: 1px;
+
+    text-align: left;
+
+    background-color: white;
+    box-shadow: 0 4px 10px grey;
+}
+
+
+.card-top__image {
+    width: 100%;
+    max-height: 200px%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.card-top__image img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-top__title {
+    font-family: "DM Serif Display";
+}
+
+.card-top__topic-title {
+    font-family: "Roboto";
+}
+
+.card-bottom-author {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+hr {color:black;
+}
