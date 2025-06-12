@@ -39,12 +39,34 @@
                 </div>
                 <div class="nav__menu-item">
                     <div class="nav__menu-dropdown">
-                        <button class="nav__menu-dropdown-button">Resourcis</button>
-                   
-                            <a href="#">404</a>
-                            <a href="#">Support</a>
-                        
+                        <button class="nav__menu-dropdown-button">Resources</button>
+                        <ul class="dropdown-content" x-show="open">
+                            <li> <a href="#">404</a> </li>
+                            <li> <a href="#">Support</a> </li>
+                        </ul>
                     </div>
+ <!--
+                
+<div class="nav__menu-dropdown" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+  <button class="nav__menu-dropdown-button" :aria-expanded="open">Resources</button>
+  <ul class="dropdown-content" x-show="open" x-cloak>
+    <li><a href="#">404</a></li>
+    <li><a href="#">Support</a></li>
+  </ul>
+</div>
+
+(Da aggiungere anche css e integrazione Alpine.js per farlo funzionare)
+
+Il menù a tendina è formato da un elenco "ul". 
+x-data, @mouseenter, @mouseleave sono attributi di Alpine.js 
+per gestire l’apertura del menu al passaggio del mouse. 
+
+x-show="open" fa apparire il sottomenu quando la variabile open è true.
+aria-expanded="open" è utile per l’accessibilità, comunica a screen reader lo stato aperto/chiuso.
+
+Alpine.js è una libreria JavaScript leggera (solo ~10kB) che ti permette di aggiungere comportamenti 
+interattivi a una pagina HTML in modo semplice, 
+senza scrivere JavaScript complesso o usare framework pesanti come React o Vue.-->
 
                 </div>
             </div>
@@ -159,7 +181,7 @@
                         </div>
                     </div>
                     <div class="build__img">
-                        <img src="" alt=""/>
+                        <img src="" alt="" />
                         <!--un carosello di immagini ognuna collegata ad un bottone diverso come si mette?-->
                     </div>
                 </div>
@@ -173,7 +195,7 @@
                     <h2>The quick brown fox jumped over the lazy dog</h2>
 
                     <div class="features__img">
-                        <img src="" alt="immagini collegate alle 3 opzioni cliccabili"/>
+                        <img src="" alt="immagini collegate alle 3 opzioni cliccabili" />
                     </div>
                     <div class="features__features">
                         <h3>Built exclusively for you</h3>
@@ -225,7 +247,7 @@
                             1
                         </text>
                     </svg>
-                    <img src="" alt="ragazza"/>
+                    <img src="" alt="ragazza" />
 
                     <a href="">Advanced Features</a>
                     <p>Lorem ipsum is placeholder text used in the graphic, print, and publishing for previewing
@@ -239,7 +261,7 @@
                             2
                         </text>
                     </svg>
-                    <img src="" alt="ragazze che ridono"/>
+                    <img src="" alt="ragazze che ridono" />
 
                     <a href="">Advanced Features</a>
                     <p>Lorem ipsum is placeholder text used in the graphic, print, and publishing for previewing
@@ -253,7 +275,7 @@
                             3
                         </text>
                     </svg>
-                    <img src="" alt="donne in ufficio"/>
+                    <img src="" alt="donne in ufficio" />
                     <a href="">Advanced Features</a>
                     <p>Lorem ipsum is placeholder text used in the graphic, print, and publishing for previewing
                         layouts.</p>
@@ -289,7 +311,7 @@
                                 previewing layouts.</p>
                         </div>
                         <div class="statistics__img">
-                            <img src="" alt="immagini con 3 foto di persone"/>
+                            <img src="" alt="immagini con 3 foto di persone" />
                         </div>
                     </div>
                 </div>
@@ -309,8 +331,8 @@
                             <label class="switch">
                                 <input type="checkbox">
                                 <span class="slider round"></span>
-                              </label>
-                             <p>Pay Yearly (-20%)</p>
+                            </label>
+                            <p>Pay Yearly (-20%)</p>
                         </div>
 
                     </div>
