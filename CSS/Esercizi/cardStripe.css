@@ -1,0 +1,79 @@
+
+/* per azzerare le regole css di default del browser: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* per dare forma al box */
+  .card {
+    width: 270px;
+    margin: 1rem;
+    overflow: hidden; /* taglia parti di elementi che escono dalla card */
+    text-align: left;
+    background-color: white;
+    box-shadow: 0px 6px 10px grey; /* Offset orizzontale: un vlore positivo spost l'ombra a destra mentre negativo a sinistra;
+    Offset verticale: positivo sposta l'ombra verso il basso mentre negativo verso l alto;
+    Sfocatura(blur radius): più è grande questo valore, più l’ombra sarà sfumata. */
+    border-radius:8px; /* non usare % perché potrebbe cambiare su diversi device o browser */
+  }
+
+  a {
+    text-decoration: none; /*per togliere la sottolineatura dei link*/
+  } /*ma se faccio la pagina intera di un sito ma devo togliere la sottolineatura solo dalle card come faccio? 
+  ho provato a scrivere "a .card" per selezionare solo le card di un'eventuale pagina html ma non mi prende la regola.*/
+  
+  .card .card__body {
+    padding: 1rem;
+    padding-top: 2rem; /* rem si adatta ai diversi schermi, rede il layout flessibile, accessibile e coerente su tutta la pagina. 
+    Si usa anche per font-size, margini, spaziature e larghezze. 
+    rem="root em" che significa "la dimensione relativa rispetto al font base della pagina. 
+    Il font size della radice html è 16px, quindi 1rem=16px, 0.5rem=8px;2rem=32px*/
+    /* margin: 1rem auto; fa la stessa cosa ma dando  */
+  }
+  
+  
+  
+  h2 {
+    padding-bottom: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 1rem;
+  }
+  
+  span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .card .card__separator {
+    background-color: rgb(221, 221, 221);
+    max-lines: 80%; /*per lasciare lo spaio ai lati*/
+    /*perché se scrivo "width:80%" parte da sinistra e lascia lo spazio solo a destra anch con "align:center?"*/
+    height: 1px;
+    margin: 35px 10px 0px; /*margin: top right bottom left; se ne metto 3 il secondo valore da la regola anche al suo opposto.
+    quindi 35top 10right-left 0bottom*/
+  }
+  
+  .card .card__header { /*bordino superiore viola*/
+    height: 8px;
+    background-color: rgb(98, 31, 244);
+  
+  }
+  
+  .card .card__footer { 
+    padding: 1rem;
+    display: flex; /*mette in orizzontale tutti gli elementi al suo interno- Diventano flex-items*/
+    gap: 0.5rem; /*mette una distanza tra 1 elemento e l'altro del footer*/
+    justify-content: center; /*per centrare il contenuro del footer. con il valore "flex-start vengono allineati a sinistra, mentre con il valore "flex-end" vengono allineati a destra.*/
+  }
+
+  .container {
+    display: flex; /*per disorre orizzontalmente gli elementi al suo interno */
+    justify-content: center;
+    flex-wrap: wrap; /* per farle andare a capo automaticamente sui piccoli schermi*/
+    padding: 2rem; /* perché le card non tocchino il bordo del container.*/
+  }

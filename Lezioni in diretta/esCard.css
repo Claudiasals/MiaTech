@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex; /*Gli elementi figli si dispongono su una sola riga (per default). I figli diventano flessibili: puoi allinearli, 
+    distanziarli, centrarli, ecc. - trasforma un elemento in un contenitore flessibile, cioè un flex container. Questo consente di disporre 
+    i figli dell'elemento (chiamati "flex items") in modo molto più controllato e dinamico rispetto ai layout classici.*/
+  }
+  
+  .card {
+    width: 220px;
+    max-width: 100%; /*rende l'immagine responsive, adattabile al contenitore. 
+    La larghezza massima dell'elemento non supera il 100% della larghezza suo contenitore.*/
+    margin: 1rem auto;
+    border: 1px;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0 4px 10px grey; /* primo valore=Offset orizzontale: un vlore positivo spost l'ombra a destra mentre negativo a sinistra;
+    secondo valore=Offset verticale: positivo sposta l'ombra verso il basso mentre negativo verso l alto;
+    terzo valore= Sfocatura(blur radius): più è grande questo valore, più l’ombra sarà sfumata.*/
+  }
+  
+  .card .card__header .card__header-image {
+    width: 100%;    
+    min-height: 200px;
+    /*perché sia larghezza 100 che altezza minima?*/
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card .card__header .card__header-image img {
+    width: 100%;
+    object-fit: cover; /*è una proprietà CSS usata per elementi HTML tipo <img> o <video>, non per sfondi (lì si usa background-size: cover).
+    display: block; a in modo che: 1.L’immagine riempia completamente il contenitore 2.Mantenga le proporzioni originali (niente deformazioni)
+    3.Se necessario, l’immagine viene ritagliata per adattarsi*/
+  }
+  
+  .card .card__body {
+    padding: 15px 15px 0 15px; /*padding: top right bottom left;*/
+  }
+  
+  .card .card__body .card__body-title {
+    font-family: "DM Serif Display";
+    margin-bottom: 10px; /*significa che stai aggiungendo uno spazio di 10 pixel sotto l'elemento.*/
+  }
+  
+  .card .card__body .card__body-topic-title {
+    font-family: "Roboto";
+  }
+  
+  .card .card__body .card__body-separator {
+    border: 2px;
+    height: 1px;
+    background-color: black;
+    margin: 5px 0;
+  }
+  
+  .card .card__footer {
+    padding: 0 15px;
+  }
+  
+  .card .card__footer .card__footer-author {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
