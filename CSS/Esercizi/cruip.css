@@ -15,7 +15,7 @@ h1, h2, h3 {
 
 /*qui solo .nav__logo o tutte le classi contenenti? */
 .wrapper .container .nav__logo {
-width: 40px;
+padding: 0px 24px; /* top-bottom left-right */
 max-width: 100%;
 }
 
@@ -49,3 +49,8 @@ nav {
     padding-left: 200px;
     padding-right: 200px;
   }
+
+  .nav__menu-dropdown-button {
+    display: none;
+  }
+
