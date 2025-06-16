@@ -1,0 +1,51 @@
+/* reset stile default browser */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+}
+
+/*qui solo .nav__logo o tutte le classi contenenti? */
+.wrapper .container .nav__logo {
+width: 40px;
+max-width: 100%;
+}
+
+.nav__logo-svg {
+    color:rgb(55, 118, 226);
+}
+
+nav {
+    background-color: rgb(18, 29, 44);    
+
+}
+
+.container {
+    display: flex;    /* come porto sull'asse orizzontale tutti gli elementi del nav?*/
+}
+
+.nav__menu {
+    display: flex;
+}
+
+.nav__menu-item {
+    display: flex;
+
+}
+
+.nav__menu-dropdown {
+    display: flex;
+} /* me so impallata co sto flex */
+
+.wrapper {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
