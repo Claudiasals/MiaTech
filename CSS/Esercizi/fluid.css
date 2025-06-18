@@ -1,0 +1,6 @@
+div {
+    width: 30%;
+    aspect-ratio: 1 / 1; 
+    /* serve per far si che l'altezza sia uguale alla larghezza */
+    background-color: blueviolet;
+}

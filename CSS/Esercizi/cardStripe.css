@@ -18,7 +18,7 @@
     Sfocatura(blur radius): più è grande questo valore, più l’ombra sarà sfumata. */
     border-radius:8px; /* non usare % perché potrebbe cambiare su diversi device o browser */
     line-height: 1.6; /* Per aumentare l'interlinea. Per diminuirlo in negavtivo: "letter-spacing: -1px;"*/
-    letter-spacing: 0.2px;
+    letter-spacing: 0.2px; /* regolare spazio intra-lettere*/
     color: rgb(91, 90, 90);
   }
 
