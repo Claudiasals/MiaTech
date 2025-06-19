@@ -1,0 +1,36 @@
+Le variabili CSS ci consentono di memorizzare dei valori e poi riutilizzarli all'interno del nostro 
+foglio di stile. Questo ci aiuta a mantenere il foglio pilito, organizzato e 
+più facile da gestire. Ci consentono di apportare modifiche globali al design modificando i valori della variabile.
+
+--nome-variabile: valore;
+
+
+es.:
+
+<pre>
+:root {
+    --colore-principale: #FF0000;
+    --dimensione-testo: 18px;
+}
+</pre>
+
+per utilizzarla ovunque sul foglio di stile utilizzeremo la funzione "var".
+
+selettore {
+    proprietà: var(--nome-variabile);
+}
+
+
+es.:
+
+<pre> 
+h1 {
+    color: var(--colore-principale);
+    font-size: var(--dimensione-testo);
+}
+
+p {
+    color: var(--colore-principale);
+    font-size: calc(var(--dimensione-testo) - 2px);
+}
+</pre>
