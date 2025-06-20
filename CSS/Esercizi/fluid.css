@@ -33,3 +33,11 @@
 .em {
     font-size: 7em;
 }
+
+:root {
+    --colore-principale: #FF0000;
+}
+
+* {
+    color: var(--colore-principale);
+}
