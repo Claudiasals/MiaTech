@@ -16,6 +16,9 @@
     border: 2px dashed blue ;
 }
 
+li {
+    display: inline-block;
+}
 .box2 {
     padding: 50px;
     margin: 10px;
