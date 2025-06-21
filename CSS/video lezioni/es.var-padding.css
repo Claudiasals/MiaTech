@@ -1,0 +1,11 @@
+
+:root {
+    --padding: 200px;
+    --sfondo: #e68609;
+}
+
+
+.box {
+    padding: var(--padding);
+    background-color: var(--sfondo);
+}
