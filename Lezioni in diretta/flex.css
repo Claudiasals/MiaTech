@@ -5,7 +5,7 @@
 .box {
     width: 150px;
     height: 150px;
-    background-color: blue;
+    border: 3px solid blue; /* solid → tipo di linea (può essere dashed(tratteggiata), dotted(puntinata) ecc.) */
     margin: 10px;
 }
 

@@ -1,0 +1,44 @@
+.margin {
+    width: 270px;
+    height: 200px;
+    background-color: rgb(255, 162, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.border {
+    width: 210px;
+    height: 150px;
+    border: 1px solid rgb(176, 6, 6);
+
+    display: flex;
+}
+
+.padding {
+    width: 170px;
+    height: 100px;
+    background-color: aquamarine;
+    display: flex;
+   
+}
+
+.content {
+    width: 120px;
+    height: 50px;
+    background-color: aliceblue;
+    border: 1px dashed grey;
+    display: flex;
+ 
+}
+
+
+
+
+.box {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
