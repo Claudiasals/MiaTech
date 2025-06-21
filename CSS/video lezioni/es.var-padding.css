@@ -13,6 +13,7 @@
 .padding {
     padding: 50px;
     margin: 10px;
+    border: 2px dashed blue ;
 }
 
 .box2 {
