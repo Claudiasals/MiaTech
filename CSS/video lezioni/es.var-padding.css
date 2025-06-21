@@ -9,3 +9,7 @@
     padding: var(--padding);
     background-color: var(--sfondo);
 }
+
+.padding {
+    padding: 50px;
+}
