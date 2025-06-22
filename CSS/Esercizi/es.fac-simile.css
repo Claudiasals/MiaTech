@@ -25,17 +25,16 @@ nav {
 }
 
 .main__aside {
-    width: 150px;
-    height: 250px;
-    margin: 20px;
+   width: 150px;
+   height: 200px;
+ 
     background-color: #a29b9b;
 
 }
 
 .main__content {
-    width: 150px;
-    height: 250px;
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: #a29b9b;
     flex-grow: 1; 
   
