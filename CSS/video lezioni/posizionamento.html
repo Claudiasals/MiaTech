@@ -1,0 +1,61 @@
+Regole per il Layout -posizionamento
+
+Regola POSITION:
+Valori:
+- STATIC: regola di default
+- RELATIVE: dice al browser 
+di posizionre l'elemento secondo la posiione che avrebbe avuto 
+di default, ma applicando le regole top, bottom, left e right.
+
+.div { 
+    position: reltive;
+    left: 40px;
+    top: 50px;
+}
+
+- FIXED: prenderà le coordinate top,bottom left e right 
+in riferimento alla viewport. Questo elelmento verrà visualizzato 
+sempre mantenendo quest ecoordinate, anche scorrendo la pagina.
+Per esempio mi viene in mente l'icona di whatsapp o delle chat 
+in basso a destra nei siti.
+ 
+.div {
+    position: fixed;
+    right: 40px;
+    bottom; 50px;
+}
+
+- ABSOLUTE: l'elemento verrà posizionto rispetto all'elemento padre, 
+se non ci fosse un elemento padre sarà in base al corpo del documento.
+Vengono rimossi dal flusso della pagian e possono essere 
+sovrapposti ad altri elementi. L'elemento con position absolute 
+si sovrappone agli altri elementi.
+
+.divPadre {
+    posiion: relative;
+    top: 125px;
+}
+
+.divFiglio {
+    position: absolute;
+    left: 40px;
+    top: 150px;
+}
+
+In questo esempio il div padre si staccherà di 125 px dall'estremità 
+superiore della pagina mentre il div figlio si staccherà di 40px 
+e 150px dall'estremità del div padre.
+
+
+- STICKY: si posiziona in due modi differenti a seconda 
+del posizionamento dello scroll della nostra pagina.
+Iniziamlente è un posizionamento relativo applicando poi 
+il top,bottom ecc.; mentre si trasforma in un elemento fixed 
+mentre l'utente scrolla la pagina, e non andrà mai al di fuori 
+dello scroll, si fissa sulla pagina restando appoggiato al bordo della pagina e creando una trasparenza che fa vedere ciò che c'è sotto sulla oagina.
+
+Regole collegate al position:
+- top
+- bottom
+- left
+- right 
