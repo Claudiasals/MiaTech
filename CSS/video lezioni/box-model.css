@@ -3,12 +3,9 @@
     height: 600px;
     background-color: rgb(255, 162, 0);
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: row;
-    text-align: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* perché non sono tutti centrati uno dentro l'altro? */
 
 }
 
@@ -17,7 +14,6 @@
     height: 400px;
     border: 1px solid rgb(176, 6, 6);
     display: flex;
-    text-align: center;
     margin: 10px;
     display: block;
     padding: 10px;
@@ -31,7 +27,6 @@
     height: 200px;
     background-color: aquamarine;
     display: flex;
-    text-align: center;
     display: block;
     padding: 10px;
     margin: 10px;
@@ -47,15 +42,19 @@
     border: 1px dashed grey;
     display: flex;
     margin: 10px;
-    text-align: center;
     padding: 10px;
     display: block;
     flex-direction: column;
     justify-content: center;
+  
 
 }
 
-
+p{
+    text-align: center;
+    justify-content: center; /*perché i testi non vanno al centro del box?*/
+    align-items: center;
+}
 
 
 .box {
