@@ -23,3 +23,22 @@ li {
     padding: 50px;
     margin: 10px;
 }
+
+span {
+    width: 20px;
+    height: 5px;
+    border: 1px solid green;
+    background-color: #e68609;
+}
+
+.i {
+    display: inline;
+}
+
+.ib {
+    display: inline-block;
+}
+
+.b {
+    display: block;
+}
