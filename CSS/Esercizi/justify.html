@@ -1,18 +1,31 @@
 <div class="container">
-    <div>AAA</div>
-    <div>BBB</div>
-    <div>CCC</div>
+    <div class="item">AAA</div>
+    <div  class="item">BBB</div>
+    <div class="item grow">CCC</div>
 </div>
 <style>
     .container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         background-color: blue;
-        width: 150px;
+        width: 450px;
         height: 350px;
         color: aliceblue;
         padding: 30px;
         align-items: center;
         justify-content: center;
+    }
+
+.item {
+    width: 50px;
+    height: auto;
+    padding: 5px;
+    background-color: rgb(255, 170, 0);
+    margin: 5px;
+
+}
+
+    .item.grow {
+        flex-grow: 1;
     }
 </style>
