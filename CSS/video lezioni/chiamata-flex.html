@@ -1,0 +1,43 @@
+Definire grow, shrink e basic in un unica chiamata.
+
+<div class="container">
+    <div class="item1">AAA</div>
+    <div  class="item2">BBB</div>
+    <div class="item3">CCC</div>
+    <div  class="item4">DDD</div>
+    <div class="item5">EEE</div>
+    <div class="item6">CCC</div>
+    <div  class="item7">DDD</div>
+    <div class="item8">EEE</div>
+  
+
+</div>
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        background-color: blue;
+        width: 550px;
+        height: 350px;
+        color: aliceblue;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+.item {
+    width: 50px;
+    height: auto;
+    padding: 5px;
+    background-color: rgb(255, 170, 0);
+    margin: 5px;
+
+}
+
+.item3 {
+    flex: 1 0 150px; /* in primi due valori equivalgono a grow e shrink. 
+    Se voglio che l'item cresca di più metterò 1 alla prima cifra e 0 alla seconda, 
+    mentre se voglio che resti più piccolo mettero 0 e 1.*/
+}
+
+</style>

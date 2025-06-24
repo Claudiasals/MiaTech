@@ -1,0 +1,36 @@
+Definire grow, shrink e basic in un unica chiamata.
+
+<div class="container">
+    <div class="item self">AAA</div>
+    <div class="item self">BBB</div>
+    <div class="item">CCC</div>
+
+
+</div>
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        background-color: blue;
+        color: aliceblue;
+        height: 600px;
+        justify-content: center;
+
+    }
+
+    .item {
+        background-color: rgb(255, 170, 0);
+        width: 50px;
+        margin: 5px;
+        text-align: center;
+        line-height: 50px;
+        /*altezza riga di testo*/
+        font-size: 20px;
+
+
+    }
+
+    .self {
+        align-self: center;
+    }
+</style>
