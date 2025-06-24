@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="item shrink">AAA</div>
+    <div  class="item basis">BBB</div>
+    <div class="item">CCC</div>
+    <div  class="item">DDD</div>
+    <div class="item">EEE</div>
+    <div class="item">CCC</div>
+    <div  class="item">DDD</div>
+    <div class="item">EEE</div>
+  
+
+</div>
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        background-color: blue;
+        width: 550px;
+        height: 350px;
+        color: aliceblue;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+.item {
+    width: 50px;
+    height: auto;
+    padding: 5px;
+    background-color: rgb(255, 170, 0);
+    margin: 5px;
+
+}
+
+    .item.shrink {
+        flex-shrink: 1; /* non ho capito, dovrebbe restringersi?*/
+    }
+
+    .item.basis {
+        flex-basis: 100px;
+    }
+</style>
