@@ -1,42 +1,60 @@
-<div class="container">
-    <div class="item shrink">AAA</div>
-    <div  class="item basis">BBB</div>
-    <div class="item">CCC</div>
-    <div  class="item">DDD</div>
-    <div class="item">EEE</div>
-    <div class="item">CCC</div>
-    <div  class="item">DDD</div>
-    <div class="item">EEE</div>
-  
-
-</div>
-<style>
-    .container {
-        display: flex;
-        flex-direction: row;
-        background-color: blue;
-        width: 550px;
-        height: 350px;
-        color: aliceblue;
-        padding: 30px;
-        align-items: center;
-        justify-content: center;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: red;
+            width: 350px;
+            height: 350px;
+            color: aliceblue;
+            padding: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+    
+    .item {
+        width: 200px;
+        height: auto;
+        padding: 5px;
+        background-color: rgb(255, 170, 0);
+        margin: 5px;
+    
     }
+    
+        .item.shrink {
+            flex-shrink: 7; /* non ho capito, dovrebbe restringersi?*/
+        }
+    
+        .item.shrink2 {
+            flex-shrink: 2; /* non ho capito, dovrebbe restringersi?*/
+        }
+    
+        .item.shrink3 {
+            flex-shrink: 3; /* non ho capito, dovrebbe restringersi?*/
+        }
+    
+        .item.shrink4 {
+            flex-shrink: 4; /* non ho capito, dovrebbe restringersi?*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item shrink"></div>
+        <div  class="item basis"></div>
+        <div class="item shrink2"></div>
+        <div  class="item shrink3"></div>
+        <div class="item shrink4"></div>
+        <div class="item"></div>
+        <div  class="item"></div>
+        <div class="item"></div>
+    </div>
+    
 
-.item {
-    width: 50px;
-    height: auto;
-    padding: 5px;
-    background-color: rgb(255, 170, 0);
-    margin: 5px;
+</body>
+</html>
 
-}
-
-    .item.shrink {
-        flex-shrink: 1; /* non ho capito, dovrebbe restringersi?*/
-    }
-
-    .item.basis {
-        flex-basis: 100px;
-    }
-</style>
