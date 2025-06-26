@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.grid-container { /* si definisce la struttura della griglia dal contenitore */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: blue;
+    padding: 20px;
+}
+
+.grid-container>div { /* stile per tutti gli item contenuti */
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+/*COLUMN PROPRIERTY*/
+
+/*.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}*/
+
+/* versione abbreviata della regola poco sopra, 
+    1 sta per le colonne e 3 sta per le righe */
+/*.item1 {
+    grid-column-start: 1 / 3; 
+}*/
+
+/* con lo span impostiamo la riga di partenza 
+e dopo lo / il numero di righe che l'item deve andare ad occupare */
+/*.item1 {
+    grid-column: 1 / span 3; 
+}*/
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+<div class="item1"> Item 1</div>
+<div class="item2"> Item 2</div>
+<div class="item3"> Item 3</div>
+<div class="item4"> Item 4</div>
+<div class="item5"> Item 5</div>
+<div class="item6"> Item 6</div>
+<div class="item7"> Item 7</div>
+<div class="item8"> Item 8</div>
+<div class="item9"> Item 9</div>
+    </div>
+    <p>stesse rgeole con le ROW PROPRIERTY ma ovviamente 
+        si riferiranno all'asse verticale.</p>
+        <h2>grid area propreries </h2>
+</body>
+</html>

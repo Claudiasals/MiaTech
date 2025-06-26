@@ -1,0 +1,90 @@
+<!-- <h1> GRID AREA PROPRIERTIES</h1>
+
+<p> grid-row-start 1 / grid-column-start 2/ grid-row-end 3/ grid-column-end.
+    finisce a bordo della riga 3, row 3 significa che finisce sopra alla terza riga,
+    le righe sono da intendere come i bordi della grigia.</p>
+
+
+<div class="grid-container">
+    <div class="item1"> Item 1</div>
+    <div class="item2"> Item 2</div>
+    <div class="item3"> Item 3</div>
+    <div class="item4"> Item 4</div>
+    <div class="item5"> Item 5</div>
+    <div class="item6"> Item 6</div>
+    <div class="item7"> Item 7</div>
+    <div class="item8"> Item 8</div>
+    <div class="item9"> Item 9</div>
+</div>
+
+<style>
+    .item1 {
+        grid-area: 1 / 2 / 3 / 4;
+    }
+</style>
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            /* si definisce la struttura della griglia dal contenitore */
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: blue;
+            padding: 20px;
+        }
+
+        .grid-container>div {
+            /* stile per tutti gli item contenuti */
+            background-color: white;
+            text-align: center;
+            border: 1px solid black;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        /* Diamo un nome all'item, in questo caso si chiamerà "myArea" */
+        .item1 {
+            grid-area: myArea;
+        }
+
+        /* Ora andiamo a dire al browser che l'item occuperà le colonne segnate con il suo nome, 
+cioè "myArea", ci sono 5 myArea quindi occuperà 5 colonne.*/
+        .grid-container {
+            grid-template-areas: 'myArea myArea myArea myArea myArea '
+        }
+
+        /* proviamo a dare un nome e delle regole a tutti gli item */
+
+       </style>
+</head>
+
+<body>
+    <h1> GRID AREA: MYAREA</h1>
+
+    <p> grid-row-start 1 / grid-column-start 2/ grid-row-end 3/ grid-column-end.
+        finisce a bordo della riga 3, row 3 significa che finisce sopra alla terza riga,
+        le righe sono da intendere come i bordi della grigia.</p>
+
+
+    <div class="grid-container">
+        <div class="item1"> Item 1</div>
+        <div class="item2"> Item 2</div>
+        <div class="item3"> Item 3</div>
+        <div class="item4"> Item 4</div>
+        <div class="item5"> Item 5</div>
+        <div class="item6"> Item 6</div>
+        <div class="item7"> Item 7</div>
+        <div class="item8"> Item 8</div>
+        <div class="item9"> Item 9</div>
+    </div>
+
+
+</body>
+
+</html>

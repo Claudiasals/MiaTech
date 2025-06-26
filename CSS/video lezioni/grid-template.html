@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            /* si definisce la struttura della griglia dal contenitore */
+            display: grid;
+            /*grid-template-columns: auto;*/
+            background-color: blue;
+            padding: 20px;
+        }
+
+        .grid-container>div {
+            /* stile per tutti gli item contenuti */
+            background-color: white;
+            text-align: center;
+            border: 1px solid black;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: menu;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: right;
+        }
+
+
+        .item5 {
+            grid-area: footer;
+        }
+
+        .grid-container {
+            gap: 15px; /* spazio tra gli item */
+            grid-template-areas: 
+            'header header header header header header' 
+            'menu main main main right right'
+            'menu footer footer footer footer footer';
+        }
+
+
+    </style>
+</head>
+<body>
+<h1> GRID TEMPLATE </h1>
+<div class="grid-container">
+    <div class="item1"> Item 1</div>
+    <div class="item2"> Item 2</div>
+    <div class="item3"> Item 3</div>
+    <div class="item4"> Item 4</div>
+    <div class="item5"> Item 5</div>
+</div>
+
+<p> il container è im'ostato con 3 colonne, </p>
+</body>
+
+</html>
