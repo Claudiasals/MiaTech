@@ -4,9 +4,14 @@
     box-sizing: border-box;
 }
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:600px){
   body {
     overflow-x: auto;  
+   /* perché non funzionano per rendere la  calcolatrice 
+   grande quanto lo schermo? */ 
+   width: 100vw;
+   height: 100vh;
+
     }
 }
 
@@ -42,8 +47,11 @@
     align-items: center;
     text-align: center;
     box-shadow: 5px 5px 2px rgb(98, 95, 95);
-
-
+    
+}
+.grid-container > div:hover {
+    box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3);
+    background-color:  rgb(187, 175, 184);
 }
 
 .schermo {
