@@ -15,7 +15,7 @@
     }
 
     .grid-container>div:active { /*:active serve per dare l'effetto ":hover" anche da smartphone*/
-        box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3); /* "inset" per dare le ombre internamente*/
         background-color: rgb(187, 175, 184);
     }
 }
@@ -42,6 +42,7 @@
     box-shadow: 5px 5px 0px rgb(97, 95, 95),
         12px 12px 5px rgba(45, 45, 45, 0.5),
         inset 8px 8px 3px rgba(0, 0, 0, 0.3);
+        /* aggiungere più ombre separandole con una virgola */
 
 
 }
