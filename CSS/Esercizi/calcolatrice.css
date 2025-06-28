@@ -18,6 +18,21 @@
         box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3); /* "inset" per dare le ombre internamente*/
         background-color: rgb(187, 175, 184);
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
+        grid-template-rows: 5.5rem 3rem 3rem 3rem 3rem 3rem;
+        width: 24.375rem;
+        gap: 0.625rem;
+        padding: 0.25rem;
+       
+        font-size: 20px;
+       
+        margin: 3rem;
+       
+    
+    }
 }
 
 .grid-container {
