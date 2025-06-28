@@ -5,106 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Es. grid container </title>
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: 50px 50px 50px 50px;
-            grid-template-rows: 50px 25px 25px 25px 25px 25px;
-            grid-template-areas:
-                'schermo schermo schermo schermo'
-                'ac ac slash per'
-                'sette otto nove meno'
-                'quattro cinque sei più'
-                'uno due tre uguale'
-                'zero zero punto uguale'
-        }
-
-        .grid-container>div {
-            background-color: rgb(255, 255, 255);
-            text-align: center;
-            border: 1px solid rgb(255, 0, 187);
-        }
-
-        .schermo {
-            grid-area: schermo;
-            text-align: end;
-            font-size: 30px;
-        }
-
-        .ac {
-            grid-area: ac;
-        }
-
-        .slash {
-            grid-area: slash;
-        }
-
-        .per {
-            grid-area: per;
-        }
-
-        .sette {
-            grid-area: sette;
-        }
-
-        .otto {
-            grid-area: otto;
-        }
-
-        .nove {
-            grid-area: nove;
-        }
-
-        .meno {
-            grid-area: meno;
-        }
-
-        .quattro {
-            grid-area: quattro;
-        }
-
-        .cinque {
-            grid-area: cinque;
-        }
-
-        .sei {
-            grid-area: sei;
-        }
-
-        .più {
-            grid-area: più;
-        }
-
-        .uno {
-            grid-area: uno;
-        }
-
-        .due {
-            grid-area: due;
-        }
-
-        .tre {
-            grid-area: tre;
-        }
-
-        .uguale {
-            grid-area: uguale;
-        }
-
-        .zero {
-            grid-area: zero;
-        }
-
-        .punto {
-            grid-area: punto;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="calcolatrice.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="schermo">0</div>
-        <div class="ac">AC</div>
+        <div class="schermo" id="schermo">0</div>
+        <div class="ac" id="ac">AC</div>
         <div class="slash">/</div>
         <div class="per">x</div>
         <div class="sette">7</div>
@@ -120,7 +28,7 @@
         <div class="uno">1</div>
         <div class="due">2</div>
         <div class="tre">3</div>
-        <div class="uguale">=</div>
+        <div class="uguale" id="uguale">=</div>
         <div class="zero">0</div>
         <div class="punto">.</div>
     </div>
