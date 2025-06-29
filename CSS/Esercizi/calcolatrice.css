@@ -207,7 +207,7 @@ width: 100%;
     
     body .flex {
         display: flex;
-        flex-direction: column !important;
+        flex-direction: column;
     }
     .grid-container>div:active {
         /*:active serve per dare l'effetto ":hover" anche da smartphone*/
