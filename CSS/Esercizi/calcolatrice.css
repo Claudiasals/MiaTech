@@ -43,7 +43,7 @@ section {
     align-items: center;
     background-color: rgb(226, 249, 253);
     padding: 2rem;
-
+width: 100%;
 
 }
 .grid-container {
