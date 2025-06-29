@@ -14,10 +14,7 @@
         display: flex;
         flex-direction: column;
     }
-
-
-    }
-
+    
     .grid-container>div:active {
         /*:active serve per dare l'effetto ":hover" anche da smartphone*/
         box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3);
