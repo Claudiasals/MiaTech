@@ -13,11 +13,12 @@
         height: 100vh;
 
     }
-    
+
     body .flex {
         display: flex;
         flex-direction: column !important;
     }
+
     .grid-container>div:active {
         /*:active serve per dare l'effetto ":hover" anche da smartphone*/
         box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3);
@@ -40,25 +41,28 @@ section {
     padding: 2rem;
     background-color: white;
 }
-.flex { 
+
+.flex {
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: rgb(226, 249, 253);
     padding: 2rem;
-width: 100%;
-
+    width: 100%;
 }
+
 .grid-container {
     display: grid;
     /*grid-template-columns: 7.5rem 7.5rem 7.5rem 7.5rem 7.5rem;
     grid-template-rows: 7.5rem 5rem 5rem 5rem 5rem 5rem;
     width: 34.375rem;
-
     Con queste larghezze fisse in rem non è responsive. 
     Imposto "repeat" al posto delle lrghezze fisse delle colonne. */
-    grid-template-columns: repeat(4, 1fr); 
-    /* 5 colonne flessibili */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonne flessibili: "fr" sta per fraction, 
+    quindi con 1fr andiamo a dirgli di dividere proporzionalmente le 4 colonne, 
+    scrivendo o "4, 1fr" o 1fr 1fr 1fr 1fr. Per fare invece una delle colonne con proporzioni 
+    diverse si modifica la cifra prima di fr, es.: 1fr 1fr 2fr, avremo 3 colonne con 
+    l'ultima che occpua lo spazio doppio in proporzione rispetto alle altre due colonne.*/
     width: 100%;
     max-width: 400px;
     min-width: 300px;
@@ -76,7 +80,7 @@ width: 100%;
     background-color: rgb(64, 53, 141);
     border-radius: 1rem;
     margin: 1rem;
-    box-shadow: 5px 5px 0px rgb(97, 95, 95),
+    box-shadow: 7px 7px 0px rgb(8, 3, 49),
         12px 12px 5px rgba(45, 45, 45, 0.5),
         inset 8px 8px 3px rgba(0, 0, 0, 0.3);
     /* aggiungere più ombre separandole con una virgola */
@@ -92,12 +96,12 @@ width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: 5px 5px 2px rgb(178, 136, 136);
+    box-shadow: 5px 5px 0px rgb(178, 136, 136);
 
 }
 
 .grid-container>div:hover {
-    box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 3px 3px 1px rgba(0, 0, 0, 0.3);
     background-color: rgb(187, 175, 184);
 }
 
@@ -112,8 +116,10 @@ width: 100%;
     color: aliceblue;
     font-size: 5rem;
     justify-content: end;
-    padding: 2rem;
-    box-shadow: inset 5px 5px 3px rgb(83, 80, 80);
+    padding: 1rem;
+    box-shadow: inset 5px 5px 0px rgb(8, 3, 49),
+                5px 5px 5px rgb(24, 32, 86);
+
 }
 
 .ac {
@@ -204,11 +210,12 @@ width: 100%;
         height: 100vh;
 
     }
-    
+
     body .flex {
         display: flex;
         flex-direction: column;
     }
+
     .grid-container>div:active {
         /*:active serve per dare l'effetto ":hover" anche da smartphone*/
         box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3);
