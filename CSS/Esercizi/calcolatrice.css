@@ -11,11 +11,11 @@
    grande quanto lo schermo? */
         width: 100vw;
         height: 100vh;
-    }
-
-    .flex {
         display: flex;
         flex-direction: column;
+    }
+
+
     }
 
     .grid-container>div:active {
