@@ -193,3 +193,28 @@ width: 100%;
 .punto {
     grid-area: punto;
 }
+
+
+@media only screen and (max-width:600px) {
+    body {
+        overflow-x: auto;
+        /* perché non funzionano per rendere la  calcolatrice 
+   grande quanto lo schermo? */
+        width: 100vw;
+        height: 100vh;
+
+    }
+    
+    body .flex {
+        display: flex;
+        flex-direction: column !important;
+    }
+    .grid-container>div:active {
+        /*:active serve per dare l'effetto ":hover" anche da smartphone*/
+        box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3);
+        /* "inset" per dare le ombre internamente*/
+        background-color: rgb(187, 175, 184);
+    }
+
+    /* non riesco a ridimensionarla su schermi piccoli */
+}
