@@ -4,37 +4,12 @@
     box-sizing: border-box;
 }
 
-@media only screen and (max-width:600px) {
-    body {
-        overflow-x: auto;
-        /* perché non funzionano per rendere la  calcolatrice 
-   grande quanto lo schermo? */
-        width: 100vw;
-        height: 100vh;
-
-    }
-
-    body .flex {
-        display: flex;
-        flex-direction: column !important;
-    }
-
-    .grid-container>div:active {
-        /*:active serve per dare l'effetto ":hover" anche da smartphone*/
-        box-shadow: inset 5px 5px 3px rgba(0, 0, 0, 0.3);
-        /* "inset" per dare le ombre internamente*/
-        background-color: rgb(187, 175, 184);
-    }
-
-    /* non riesco a ridimensionarla su schermi piccoli */
-}
-
 section {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0px 10px 20px rgb(207, 206, 206);
+    box-shadow: 3px 3px 7px rgb(207, 206, 206);
     margin: 1rem;
     border-radius: 1rem;
     align-items: center;
@@ -97,7 +72,6 @@ section {
     align-items: center;
     text-align: center;
     box-shadow: 5px 5px 0px rgb(178, 136, 136);
-
 }
 
 .grid-container>div:hover {
