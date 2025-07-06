@@ -39,7 +39,7 @@ presentaPersona("Claudia", 33);
 
     presentaPersona("Jennifer", 31);
 
-ris.att.: Ciao, mi chiamo Jennifer e ho 31 anni.
+stampa: Ciao, mi chiamo Jennifer e ho 31 anni.
 
 
 //es. chiedi all'utente di scrivere i dati richiesti dai parametri
@@ -47,7 +47,7 @@ let nome = prompt("Come ti chiami?");
 let eta = prompt("Quanti anni hai?");
 presentaPersona(nome, eta);
 
-ris.att: Ciao, mi chiamo Jonny e ho 56 anni.
+stampa: Ciao, mi chiamo Jonny e ho 56 anni.
 
 
 //Quando usi prompt("testo"), il browser mostra una finestra con: 
