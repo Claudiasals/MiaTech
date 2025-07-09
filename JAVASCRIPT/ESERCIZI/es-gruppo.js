@@ -236,3 +236,14 @@ const valueProp = getProperty({
 age:50}, "name");
 
 console.log(valueProp);
+
+## Exercise 9: Reverse String
+
+
+function reverseString(str) {
+    return str
+}
+
+
+console.log(reverseString('hello'));  
+console.log(reverseString('world'));
