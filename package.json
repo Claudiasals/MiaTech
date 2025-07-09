@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Claudiasals/MiaTech#readme",
   "dependencies": {
-    "simple-tts-mp3": "^1.1.0"
+    "simple-tts-mp3": "^1.1.0",
+    "xml-js": "^1.6.11"
   }
 }

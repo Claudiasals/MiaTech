@@ -19,5 +19,6 @@ let number = 12;
 }
 console.log(number);
 
-/*Viene stampata prima la variablie all'interno del blocco*/
+/*Sono due entità differenti*/
 
+let 
