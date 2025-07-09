@@ -21,4 +21,12 @@ console.log(number);
 
 /*Sono due entità differenti*/
 
-let 
+let outside = 8;
+{
+    let inside = 9;
+    console.log(outside)
+    console.log(inside)
+}
+console.log(outside)
+console.log(inside)
+/* la stampa di inside dall'esterno non viene eseguita xké inside è definito solo all'interno del blocco*/
