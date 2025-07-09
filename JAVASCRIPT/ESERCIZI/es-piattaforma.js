@@ -7,3 +7,4 @@ let frutta = "banana";
 console.log(frutta);
 frutta = "fragola";
 console.log(frutta);
+
