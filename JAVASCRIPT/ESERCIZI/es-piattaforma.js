@@ -88,5 +88,6 @@ while(oddd > 1) {
 
 }
 
-//ESERCIZIO 7
+//ESERCIZIO 7 e 8
 let word = prompt ("inserisci una parola");
+console.log(word.length)
