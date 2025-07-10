@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEZIONI JS</title>
+
+</head>
+
+<body>
+
+    <h1> LEZIONE 12 </h1>
+    <P> LA SOMMA DI TUTTI I NUMERI PARI FINO A 10 (ESCLUSO IL 10) QUANTO FA?</P>
+    <script type="text/javascript">
+        let total = 0;
+        for (riga = 0; riga < 10; riga++) {
+            if (riga % 2 == 0) {
+                total = total + riga;
+            }
+        }
+
+        document.write(total);
+
+        /* for definisce un CredentialsContainer, 
+        ovvero l'operazione si ripete fino a (in questo caso) <10 
+        quindi per i primi 10 indici della variabile. 
+        if detta una condizione, cioè se i valori della 
+        variabile sono pari (% 2 ==0) andranno a sommarsi al totale. */
+
+    </script>
+
+<h1> LEZIONE 14 </h1>
+<p> CICLO "FOR"</p>
+<script type="text/javascript">
+    
+    for (riga = 0; riga < limiteDelFor - 2; riga++) {
+        if (riga % 2 == 0) {
+            total = total + riga;
+        }
+    }
+
+    document.write(total);
+
+    /* for definisce un CredentialsContainer, 
+    ovvero l'operazione si ripete fino a (in questo caso) <10 
+    quindi per i primi 10 indici della variabile. 
+    if detta una condizione, cioè se i valori della 
+    variabile sono pari (% 2 ==0) andranno a sommarsi al totale. */
+
+</script>
+
+<p>Con "limiteDelFor" possiamo modicare appunto il limite del for, in questo caso col -2 si fermerà due cicli prima</p>
+</body>
+
+</html>
