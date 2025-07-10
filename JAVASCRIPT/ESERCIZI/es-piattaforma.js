@@ -91,3 +91,22 @@ while(oddd > 1) {
 //ESERCIZIO 7 e 8
 let word = prompt ("inserisci una parola");
 console.log(word.length)
+
+
+let wordd = prompt ("inserisci una parola");
+for (let i = 0; i < 3; i++)/* parte da 0 e arriva a 3 cicli-perché me lo chiede due volte? */
+console.log(wordd.length)
+
+/* i++	incrementa di 1
+i--	decrementa di 1
+i += 2	incrementa di 2
+i = i + 5	incrementa di 5 */
+
+//ESERCIZIO 9
+let wordLetters = prompt ("inserisci una parola di 5 lettere").trim();
+while (wordLetters.length < 5){
+    wordLetters = prompt("Deve essere di almeno 5 lettere. Riprova:").trim();
+}
+console.log(wordLetters.length) 
+/*non esce il risultato e richiede la parola all'infinito. 
+Ho provato a mettere .trim per togliere eventuali spazi vuoti*/
