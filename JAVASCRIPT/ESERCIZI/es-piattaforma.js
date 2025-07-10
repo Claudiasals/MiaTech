@@ -79,12 +79,14 @@ while(odd <9) {
 
 }
 
-
 // numeri dispari da 10 a 0
-let odd = 11
+let oddd = 11
 
-while(odd > 0) {
-    odd -= 2;  /* decrementa di 2 ogni giro */    
-    console.log(odd);
+while(oddd > 1) {
+    oddd -= 2;  /* decrementa di 2 ogni giro */    
+    console.log(oddd);
 
 }
+
+//ESERCIZIO 7
+let word = prompt ("inserisci una parola");
