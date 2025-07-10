@@ -110,3 +110,11 @@ while (wordLetters.length < 5){
 console.log(wordLetters.length) 
 /*non esce il risultato e richiede la parola all'infinito. 
 Ho provato a mettere .trim per togliere eventuali spazi vuoti*/
+
+let wordLetter;
+
+do {
+  wordLetter = prompt("Inserisci una parola di almeno 5 lettere:").trim();
+} while (wordLetter.length < 5);
+
+console.log("Lunghezza:", wordLetter.length);
