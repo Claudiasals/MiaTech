@@ -37,7 +37,8 @@ const evenNumbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 for (let i = 0; i < evenNumbers.length; i++) {
     if (evenNumbers[i] % 2 === 0) { /* Se il numero in posizione i è pari, 
         allora esegui il codice dentro le parentesi { ... }, 
-        in qst caso il console.log, quindi stampa */
+        in qst caso il console.log, quindi stampa.
+        %2 === 0 significa che il numero è divisibile per 2 con resto di 0 */
     
       console.log(evenNumbers[i]);
 }
