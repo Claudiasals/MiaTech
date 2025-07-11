@@ -31,7 +31,7 @@ if (score < 59) {
 */
 
 //ESERCIZIO 12
-//Switch
+//Switch - Verifica il punteggio
 
 let number = parseInt(prompt("scrivi un numero:"));
 switch (true) {
