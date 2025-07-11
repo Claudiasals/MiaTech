@@ -1,16 +1,16 @@
 //ESERCIZIO 10
 /*
-let number = 3; {
+let number = 3; 
     if (number>5){
         console.log("La variabile è maggiore di 5");
     } else {
         console.log("La variabile è minore di 5");
     }
-}
+
 */
 //ESERCIZIO 11
 //Metodo parseInt
-/*let score = parseInt(prompt("scrivi un numero:"));
+/* let score = parseInt(prompt("scrivi un numero:"));
 if (score < 59) {
     document.write("voto insufficiente");
 } else if (score >= 60 && score <= 69) {
@@ -33,20 +33,24 @@ if (score < 59) {
 //ESERCIZIO 12
 //Switch
 
-let = parseInt(prompt("scrivi un numero:")); 
-switch (numero) {
-case < 59: 
-    document.write("voto insufficiente");
-    break
-case >= 60 && case <= 69
-    document.write("voto sufficiente");
-    break
-case >= 70 && case <= 89) 
-    document.write("voto buono")
-    break
-case >= 90 && case <= 100) 
-    document.write("voto ottimo")
-    break
-default: 
-document.write("Numero non valido")
+let number = parseInt(prompt("scrivi un numero:"));
+switch (true) {
+    case number <= 100 && number >= 90:
+        console.log("voto ottimo");
+        break; //per farlo fermare quando non trova una corrispondenza
+
+    case number <= 89 && number >= 70:
+        console.log("voto buono");
+        break;
+
+    case number <= 69 && number >= 60:
+        console.log("voto sufficiente");
+        break;
+
+    case
+        number <= 59:
+        console.log("voto insufficiente");
+        break;
+    default:
+        console.log("Numero non valido")
 }

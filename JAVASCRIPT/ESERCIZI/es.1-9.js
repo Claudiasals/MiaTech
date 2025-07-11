@@ -48,25 +48,27 @@ for (let i = 0; i < evenNumbers.length; i++) {
 //ESERCIZIO 5 ALTRE PROVE
 
 
-for (let even = 0; even < 14; even++) {
+for (let even = 0; even < 20; even++) {
     /* for (inizio; condizione; aggiornamento):
     inizia dal valore con indice 0, 
     prosegue fino al valore con indice inferiore a 20 quindi 19, 
     aggiorna ad ogni ciclo, "++" sarebbe l'abbreviazione di "even + 1",
     dunque ad ogni giro/ciclo va avanti di 1 ciclo */
-
     if (even % 2 === 0) {
         console.log(even);
 
     }
 }
 
-for (let even = 0; even < 10; even += 2)
-    console.log(even) 
+for (let even = 0; even < 20; even += 2) {
+    console.log(even)
+}
+   
 /* even parte da 0 quindi aggiungendo ogni volta 2 (even += 2) 
 avremo tutti i numeri pari fino a 10 (fino al nono indice) */
 
 
+for 
 
 //ESERCIZIO 6 
 
@@ -87,6 +89,17 @@ while(oddd > 1) {
     console.log(oddd);
 
 }
+
+let start = 10;
+
+while (start > 0) {
+  if (start % 2 !== 0) {
+    console.log(start);
+  }
+
+  start--
+}
+
 
 //ESERCIZIO 7 e 8
 let word = prompt ("inserisci una parola");
