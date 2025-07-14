@@ -22,3 +22,7 @@ switch (true) {
     default:
         console.log("Numero non valido")
 }
+
+//ES array di numeri
+let numberArr = [3, 4, 56, 5, 78, 3;];
+console.log(numberArr);
