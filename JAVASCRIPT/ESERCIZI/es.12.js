@@ -1,6 +1,6 @@
 //ESERCIZIO 12
 //Switch - Verifica il punteggio
-
+/*
 let number = parseInt(prompt("scrivi un numero:"));
 switch (true) {
     case number <= 100 && number >= 90:
@@ -22,7 +22,7 @@ switch (true) {
     default:
         console.log("Numero non valido")
 }
-
+*/
 //ES array di numeri
-let numberArr = [3, 4, 56, 5, 78, 3;];
+let numberArr = [3, 4, 56, 5, 78, 3];
 console.log(numberArr);
