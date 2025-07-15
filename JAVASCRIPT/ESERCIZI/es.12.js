@@ -45,6 +45,6 @@ console.log(sum);
 
 //ES ARRAY REVERSE con ciclo FOR
 let numbersArr = [3, 4, 56, 5, 78, 3];
-let reverse = <= nunberArr.length;
+let reverse = <= numberArr.length;
 for (let i <= numberArr.length -1; i++;   )
     console.log(reverse)
