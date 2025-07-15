@@ -23,9 +23,11 @@ switch (true) {
         console.log("Numero non valido")
 }
 */
+
 //ES array somma di numeri
 let numberArr = [3, 4, 56, 5, 78, 3];
-let sum = 0; //var con valore iniziale 0, inizia a 0 perché non abbiamo ancora sommato nientwe. Che terrà conto, sevre a salvare la somma totale degli array
+let sum = 0; //var con valore iniziale 0, inizia a 0 perché non abbiamo ancora sommato niente. 
+//Che terrà il conto, sevre a salvare la somma totale degli array.
 for (let i = 0; i < numberArr.length; i++) {
     /* inizializziamo la var i alla pozizione 0; 
     poi diciamo a i di continuare finché è più piccolo 
@@ -40,3 +42,9 @@ for (let i = 0; i < numberArr.length; i++) {
     ➕ e salva il risultato dentro sum di nuovo. */
 }
 console.log(sum);
+
+//ES ARRAY REVERSE con ciclo FOR
+let numbersArr = [3, 4, 56, 5, 78, 3];
+let reverse = <= nunberArr.length;
+for (let i <= numberArr.length -1; i++;   )
+    console.log(reverse)
