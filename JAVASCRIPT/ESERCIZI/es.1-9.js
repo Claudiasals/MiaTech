@@ -131,3 +131,19 @@ do {
 } while (wordLetter.length < 5);
 
 console.log("Lunghezza:", wordLetter.length);
+
+
+//ESERCIZIO CORRETTO
+let number = parseInt(prompt("scrivi un numero:"));
+
+switch (true) {
+  case number <= 100 && number >= 90:
+    console.log("voto ottimo");
+    break;
+  case number <= 89 && number >= 80:
+    console.log("voto buono");
+    break;
+  default:
+    console.log('voto scarso');
+    break;
+}
