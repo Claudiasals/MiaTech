@@ -16,3 +16,11 @@ prende in considerazione la lunghezza dell'array in generale.
 proseguire finché i è maggiore o uguale a 0.
 - i-- : che significa che ad ogni ciclo deve andare dietro di 1, 
 */
+
+//ES. ARRAY PROMPT 5 PAROLE
+let fivewords = [];
+for (let i = 0; i < 5; i++) {
+  let word = prompt("inserisci una parola");
+  fivewords.push(word); /* push: per far aggiungere le parole nell'array*/
+}
+console.log(fivewords);
