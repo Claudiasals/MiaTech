@@ -37,5 +37,7 @@ console.log(person);
 console.log(person.age);
 
 person.age = 26;
-
 console.log(person.age);
+
+person.job = "consulente";
+console.log(person.job); 
