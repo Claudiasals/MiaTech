@@ -33,3 +33,5 @@ const person = {
   city: "Torre Ovo"
 };
 console.log(person);
+
+console.log(person.age);
