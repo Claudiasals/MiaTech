@@ -24,3 +24,12 @@ for (let i = 0; i < 5; i++) {
   fivewords.push(word); /* push: per far aggiungere le parole nell'array*/
 }
 console.log(fivewords);
+
+//ES. CREA OGGETTO PERSON
+
+const person = {
+  name: "Lidia",
+  age: 25,
+  city: "Torre Ovo"
+};
+console.log(person);
