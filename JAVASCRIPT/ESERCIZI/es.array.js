@@ -17,6 +17,9 @@ proseguire finché i è maggiore o uguale a 0.
 - i-- : che significa che ad ogni ciclo deve andare dietro di 1, 
 */
 
+
+
+
 //ES. ARRAY PROMPT 5 PAROLE
 let fivewords = [];
 for (let i = 0; i < 5; i++) {
@@ -39,6 +42,7 @@ for (let i = 0; i < fivewords.length; i++) {
 
 
 
+
 //ES. CREA OGGETTO PERSON
 
 const person = {
@@ -55,6 +59,11 @@ console.log(person.age);
 
 person.job = "consulente";
 console.log(person.job); 
+
+
+
+
+
 
 // FOREACH E MAP
 
@@ -87,3 +96,10 @@ la funzione viene “eseguita” da map perché è passata come argomento.
 "Passata come argomento" significa che una funzione viene data in input 
 a un'altra funzione, come se fosse un valore o una variabile.
 In questo caso "forEach" e "map" ricevono in input la funzione anonima: (function(value) { console.log(value); }) */
+
+
+
+
+
+
+
