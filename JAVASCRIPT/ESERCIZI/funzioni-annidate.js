@@ -15,30 +15,4 @@ function outerFunction(x, initialValue) {
 
 // cunter: metodi increment e decrement
 
-function createCounter () {
-        //Definiamo una funzione chiamata createCounter
-        //che serve per creare un nuovo contatore
-      
-        let count = 0;
-        //Questa è la var locale che tiene traccia del valore attuale del contatore
-        //Inizia da 0 e NON è accessibile da fuori
-      
-        return {
-          //La funzione restituisce un oggetto con due metodi
-      
-          increment: function() {
-            //Metodo chiamato "increment" che aumenta count di 1
-            count++;           
-            return count;       
-            //restituisce il nuovo valore
-          },
-      
-          decrement: function() {
-            //Metodo chiamato "decrement" che diminuisce count di 1
-            count--;           
-            return count;       
-            //restituisce il nuovo valore
-          }
-        };
-      }
-      
+
