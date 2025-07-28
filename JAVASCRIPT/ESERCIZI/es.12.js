@@ -42,20 +42,3 @@ for (let i = 0; i < numberArr.length; i++) {
     ➕ e salva il risultato dentro sum di nuovo. */
 }
 console.log(sum);
-
-// es. object.keys e object.values
-
-const student = {
-name: "Filippo",
-age: 34,
-grade: "laurea"
-};
-
-const keys = Object.keys(student); 
-//"object.keys" è un metodo integrato che restituisce un arrey 
-//con le chiavi, ovvero tutte le proprietà incuse nell'oggetto
-
-console.log (keys)
-
-const values = Object.values(student);
-console.log (values)
