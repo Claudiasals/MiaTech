@@ -43,9 +43,9 @@ for (let i = 0; i < numberArr.length; i++) {
 }
 console.log(sum);
 
-// es. object.keys
+// es. object.keys e object.values
 
-const student {
+const student = {
 name: "Filippo",
 age: 34,
 grade: "laurea"
@@ -56,3 +56,6 @@ const keys = Object.keys(student);
 //con le chiavi, ovvero tutte le proprietà incuse nell'oggetto
 
 console.log (keys)
+
+const values = Object.values(student);
+console.log (values)
