@@ -25,6 +25,20 @@ for (let i = 0; i < 5; i++) {
 }
 console.log(fivewords);
 
+for (let i = 0; i < fivewords.length; i++) {
+  if (fivewords[i].length % 2 !== 0) {  
+    // controllo se la lunghezza è dispari
+    console.log(fivewords[i]);  
+    // stampo la parola se ha lunghezza dispari
+  }
+}
+// fivewords[i].length: ogni richiamo è la i (posizione) successiva, quindi 
+// con questa dicitura contiamo le lettere della parola alla posiz. corrente
+// % 2 !== 0 significa che se il resto della div x 2 non è 0 allora è dispari
+
+
+
+
 //ES. CREA OGGETTO PERSON
 
 const person = {
