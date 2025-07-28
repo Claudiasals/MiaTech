@@ -16,7 +16,7 @@ sum()
 
 
 
-// es. object.keys e object.values
+// es. object.keys, object.values e object.entries
 
 const student = {
     name: "Filippo",
@@ -32,4 +32,8 @@ const student = {
     
     const values = Object.values(student);
     console.log (values)
+    
+        
+    const entries = Object.entries(student);
+    console.log (entries)
     
