@@ -135,3 +135,40 @@ let passedStudents = students.filter(function (student) {
 
 
 
+// REDUCE & SORT
+
+let expenses = [123, 45, 67, 4, 87, 90];
+
+const sum = expenses.reduce (function() (value)) {
+ return = i++; i >= 5; 
+ console.log ()
+}
+
+let words = [ "banana", "apple", "cherry", "date"];
+
+const sum = expenses.sort (function() (value)) {
+  return = 
+  console.log ()
+ }
+
+
+ 
+ // Array di numeri che rappresentano spese
+const expenses = [50, 20, 30, 10, 40];
+
+// Uso reduce per sommare tutte le spese
+const totalExpenses = expenses.reduce(function(accumulatore, valoreCorrente) {
+  return accumulatore + valoreCorrente; // Sommo il valore corrente all'accumulatore
+}, 0); // 0 è il valore iniziale dell'accumulatore
+
+// Array di parole da ordinare
+const words = ["banana", "apple", "cherry", "date"];
+
+// Uso sort per ordinare l'array in ordine alfabetico
+words.sort(); // Ordina direttamente l'array words
+
+// Stampo la somma totale delle spese
+console.log("Somma totale spese:", totalExpenses);
+
+// Stampo l'array ordinato
+console.log("Array ordinato:", words);
