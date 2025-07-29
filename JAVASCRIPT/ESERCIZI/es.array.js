@@ -29,9 +29,9 @@ for (let i = 0; i < 5; i++) {
 console.log(fivewords);
 
 for (let i = 0; i < fivewords.length; i++) {
-  if (fivewords[i].length % 2 !== 0) {  
+  if (fivewords[i].length % 2 !== 0) {
     // controllo se la lunghezza è dispari
-    console.log(fivewords[i]);  
+    console.log(fivewords[i]);
     // stampo la parola se ha lunghezza dispari
   }
 }
@@ -58,7 +58,7 @@ person.age = 26;
 console.log(person.age);
 
 person.job = "consulente";
-console.log(person.job); 
+console.log(person.job);
 
 
 
@@ -67,26 +67,26 @@ console.log(person.job);
 
 // FOREACH E MAP
 
-    /* forEach — per fare qualcosa con ogni elemento, è un metodo degli array in JavaScript.
-    Serve per eseguire una funzione su ogni elemento dell’array. */
+/* forEach — per fare qualcosa con ogni elemento, è un metodo degli array in JavaScript.
+Serve per eseguire una funzione su ogni elemento dell’array. */
 /* map —  è un metodo degli array per trasformare e creare un nuovo array.
 Serve per trasformare ogni elemento dell’array in un nuovo valore. Restituisce un nuovo array. */
 
 let numbers = [1, 2, 3, 4, 5];
 // Uso forEach per moltiplicare ogni numero per 2 ( nomevariabile.forEach(...) ) 
-numbers.forEach(function(value) { /* "value" è il nome che do al parametro, 
+numbers.forEach(function (value) { /* "value" è il nome che do al parametro, 
   si riferisce all'elemento dell'array, ad ogni giro passerà all'elemento successivo
   scorrendoli tutti. Scrivo una funzione anonima solo per dare le istruzioni */
   console.log(value * 2); // Stampa il risultato dell'elemento x 2: 2, 4, 6, 8, 10
 });
 
 // Uso map per creare un nuovo array con i quadrati dei numeri ( nomevariabile.map(...) )
-let squaredNumbers = numbers.map(function(value) { /* Scrivo una funzione anonima solo per 
+let squaredNumbers = numbers.map(function (value) { /* Scrivo una funzione anonima solo per 
   dare le istruzioni su come modificare l'array*/
   return value * value; // gli diciamo di rimandarci il quadrato di ogni numero
 });
 
-console.log(squaredNumbers); 
+console.log(squaredNumbers);
 // Stampa un nuovo array: [1, 4, 9, 16, 25]
 
 /* In questi casi non serve richiamare la funzion, 
