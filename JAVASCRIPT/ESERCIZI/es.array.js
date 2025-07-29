@@ -101,5 +101,37 @@ In questo caso "forEach" e "map" ricevono in input la funzione anonima: (functio
 
 
 
+// FILTER & FIND
+
+/* Callback
+È una funzione che passi come argomento a un'altra funzione.
+Viene chiamata (eseguita) all'interno di quella funzione più grande. */
+
+
+let students = [
+  { name: "Sofia", grade: "degree" },
+  { name: "Greta", grade: "degree" },
+  { name: "Jenny", grade: "degree" },
+];
+
+
+// filter serve per ottenere solo gli studenti con grade >= 60
+let passedStudents = students.filter(function (student) {
+  return student.grade >= 60;
+  /* .filter(...) restituisce un nuovo array con tutti 
+  gli studenti che rispettano la condizione (grade >= 60). */
+  /* student è il nome scelto per il parametro temporaneo 
+  che rappresenta ogni oggetto dell'array durante il ciclo. */
+
+  // find serve per trovare il primo studente dell'array con grade < 60
+  let failedStudent = students.find(function (student) {
+    return student.grade < 60;
+    /* .find(...) restituisce solo il primo studente dell'array
+    che rispetta la condizione (grade < 60). */
+
+    console.log("Studenti promossi:", passedStudents);
+    console.log("Primo studente bocciato:", failedStudent);
+
+
 
 
