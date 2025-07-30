@@ -98,7 +98,28 @@ a un'altra funzione, come se fosse un valore o una variabile.
 In questo caso "forEach" e "map" ricevono in input la funzione anonima: (function(value) { console.log(value); }) */
 
 
+// con ARROW FUNCTION
+// FOREACH E MAP
 
+/* forEach — per fare qualcosa con ogni elemento, è un metodo degli array in JavaScript.
+Serve per eseguire una funzione su ogni elemento dell’array. */
+/* map —  è un metodo degli array per trasformare e creare un nuovo array.
+Serve per trasformare ogni elemento dell’array in un nuovo valore. Restituisce un nuovo array. */
+
+let numbers = [1, 2, 3, 4, 5];
+numbers.forEach (value) => {  
+  
+ return value * 2;
+
+ console.log(value * 2); 
+};
+
+let squaredNumbers = numbers.map (value) => { 
+  return value * value; 
+};
+
+console.log(squaredNumbers);
+// Stampa un nuovo array: [1, 4, 9, 16, 25]
 
 
 // FILTER & FIND
@@ -152,7 +173,7 @@ const sum = expenses.sort (function() (value)) {
  }
 
 
- 
+
  // Array di numeri che rappresentano spese
 const expenses = [50, 20, 30, 10, 40];
 
