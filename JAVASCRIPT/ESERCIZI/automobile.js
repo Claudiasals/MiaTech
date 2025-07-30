@@ -1,13 +1,13 @@
 class Automobile {
-    constructor(marca, modello, anno) {
+    constructor(marca, modello, anno, chilometraggio) {
         this.marca = marca;
         this.modello = modello;
         this.anno = anno;
-        this.chilometraggio = 0;
+        this.chilometraggio = chilometraggio;
     }
 
     descrizione() {
-        return ` Marca: ${this.marca}, Modello:${this.modello}, Anno:${this.anno}`;
+        return `Marca: ${this.marca}, Modello:${this.modello}, Anno:${this.anno}`;
     }
 
     aggiungiChilometri(km) {
@@ -15,23 +15,24 @@ class Automobile {
     }
     mostraChilometraggio() {
         return `Chilometraggio: ${this.chilometraggio}`;
-    }       
+    }
 }
 class Elettrica extends Automobile {
-    constructor(marca, modello, anno, km, autonomia) {
+    constructor(marca, modello, anno, chilometraggio) {
         super(marca, modello, anno, km);
-        this.autonomia = 0;
+        this.autonomia = autonomia;
     }
 
     descrizione() {
-        return `Marca: ${this.marca}, Modello:${this.modello}, Anno:${this.anno}, Autonomia:${this.autonomia}`;
+        return super.descrizione() + `Autonomia:${this.autonomia}`;
     }
 
- ricarica(km) {
-        this.autonomia += km;  
+    ricarica(km) {
+        this.autonomia += km;
     }
- 
+
 }
+
 
 
 

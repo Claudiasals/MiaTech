@@ -13,7 +13,15 @@ function outerFunction(x, initialValue) {
     // outerFunction restituisce innerFunction
 }
 
+
+console.log(outerFunction(5)(7));
+
+
+
 // cunter: metodi increment e decrement
+
+
+
 
 function createCounter () {
     //Definiamo una funzione chiamata createCounter
