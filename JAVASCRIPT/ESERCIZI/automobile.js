@@ -19,7 +19,7 @@ class Automobile {
 }
 class Elettrica extends Automobile {
     constructor(marca, modello, anno, chilometraggio) {
-        super(marca, modello, anno, km);
+        super(marca, modello, anno, chilometraggio);
         this.autonomia = autonomia;
     }
 
