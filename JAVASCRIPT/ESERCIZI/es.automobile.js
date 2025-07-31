@@ -6,6 +6,18 @@ class Automobile {
         this.chilometraggio = chilometraggio;
     }
 
+    #calcolaEtà() {
+        //anno corrente - this.anno 
+      return  new Date().getFullYear() - this.anno
+      // new Date().getFullYear() crea un oggetto che su js ci dice l'anno corrente
+
+    }
+
+
+    mostraEtà() {
+        return this.#calcolaEtà();
+    }
+
     descrizione() {
         return `Marca: ${this.marca}, Modello:${this.modello}, Anno:${this.anno}`;
     }
@@ -21,7 +33,7 @@ class Automobile {
 /* aggiungo automobile.prototype.saluta per inserire il metodo 
 "saluta" in tutte le istanze di automobile */
 
-Automobile.prototype.saluta = function() {
+Automobile.prototype.saluta = function () {
     return `ciao, sono ${this.marca} ${this.modello}.`;
 };
 
@@ -49,4 +61,8 @@ let auto = new Automobile("Fiat", "Panda", 2020, 30000);
 let autoElet = new Elettrica("Tesla", "Model", 2022, 15000, 400);
 
 console.log(auto.saluta()); // Ciao! Sono una Fiat Panda.
-console.log(autoElet.saluta()); // Ciao! Sono una Tesla Model 3.
+console.log(autoElet.saluta()); // Ciao! Sono una Tesla Model 3.    
+
+
+const miaAuto = new Automobile("Fiat", "Punto", 2018, 25000);
+console.log("Età dell'auto:", miaAuto.mostraEtà());
