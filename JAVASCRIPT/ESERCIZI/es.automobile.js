@@ -18,7 +18,8 @@ class Automobile {
     }
 }
 
-// aggiungo automobile.prototype.saluta per inserire il metodo saluta in tutte le istanze di automobile
+/* aggiungo automobile.prototype.saluta per inserire il metodo 
+"saluta" in tutte le istanze di automobile */
 
 Automobile.prototype.saluta = function() {
     return `ciao, sono ${this.marca} ${this.modello}.`;
