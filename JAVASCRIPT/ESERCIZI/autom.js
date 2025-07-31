@@ -42,6 +42,7 @@ class Elettrica extends Automobile {
 
 }
 
+// creo un istanza dalla classe e una dalla sorttoclasse e le verifico con console.log
 let auto1 = new Automobile("Fiat", "Panda", 2020, 30000);
 let tesla = new Elettrica("Tesla", "Model", 2022, 15000, 400);
 
