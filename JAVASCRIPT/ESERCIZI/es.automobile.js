@@ -63,12 +63,12 @@ class Elettrica extends Automobile {
 
 //perché lo metto qui sotto il pubblico e il protetto nell automobile? 
 overChilometraggio () {
-    if (this._controllaChilometri()) { // if al posto di return se c'è una condizione? 
+    if (this._controllaChilometri()) { // if per la conizione e poi il return 
         console.warn("Il chilometraggio supera i 100.000 km!"); /* console.warm è una funzione di JS
          che serve a mostrare un avviso (warning) nella console del browser. */
          return true;
         }
-        return false;
+        return false; // return con booleani se c'è condizione
 
     } 
     descrizione() {
