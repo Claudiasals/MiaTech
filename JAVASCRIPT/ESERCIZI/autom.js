@@ -17,8 +17,17 @@ class Automobile {
         return `Chilometraggio: ${this.chilometraggio}`;
     }
 }
+
+// aggiungo automobile.prototype.saluta per inserire il metodo saluta in tutte le istanze di automobile
+
+Automobile.prototype.saluta = function() {
+    return `ciao, sono ${this.marca} ${this.modello}.`;
+};
+
+
+
 class Elettrica extends Automobile {
-    constructor(marca, modello, anno, chilometraggio) {
+    constructor(marca, modello, anno, chilometraggio, autonomia) {
         super(marca, modello, anno, chilometraggio);
         this.autonomia = autonomia;
     }
@@ -32,3 +41,9 @@ class Elettrica extends Automobile {
     }
 
 }
+
+let auto1 = new Automobile("Fiat", "Panda", 2020, 30000);
+let tesla = new Elettrica("Tesla", "Model", 2022, 15000, 400);
+
+console.log(auto1.saluta()); // Ciao! Sono una Fiat Panda.
+console.log(tesla.saluta()); // Ciao! Sono una Tesla Model 3.

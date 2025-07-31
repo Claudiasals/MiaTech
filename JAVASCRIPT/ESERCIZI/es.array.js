@@ -122,6 +122,23 @@ console.log(squaredNumbers);
 // Stampa un nuovo array: [1, 4, 9, 16, 25]
 
 
+// corretto da chat gpt
+
+let numbers = [1, 2, 3, 4, 5];
+
+// Con forEach e arrow function
+numbers.forEach((value) => {
+  console.log(value * 2); // Stampa: 2, 4, 6, 8, 10
+});
+
+// Con map e arrow function
+let squaredNumbers = numbers.map(value => value * value);
+
+console.log(squaredNumbers); // Stampa: [1, 4, 9, 16, 25]
+
+
+
+
 // FILTER & FIND
 
 /* Callback
