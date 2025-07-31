@@ -42,9 +42,10 @@ class Elettrica extends Automobile {
 
 }
 
-// creo un istanza dalla classe e una dalla sorttoclasse e le verifico con console.log
-let auto1 = new Automobile("Fiat", "Panda", 2020, 30000);
-let tesla = new Elettrica("Tesla", "Model", 2022, 15000, 400);
+/* creo un istanza dalla classe e una dalla sorttoclasse e 
+verifico con console.log che il metodo saluta funzioni */
+let auto = new Automobile("Fiat", "Panda", 2020, 30000);
+let autoElet = new Elettrica("Tesla", "Model", 2022, 15000, 400);
 
-console.log(auto1.saluta()); // Ciao! Sono una Fiat Panda.
-console.log(tesla.saluta()); // Ciao! Sono una Tesla Model 3.
+console.log(auto.saluta()); // Ciao! Sono una Fiat Panda.
+console.log(autoElet.saluta()); // Ciao! Sono una Tesla Model 3.
