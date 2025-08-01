@@ -6,6 +6,27 @@ class Automobile {
         this.chilometraggio = chilometraggio;
     }
 
+    static confrontaChilometraggio(auto1, auto2){
+        if (auto1.chilometraggio > auto2.chilometraggio) {
+            return auto1; //se auto1 ha magg. km return auto1
+        } else if (auto2.chilometraggio > auto1.chilometraggio) {
+            return auto2;//se auto2 ha magg. km return auto1
+        } else {
+            return null; // Quindi se hanno lo stesso chilometraggio
+        }
+    }
+ 
+    overChilometraggio() {
+        if (this._controllaChilometri()) { // if per la conizione e poi il return 
+            console.warn("Il chilometraggio supera i 100.000 km!"); 
+            /* console.warm è una funzione di JS che serve a
+             mostrare un avviso (warning) nella console del browser. */
+            return true;
+        }
+        return false; // return con booleani se c'è condizione
+
+    }
+
 
     /* Metodo protetto
 Aggiungi un metodo protetto _controllaChilometri() alla classe Automobile che verifica 
@@ -90,3 +111,17 @@ const miaAuto = new Automobile("Fiat", "Punto", 2018, 25000);
 console.log("Età dell'auto:", miaAuto.mostraEtà());
 
 console.log(autoElet.overChilometraggio());
+
+   // METODO STATICO: creo 2 istanze auto1 e auto2:
+   const auto1 = new Automobile("Fiat", "Panda", 2020, 120000);
+   const auto2 = new Automobile("Toyota", "One", 2019, 120000);
+// creiamo la const "risultato" per eseguire il metodo statico e quindi fare il confronto
+   const risultato = Automobile.confrontaChilometraggio(auto1, auto2);
+  
+
+   // verifica metodo statico
+   if (risultato) {
+    console.log("Ha più km:", risultato.marca, risultato.chilometraggio);
+  } else {
+    console.log("Le due auto hanno lo stesso chilometraggio.");
+  }
