@@ -13,26 +13,21 @@ se il chilometraggio supera un certo valore (ad esempio 100,000 km) e restituisc
 un avviso. Utilizza questo metodo nella sottoclasse Elettrica 
 per mostrare un avviso se il chilometraggio supera il limite. */
 
-_controllaChilometri() {
-    return this.chilometraggio > 100000;
-}
-
+    _controllaChilometri() {
+        return this.chilometraggio > 100000;
+    }
 
     #calcolaEtà() {
         //anno corrente - this.anno 
-      return  new Date().getFullYear() - this.anno
-      // new Date().getFullYear() crea un oggetto che su js ci dice l'anno corrente
-
+        return new Date().getFullYear() - this.anno
+        // new Date().getFullYear() crea un oggetto che su js ci dice l'anno corrente
     }
-
 
     mostraEtà() {
         return this.#calcolaEtà();
     }
 
 
-
-   
     descrizione() {
         return `Marca: ${this.marca}, Modello:${this.modello}, Anno:${this.anno}`;
     }
@@ -61,16 +56,17 @@ class Elettrica extends Automobile {
     }
 
 
-//perché lo metto qui sotto il pubblico e il protetto nell automobile? 
-overChilometraggio () {
-    if (this._controllaChilometri()) { // if per la conizione e poi il return 
-        console.warn("Il chilometraggio supera i 100.000 km!"); /* console.warm è una funzione di JS
+    //perché lo metto qui sotto il pubblico e il protetto nell automobile? 
+    overChilometraggio() {
+        if (this._controllaChilometri()) { // if per la conizione e poi il return 
+            console.warn("Il chilometraggio supera i 100.000 km!"); /* console.warm è una funzione di JS
          che serve a mostrare un avviso (warning) nella console del browser. */
-         return true;
+            return true;
         }
         return false; // return con booleani se c'è condizione
 
-    } 
+    }
+
     descrizione() {
         return super.descrizione() + `Autonomia:${this.autonomia}`;
     }
