@@ -17,6 +17,7 @@ class Automobile {
         }
     }
 
+
     overChilometraggio() {
         if (this._controllaChilometri()) { // if per la conizione e poi il return 
             console.warn("Il chilometraggio supera i 100.000 km!");
@@ -73,6 +74,9 @@ per mostrare un avviso se il chilometraggio supera il limite. */
         return this.#contatoreChiamate;
     }
 
+    get chilometri() {
+        return this.chilometraggio;
+    }
 
 }
 
@@ -104,7 +108,7 @@ class Elettrica extends Automobile {
     }
 
     descrizione() {
-        return super.descrizione() + `Autonomia:${this.autonomia}`;
+        return super.descrizione() + ` Autonomia:${this.autonomia}`;
     }
 
     ricarica(km) {
