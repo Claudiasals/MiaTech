@@ -7,6 +7,9 @@ class Automobile {
         this.chilometraggio = chilometraggio;
     }
 
+
+
+
     static confrontaChilometraggio(auto1, auto2) {
         if (auto1.chilometraggio > auto2.chilometraggio) {
             return auto1; //se auto1 ha magg. km return auto1
@@ -57,6 +60,8 @@ per mostrare un avviso se il chilometraggio supera il limite. */
     }
 
     aggiungiChilometri(km) {
+        this.#incrementaContatore(); // <--- incremento contatore
+
         this.chilometraggio += km;  // aumento i chilometri
     }
     mostraChilometraggio() {
@@ -134,5 +139,6 @@ if (risultato) {
 } else {
     console.log("Le due auto hanno lo stesso chilometraggio.");
 }
+
 
 
