@@ -1,4 +1,5 @@
 class Automobile {
+    #contatoreChiamate = 0;
     constructor(marca, modello, anno, chilometraggio) {
         this.marca = marca;
         this.modello = modello;
@@ -6,7 +7,7 @@ class Automobile {
         this.chilometraggio = chilometraggio;
     }
 
-    static confrontaChilometraggio(auto1, auto2){
+    static confrontaChilometraggio(auto1, auto2) {
         if (auto1.chilometraggio > auto2.chilometraggio) {
             return auto1; //se auto1 ha magg. km return auto1
         } else if (auto2.chilometraggio > auto1.chilometraggio) {
@@ -15,10 +16,10 @@ class Automobile {
             return null; // Quindi se hanno lo stesso chilometraggio
         }
     }
- 
+
     overChilometraggio() {
         if (this._controllaChilometri()) { // if per la conizione e poi il return 
-            console.warn("Il chilometraggio supera i 100.000 km!"); 
+            console.warn("Il chilometraggio supera i 100.000 km!");
             /* console.warm è una funzione di JS che serve a
              mostrare un avviso (warning) nella console del browser. */
             return true;
@@ -35,6 +36,8 @@ un avviso. Utilizza questo metodo nella sottoclasse Elettrica
 per mostrare un avviso se il chilometraggio supera il limite. */
 
     _controllaChilometri() {
+        this.#incrementaContatore();
+
         return this.chilometraggio > 100000;
     }
 
@@ -59,6 +62,11 @@ per mostrare un avviso se il chilometraggio supera il limite. */
     mostraChilometraggio() {
         return `Chilometraggio: ${this.chilometraggio}`;
     }
+
+    #incrementaContatore() {
+        this.#contatoreChiamate++;
+    }
+
 }
 
 /* aggiungo automobile.prototype.saluta per inserire il metodo 
@@ -96,6 +104,7 @@ class Elettrica extends Automobile {
         this.autonomia += km;
     }
 
+
 }
 
 /* creo un istanza dalla classe e una dalla sottoclasse e 
@@ -112,16 +121,18 @@ console.log("Età dell'auto:", miaAuto.mostraEtà());
 
 console.log(autoElet.overChilometraggio());
 
-   // METODO STATICO: creo 2 istanze auto1 e auto2:
-   const auto1 = new Automobile("Fiat", "Panda", 2020, 120000);
-   const auto2 = new Automobile("Toyota", "One", 2019, 120000);
+// METODO STATICO: creo 2 istanze auto1 e auto2:
+const auto1 = new Automobile("Fiat", "Panda", 2020, 120000);
+const auto2 = new Automobile("Toyota", "One", 2019, 120000);
 // creiamo la const "risultato" per eseguire il metodo statico e quindi fare il confronto
-   const risultato = Automobile.confrontaChilometraggio(auto1, auto2);
-  
+const risultato = Automobile.confrontaChilometraggio(auto1, auto2);
 
-   // verifica metodo statico
-   if (risultato) {
+
+// verifica metodo statico
+if (risultato) {
     console.log("Ha più km:", risultato.marca, risultato.chilometraggio);
-  } else {
+} else {
     console.log("Le due auto hanno lo stesso chilometraggio.");
-  }
+}
+
+
