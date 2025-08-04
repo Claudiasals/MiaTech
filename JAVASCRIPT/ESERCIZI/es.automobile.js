@@ -7,9 +7,6 @@ class Automobile {
         this.chilometraggio = chilometraggio;
     }
 
-
-
-
     static confrontaChilometraggio(auto1, auto2) {
         if (auto1.chilometraggio > auto2.chilometraggio) {
             return auto1; //se auto1 ha magg. km return auto1
@@ -71,6 +68,11 @@ per mostrare un avviso se il chilometraggio supera il limite. */
     #incrementaContatore() {
         this.#contatoreChiamate++;
     }
+
+    mostraContatoreChiamate() {
+        return this.#contatoreChiamate;
+    }
+
 
 }
 
