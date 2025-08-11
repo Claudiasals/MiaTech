@@ -129,11 +129,18 @@ class Elettrica extends Automobile {
 }
 
 class Camion extends Automobile {
-    constructor(marca, modello, anno, chilometraggio, ) {
+    constructor(marca, modello, anno, chilometraggio, caricoMassimo) {
         super(marca, modello, anno, chilometraggio);
-     
+        this.caricoMassimo = caricoMassimo;
     }
 
+    descrizione() {
+        return super.descrizione() + ` caricoMassimo:${this.caricoMassimo}`;
+    }
+
+    peso(kg) {
+        this.caricoMassimo += kg;
+    }
 }
 /* creo un istanza dalla classe e una dalla sottoclasse e 
 verifico con console.log che il metodo saluta funzioni */
@@ -163,3 +170,5 @@ if (risultato) {
     console.log("Le due auto hanno lo stesso chilometraggio.");
 }
 
+const Camion1 = new Camion("BMW", "serie1", 2023, 50000, 15000);
+console.log(Camion1.caricoMassimo); // verifico che stampi il caricoMassimo: 15000
