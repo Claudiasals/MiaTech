@@ -91,6 +91,7 @@ per mostrare un avviso se il chilometraggio supera il limite. */
     }
 
 
+
 /* aggiungo automobile.prototype.saluta per inserire il metodo 
 "saluta" in tutte le istanze di automobile */
 
@@ -125,10 +126,15 @@ class Elettrica extends Automobile {
     ricarica(km) {
         this.autonomia += km;
     }
-
-
 }
 
+class Camion extends Automobile {
+    constructor(marca, modello, anno, chilometraggio, ) {
+        super(marca, modello, anno, chilometraggio);
+     
+    }
+
+}
 /* creo un istanza dalla classe e una dalla sottoclasse e 
 verifico con console.log che il metodo saluta funzioni */
 let auto = new Automobile("Fiat", "Panda", 2020, 30000);
