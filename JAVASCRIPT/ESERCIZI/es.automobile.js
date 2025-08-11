@@ -74,11 +74,22 @@ per mostrare un avviso se il chilometraggio supera il limite. */
         return this.#contatoreChiamate;
     }
 
+    
+
     get chilometri() {
         return this.chilometraggio;
     }
+    set chilometri(chilometri) {
+        if (chilometri <= this.chilometraggio) {
+        console.log("Il nuovo nuovo chilometraggio deve essere maggiore del chilometraggio attuale" )
+        } else {
+            this.chilometraggio = chilometri;
+            
+        }
+        }
 
-}
+    }
+
 
 /* aggiungo automobile.prototype.saluta per inserire il metodo 
 "saluta" in tutte le istanze di automobile */
@@ -145,6 +156,4 @@ if (risultato) {
 } else {
     console.log("Le due auto hanno lo stesso chilometraggio.");
 }
-
-
 
