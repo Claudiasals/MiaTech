@@ -33,7 +33,8 @@ console.log(cacio);
 
 //array 4 elementi
 let arreyFor = [1, 22, 3, 44];
-
+/* per estrarre un quinto elemento inesistente nell'array 
+fifth = 5 */
 let [first, second, third, fourth, fifth = 5] = arreyFor;
 
 console.log(first)
@@ -41,3 +42,4 @@ console.log(second)
 console.log(third)
 console.log(fourth)
 console.log(fifth)
+
