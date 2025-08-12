@@ -43,3 +43,16 @@ console.log(third)
 console.log(fourth)
 console.log(fifth)
 
+let person = {
+    name: "Jeff",
+    age: 45,
+    surname: "Potter"
+};
+
+console.log(person);
+
+let {name, surname} = person;
+
+console.log(name); //Jeff
+console.log(surname); //Potter
+console.log(age); //not defined
