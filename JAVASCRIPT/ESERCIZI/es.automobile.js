@@ -7,6 +7,7 @@ class Automobile {
         this.chilometraggio = chilometraggio;
     }
     
+    /*
     static verificaIstanza(auto3, Automobile) {
         if (auto3 instanceof Automobile) {
             return "L'oggetto è un'istanza della classe " + classe.name + ".";
@@ -14,6 +15,7 @@ class Automobile {
             return "L'oggetto NON è un'istanza della classe " + classe.name + ".";
         }
     }
+*/
 
     static confrontaChilometraggio(auto1, auto2) {
         if (auto1.chilometraggio > auto2.chilometraggio) {
