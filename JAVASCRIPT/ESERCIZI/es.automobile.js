@@ -6,6 +6,14 @@ class Automobile {
         this.anno = anno;
         this.chilometraggio = chilometraggio;
     }
+    
+    static verificaIstanza(auto3, Automobile) {
+        if (auto3 instanceof Automobile) {
+            return "L'oggetto è un'istanza della classe " + classe.name + ".";
+        } else {
+            return "L'oggetto NON è un'istanza della classe " + classe.name + ".";
+        }
+    }
 
     static confrontaChilometraggio(auto1, auto2) {
         if (auto1.chilometraggio > auto2.chilometraggio) {
@@ -172,3 +180,12 @@ if (risultato) {
 
 const Camion1 = new Camion("BMW", "serie1", 2023, 50000, 15000);
 console.log(Camion1.caricoMassimo); // verifico che stampi il caricoMassimo: 15000
+
+//es.verifica istanza
+const auto3 = new Automobile("Audi", "q5", 2025, 0);
+const camion2 = new Camion("Volvo", "w3", 2018, 580000);
+
+console.log(auto3 instanceof Automobile);   
+console.log(camion2 instanceof Camion);   
+
+//metodo statico
