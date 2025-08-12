@@ -1,7 +1,8 @@
 //Creo un array di numeri
 const arrayDiNumeri = [1, 3, 45, 6, 54, 87, 12];
 
-//Uso il destructuring per prendere i primi due elementi
+/*Uso il destructuring ([]=nome array o {}= nome obj) 
+per prendere i primi due elementi */
 const [primo, secondo, cacio] = arrayDiNumeri;
 
 /* con il destructuring js crea già le variabili che inserisci 
@@ -12,3 +13,11 @@ che prenderanno rispettivamente il primo, il secondo e il terzo numero dell' arr
 console.log(primo);   // 1
 console.log(secondo); // 3
 console.log(cacio) // 45
+
+/* Il destructuring è una sintassi di JavaScript che ti 
+permette di “spacchettare” valori da array o oggetti 
+(e in realtà anche da altre strutture iterabili) 
+direttamente in variabili. 
+Nel caso degli oggetti non conta l'ordine elle prprietà, 
+quindi il nome della variabile deve corrispondere 
+al nome delle proprietà */
