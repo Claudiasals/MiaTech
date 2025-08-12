@@ -16,7 +16,7 @@ che prenderanno rispettivamente il primo, il secondo e il terzo numero dell' arr
 
 // 3. Stampo le variabili nella console
 console.log(primo);   // 1
-console.log(secondo); // 3
+
 console.log(cacio) // 45
 
 /* Il destructuring è una sintassi di JavaScript che ti 
@@ -29,3 +29,15 @@ al nome delle proprietà */
 
 console.log(primo);
 console.log(cacio);
+
+
+//array 4 elementi
+let arreyFor = [1, 22, 3, 44];
+
+let [first, second, third, fourth, fifth = 5] = arreyFor;
+
+console.log(first)
+console.log(second)
+console.log(third)
+console.log(fourth)
+console.log(fifth)
