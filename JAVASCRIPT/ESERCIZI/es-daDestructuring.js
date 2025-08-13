@@ -201,3 +201,24 @@ let json = '{"model": "Iphone", "display":12, "price": 600, "connectivity":"5g"}
 let jsonObj = JSON.parse(json);
 
 console.log(jsonObj)
+
+//ES. ARREY DI OGGETTI IN FORMATO JSON
+
+// Arrey contenente lista di persone obj in Stringa JSON
+let jsonPersone = `[
+    { "nome": "Clara", "età": 24 },
+    { "nome": "Giulio", "età": 34 },
+    { "nome": "Sara", "età": 29 }
+  ]`;
+  
+  let jsonArrayObj = JSON.parse(jsonPersone);
+
+  console.log(jsonArrayObj)
+
+  jsonArrayObj.push({ "nome": "Carlo", "età": 28 });
+
+  console.log(jsonArrayObj);
+
+  let jsonString2 = JSON.stringify(jsonArrayObj);
+
+  console.log(jsonString2);
