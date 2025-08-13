@@ -125,7 +125,7 @@ let dog = {
     food: "kibble"
 };
 
-let copyDog = {...dog};
+let copyDog = { ...dog };
 copyDog.color = "brown"; /* con gli oggetti non si utilizza 
 .push per aggiungere un nuovo elemento, ma nomeObj.nuovaProprietà */
 
@@ -138,13 +138,13 @@ console.log(copyDog);
 variabile di argomenti in un array. */
 
 function sumArrayArguments(...numbers) { //creo funzione con rest (...)
-return numbers.reduce((x, y) => x + y, 0); //sintassi reduce
+    return numbers.reduce((x, y) => x + y, 0); //sintassi reduce
 };
 /*Il metodo .reduce() "riduce" un array a un unico valore, 
 eseguendo una funzione su ogni elemento e accumulando 
 un risultato finale. */
 console.log(sumArrayArguments(1, 2, 3));
-console.log(sumArrayArguments(1,2,3,4,5,6));
+console.log(sumArrayArguments(1, 2, 3, 4, 5, 6));
 
 
 //ES. DESTRUCTURING ARRAY 
@@ -167,7 +167,7 @@ ho scritto rest dopo i puntini ma può chiamarsi ome vogliamo
 qst var.   (...rest = tutti gli altri elementi restanti, 
 raccolti in un nuovo array). */
 console.log(value);
-console.log(pri); 
+console.log(pri);
 console.log(sec);
 console.log(pri + sec);
 
@@ -181,7 +181,7 @@ let account = {
     tel: 3920339229
 };
 
-let {id, birth, ...theRest} = account;
+let { id, birth, ...theRest } = account;
 console.log(id);
 console.log(birth);
 console.log(theRest);
@@ -210,15 +210,38 @@ let jsonPersone = `[
     { "nome": "Giulio", "età": 34 },
     { "nome": "Sara", "età": 29 }
   ]`;
-  
-  let jsonArrayObj = JSON.parse(jsonPersone); //con JSON.parse converto in array
 
-  console.log(jsonArrayObj)
+let jsonArrayObj = JSON.parse(jsonPersone); //con JSON.parse converto in array
 
-  jsonArrayObj.push({ "nome": "Carlo", "età": 28 }); //.push aggiungo obj all'array
+console.log(jsonArrayObj)
 
-  console.log(jsonArrayObj);
+jsonArrayObj.push({ "nome": "Carlo", "età": 28 }); //.push aggiungo obj all'array
 
-  let jsonString2 = JSON.stringify(jsonArrayObj); //riconverto l'array di obj in stringa JSON
+console.log(jsonArrayObj);
 
-  console.log(jsonString2);
+let jsonString2 = JSON.stringify(jsonArrayObj); //riconverto l'array di obj in stringa JSON
+
+console.log(jsonString2);
+
+
+//ES. STRINGA SEMPLICE CON TEMPLATE LITERALS
+
+let stringa = `{"nomes": "Samanta", "cognome": "Rossi"}`; // creo stringa
+let objStringa = JSON.parse(stringa);
+// converto stringa in obj per creare le due var
+
+const { nomes, cognome } = objStringa; //creo le var
+
+console.log(objStringa);
+console.log(nomes);
+console.log(cognome);
+
+/* SBAGLIATO
+//unisco le due var con spread Operator
+let sumVar = [...nomes, ...cognome];
+
+console.log(sumVar); */
+
+//UNISCO CON TEMPLATE LITERALS
+let sumVar = `${nomes} ${cognome}`;
+console.log(sumVar); 
