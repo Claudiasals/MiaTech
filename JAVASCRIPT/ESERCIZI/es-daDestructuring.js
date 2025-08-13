@@ -80,3 +80,16 @@ let {
 
 console.log(englishGrade);
 console.log(psychologyGrade);
+
+let animals = {
+    species: "dog",
+    food: "kibble",
+    toy: "ball"
+    };
+
+    let { species, food, toy, age = 6} = animals;
+
+    console.log(species);
+    console.log(food);
+    console.log(toy);
+    console.log(age);
