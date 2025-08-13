@@ -194,3 +194,10 @@ console.log(jsonString);
 /* ho creato una nuova variabile che si chiama jsonString 
 che con il comando JSON.stringify(nomeObj) trasforma
 l'obj in una stringa JSON */
+
+//ES. STRINGA JSON in OBJ con JSON.parse
+let json = '{"model": "Iphone", "display":12, "price": 600, "connectivity":"5g"}';
+
+let jsonObj = JSON.parse(json);
+
+console.log(jsonObj)
