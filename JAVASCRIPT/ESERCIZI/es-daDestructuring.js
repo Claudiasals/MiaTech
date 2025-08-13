@@ -187,3 +187,7 @@ console.log(birth);
 console.log(theRest);
 
 
+//ES. CONVERTI OBJ IN STRINGA JSON CON JSON.stringify()
+let jsonString = JSON.stringify(account);
+// UTILIZZO L'OBJ ACCOUNT ^
+console.log(jsonString);
