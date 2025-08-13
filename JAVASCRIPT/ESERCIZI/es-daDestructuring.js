@@ -148,7 +148,7 @@ console.log(sumArrayArguments(1,2,3,4,5,6));
 
 
 //ES. DESTRUCTURING ARRAY 
-
+/*
 let value = [3, 64, 5, 78, 4];
 //destructuring
 let [pri, sec] = value; //non funziona se inserisco numeri al posto di lettere
@@ -157,14 +157,33 @@ console.log(pri);
 console.log(sec);
 console.log(pri + sec);
 
-
+*/
 //ES. DESTRUCTURING ARRAY CON REST OPERATOR
 
 let value = [13, 4, 15, 8, 14];
 //destructuring + rest
-let [pri, sec, ...rest] = value;
-//...rest = tutti gli altri elementi restanti, raccolti in un nuovo array
+let [pri, sec, ...rest] = value; /*... è la sintassi di rest, 
+ho scritto rest dopo i puntini ma può chiamarsi ome vogliamo 
+qst var.   (...rest = tutti gli altri elementi restanti, 
+raccolti in un nuovo array). */
 console.log(value);
 console.log(pri); 
 console.log(sec);
 console.log(pri + sec);
+
+
+//ES. DESTRUCTURING OBJ CON REST OPERATOR
+
+let account = {
+    id: "claude",
+    birth: 1991,
+    email: "claude@gmail.com",
+    tel: 3920339229
+};
+
+let {id, birth, ...theRest} = account;
+console.log(id);
+console.log(birth);
+console.log(theRest);
+
+
