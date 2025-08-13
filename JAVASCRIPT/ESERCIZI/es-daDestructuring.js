@@ -144,3 +144,27 @@ return numbers.reduce((x, y) => x + y, 0); //sintassi reduce
 eseguendo una funzione su ogni elemento e accumulando 
 un risultato finale. */
 console.log(sumArrayArguments(1, 2, 3));
+console.log(sumArrayArguments(1,2,3,4,5,6));
+
+
+//ES. DESTRUCTURING ARRAY 
+
+let value = [3, 64, 5, 78, 4];
+//destructuring
+let [pri, sec] = value; //non funziona se inserisco numeri al posto di lettere
+console.log(value);
+console.log(pri); 
+console.log(sec);
+console.log(pri + sec);
+
+
+//ES. DESTRUCTURING ARRAY CON REST OPERATOR
+
+let value = [13, 4, 15, 8, 14];
+//destructuring + rest
+let [pri, sec, ...rest] = value;
+//...rest = tutti gli altri elementi restanti, raccolti in un nuovo array
+console.log(value);
+console.log(pri); 
+console.log(sec);
+console.log(pri + sec);
