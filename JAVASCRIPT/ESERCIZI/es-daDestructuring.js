@@ -191,3 +191,6 @@ console.log(theRest);
 let jsonString = JSON.stringify(account);
 // UTILIZZO L'OBJ ACCOUNT ^
 console.log(jsonString);
+/* ho creato una nuova variabile che si chiama jsonString 
+che con il comando JSON.stringify(nomeObj) trasforma
+l'obj in una stringa JSON */
