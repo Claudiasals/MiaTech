@@ -131,3 +131,16 @@ copyDog.color = "brown"; /* con gli oggetti non si utilizza
 
 console.log(dog);
 console.log(copyDog);
+
+
+//ES. FUNZIONE REST OPERATOR (...) X SOMMA ARGOMENTI
+/* Il rest operator (...) raccoglie un numero 
+variabile di argomenti in un array. */
+
+function sumArrayArguments(...numbers) { //creo funzione con rest (...)
+return numbers.reduce((x, y) => x + y, 0); //sintassi reduce
+};
+/*Il metodo .reduce() "riduce" un array a un unico valore, 
+eseguendo una funzione su ogni elemento e accumulando 
+un risultato finale. */
+console.log(sumArrayArguments(1, 2, 3));
