@@ -14,7 +14,7 @@ nella parentesi quadra, in questo caso la variabile primo e la variabile secondo
 che prenderanno rispettivamente il primo, il secondo e il terzo numero dell' array
 */
 
-// 3. Stampo le variabili nella console
+// Stampo le variabili nella console
 console.log(primo);   // 1
 
 console.log(cacio) // 45
@@ -271,3 +271,19 @@ Età: ${età}
 Città: ${città}`;
 
 console.log(sommaVar);
+
+//ES. FUNZIONE E TEMPLATE LITERALS
+function persona (obj) {
+return `Nome: ${obj.nome2}, Cognome: ${obj.cognome2}, Età: ${obj.eta2}`;
+}
+
+let oggettoEsempio = { nome2: "Piero", cognome2: "Brown", eta2: 68 };
+
+persona(oggettoEsempio); 
+//chiamo la funzione e le passiamo un argomento, 
+//cioè i dati che la funzione deve usare
+
+let risultato = persona(oggettoEsempio); // salvo il ritorno della funzione
+console.log(risultato);
+//Crep una variabile per salvare il valore che la funzione restituisce.
+
