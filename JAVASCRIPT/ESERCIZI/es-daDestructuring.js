@@ -51,16 +51,16 @@ let person = {
 
 console.log(person);
 
-let {name, surname} = person;
+let { name, surname } = person;
 
 console.log(name); //Jeff xke viene sbarrato name?
 console.log(surname); //Potter
 
 let grades = {
-math: 28,
-english: 20,
-psychology: 30,
-statistics: 28
+    math: 28,
+    english: 20,
+    psychology: 30,
+    statistics: 28
 };
 
 /*
@@ -74,7 +74,7 @@ valori delle proprietà a variabili con nomi diversi.
 Stampare queste variabili nella console. */
 
 let {
-    english: englishGrade, 
+    english: englishGrade,
     psychology: psychologyGrade
 } = grades;
 
@@ -85,11 +85,24 @@ let animals = {
     species: "dog",
     food: "kibble",
     toy: "ball"
-    };
+};
 
-    let { species, food, toy, age = 6} = animals;
+let { species, food, toy, age = 6 } = animals;
 
-    console.log(species);
-    console.log(food);
-    console.log(toy);
-    console.log(age);
+console.log(species);
+console.log(food);
+console.log(toy);
+console.log(age);
+
+
+
+// ES. SPREAD OPERATOR
+
+const numbers = [6, 45, 3, 78, 8, 2, 34, 1];
+// Utilizzo lo spread operator per creare una copia
+let copiedNumbers = [...numbers];
+//aggiungo un elemento con .push
+numbers.push(88);
+
+console.log(numbers);
+console.log(copiedNumbers);
