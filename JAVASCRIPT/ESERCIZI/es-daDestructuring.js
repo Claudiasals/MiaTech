@@ -99,10 +99,19 @@ console.log(age);
 // ES. SPREAD OPERATOR
 
 const numbers = [6, 45, 3, 78, 8, 2, 34, 1];
-// Utilizzo lo spread operator per creare una copia
+// Utilizzo lo spread operator per creare una copia (...nomeArrey da copiare)
 let copiedNumbers = [...numbers];
 //aggiungo un elemento con .push
 numbers.push(88);
 
 console.log(numbers);
 console.log(copiedNumbers);
+
+//ES. UNIRE DUE ARREY CON SPREAD OPERATOR
+
+const numbersOne = [6, 45, 3, 78, 8, 2, 34, 1];
+const numbersTwo = [16, 5, 13, 8, 18, 12, 4, 11];
+
+let sumArray = [...numbersOne, ...numbersTwo];
+
+console.log(sumArray);
