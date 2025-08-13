@@ -285,5 +285,5 @@ persona(oggettoEsempio);
 
 let risultato = persona(oggettoEsempio); // salvo il ritorno della funzione
 console.log(risultato);
-//Crep una variabile per salvare il valore che la funzione restituisce.
+//CreO una variabile per salvare il valore che la funzione restituisce.
 
