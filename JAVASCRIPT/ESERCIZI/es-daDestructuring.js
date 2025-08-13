@@ -53,6 +53,30 @@ console.log(person);
 
 let {name, surname} = person;
 
-console.log(name); //Jeff
+console.log(name); //Jeff xke viene sbarrato name?
 console.log(surname); //Potter
-console.log(age); //not defined
+
+let grades = {
+math: 28,
+english: 20,
+psychology: 30,
+statistics: 28
+};
+
+/*
+let {english, psychology} = grades;
+console.log(english);
+console.log(psychology); */
+
+/* es: Destructuring con nomi di variabili diversi
+Modificare l'esercizio precedente per assegnare i 
+valori delle proprietà a variabili con nomi diversi. 
+Stampare queste variabili nella console. */
+
+let {
+    english: englishGrade, 
+    psychology: psychologyGrade
+} = grades;
+
+console.log(englishGrade);
+console.log(psychologyGrade);
