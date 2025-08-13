@@ -245,3 +245,29 @@ console.log(sumVar); */
 //UNISCO CON TEMPLATE LITERALS
 let sumVar = `${nomes} ${cognome}`;
 console.log(sumVar); 
+
+//ES. STRINGA MULTILINEA CON TEMPLATE LITERALS
+let stringaMultilinea = `{"nom": "Samanta", 
+"cognom": "Rossi", 
+"età": 36, 
+"città": "Como"}`; // creo stringa multilinea
+let stringaTrasformta = JSON.parse(stringaMultilinea);
+//converto stringa in oggetto
+
+const { nom, cognom, età, città} = stringaTrasformta; 
+//creo le var: estraggoo le proprietà con destructuring.
+
+//CREO STRINGA MULTILINEA E UNISCO LE VAR CON TEMPLATE LITERALS
+/*let sommaVar = `${nom}
+${cognom}
+${età}
+${città}`;
+console.log(sommaVar); 
+*/
+//OPPURE CON ETICHETTE PROPRIETà:
+let sommaVar = `Nome: ${nom}
+Cognome: ${cognom}
+Età: ${età}
+Città: ${città}`;
+
+console.log(sommaVar);
