@@ -211,14 +211,14 @@ let jsonPersone = `[
     { "nome": "Sara", "età": 29 }
   ]`;
   
-  let jsonArrayObj = JSON.parse(jsonPersone);
+  let jsonArrayObj = JSON.parse(jsonPersone); //con JSON.parse converto in array
 
   console.log(jsonArrayObj)
 
-  jsonArrayObj.push({ "nome": "Carlo", "età": 28 });
+  jsonArrayObj.push({ "nome": "Carlo", "età": 28 }); //.push aggiungo obj all'array
 
   console.log(jsonArrayObj);
 
-  let jsonString2 = JSON.stringify(jsonArrayObj);
+  let jsonString2 = JSON.stringify(jsonArrayObj); //riconverto l'array di obj in stringa JSON
 
   console.log(jsonString2);
