@@ -42,7 +42,7 @@ console.log(second)
 console.log(third)
 console.log(fourth)
 console.log(fifth)
-
+/*
 let person = {
     name: "Jeff",
     age: 45,
@@ -55,6 +55,7 @@ let { name, surname } = person;
 
 console.log(name); //Jeff xke viene sbarrato name?
 console.log(surname); //Potter
+*/
 
 let grades = {
     math: 28,
@@ -80,7 +81,7 @@ let {
 
 console.log(englishGrade);
 console.log(psychologyGrade);
-
+/*
 let animals = {
     species: "dog",
     food: "kibble",
@@ -94,7 +95,7 @@ console.log(food);
 console.log(toy);
 console.log(age);
 
-
+*/
 
 // ES. SPREAD OPERATOR
 
@@ -115,3 +116,18 @@ const numbersTwo = [16, 5, 13, 8, 18, 12, 4, 11];
 let sumArray = [...numbersOne, ...numbersTwo];
 
 console.log(sumArray);
+
+//ES. OBJ SPREAD OPERATOR X COPIA + ADD
+let dog = {
+    name: "Bob",
+    age: 4,
+    toy: "ball",
+    food: "kibble"
+};
+
+let copyDog = {...dog};
+copyDog.color = "brown"; /* con gli oggetti non si utilizza 
+.push per aggiungere un nuovo elemento, ma nomeObj.nuovaProprietà */
+
+console.log(dog);
+console.log(copyDog);
