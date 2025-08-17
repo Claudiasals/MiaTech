@@ -28,3 +28,12 @@ console.group("Messaggi di debug");
 console.log("Primo messaggio dentro al gruppo");
 console.log("Secondo messaggio dentro al gruppo");
 console.groupEnd();
+
+//es.settimeout
+//Creo una funzione che stampa il messaggio
+function messaggioRitardato() {
+    console.log("Questo messaggio appare dopo 3 secondi");
+  }
+  
+  //Uso setTimeout per eseguire la funzione dopo 3 secondi
+  setTimeout(messaggioRitardato, 3000); //3000 millisecndi
