@@ -37,3 +37,15 @@ function messaggioRitardato() {
   
   //Uso setTimeout per eseguire la funzione dopo 3 secondi
   setTimeout(messaggioRitardato, 3000); //3000 millisecndi
+
+
+
+  //es. setIntervallar
+  // Creo la funzione che contiene il messaggio
+function messaggio() {
+    console.log("Questo messaggio appare ogni 2 secondi");
+}
+
+//setInterval chiama la funzione ogni 2 secondi
+let intervallo = setInterval(messaggio, 2000);
+
