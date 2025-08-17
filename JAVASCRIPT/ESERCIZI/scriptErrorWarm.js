@@ -49,3 +49,10 @@ function messaggio() {
 //setInterval chiama la funzione ogni 2 secondi
 let intervallo = setInterval(messaggio, 2000);
 
+
+//es. clearIntervallar
+// Uso setTimeout per fermare l'intervallo dopo 5 secondi (5000 ms)
+setTimeout(function() {
+    clearInterval(intervallo);
+    console.log("Intervallo interrotto dopo 5 secondi");
+  }, 5000);
