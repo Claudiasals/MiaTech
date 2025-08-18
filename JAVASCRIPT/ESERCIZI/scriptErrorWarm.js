@@ -74,12 +74,6 @@ LettereMinuscole(123);    //ERRORE DI TIPO
 // js trova errore perché non ha le virgolette e quindi non è una stringa.
 LettereMinuscole("");  //ERRORE GENERICO: stringa vuota
 
-//ES. FINALLY
-
-
-
-
-
 
 
 //es. error e warn
@@ -141,3 +135,45 @@ setTimeout(function() {
     clearInterval(intervallo);
     console.log("Intervallo interrotto dopo 5 secondi");
   }, 5000);
+
+
+
+
+
+
+  //FINALLY
+/* Finally è un blocco che Ppossiamo aggiungere a try/catch. 
+La sua particolarità è che viene eseguito sempre, 
+indipendentemente dal fatto che ci sia stato un errore o meno.
+
+try {
+  // codice che potrebbe generare un errore, il codice "a rischio" che potrebbe fallire.
+  Serve ad interrompe l’esecuzione della funzione nel punto in cui si trova
+} catch (error) {
+  // codice che gestisce l'errore
+} finally {
+  // codice che DEVE ESSERE ESEGUITO COMUNQUE SEMPRE, anche se c'è stato un errore.
+  Può servire per pulire risorse(?), stampare un messaggio di conferma, o altre operazioni obbligatorie(?).
+}   
+*/
+
+  function division(a, b) {
+    try {
+      if (b === 0) {
+        throw new Error("Impossibile dividere per zero"); // errore generico
+      }
+      let result = a / b;
+      console.log("Risultato:", result); // stampa se va tutto bene
+      return result;
+    } catch (error) {
+      console.error("Errore:", error.message); // gestisce l'errore
+    } finally {
+      console.log("Operazione completata"); // eseguito sempre
+    }
+  }
+  
+
+  division(10, 2); // Risultato: 5, Operazione completata
+  division(8, 0);  // Errore, Operazione completata
+
+
