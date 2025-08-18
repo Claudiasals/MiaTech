@@ -41,6 +41,30 @@ function divisione(a, b) { //creo funzione divisione
   }
 }
 
+//ES. GESTIONE DI PIù ERRORI10
+/* Gestione di più tipi di errori:
+Creare uno script che utilizzi un blocco try per eseguire un'operazione su una stringa 
+e gestisca diversi tipi di errori (ad esempio, un errore di tipo e un errore generico). 
+Stampare un messaggio di errore appropriato nella console. */
+
+const LettereMinuscole = (string) => {
+  try {
+    // Operazione su una stringa: trasformo la stringa in maiuscolo
+    let lettereMaiuscole = string.toUpperCase(); 
+    /*Se il valore non è una stringa JS non trova il metodo toUpperCase() e genera un errore.*/
+    console.log("Risultato:", lettereMaiuscole);
+  } catch (error) {
+    console.error("Errore:", error.message); 
+    //error.message → è una proprietà dell’oggetto errore che contiene il messaggio dell’errore generato da JavaScript.
+  }
+};
+
+LettereMinuscole("ciao");   // js esegue CIAO
+LettereMinuscole(123);    // js trova errore perché non ha le virgolette e quindi non è una stringa.
+
+
+
+
 
 
 
