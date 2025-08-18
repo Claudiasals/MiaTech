@@ -48,7 +48,7 @@ divisione(10, 2);
 divisione(8, 0);
 divisione(4, 2); 
 
-//ES. GESTIONE DI PIù ERRORI10
+//ES. GESTIONE DI PIù ERRORI
 /* Gestione di più tipi di errori:
 Creare uno script che utilizzi un blocco try per eseguire un'operazione su una stringa 
 e gestisca diversi tipi di errori (ad esempio, un errore di tipo e un errore generico). 
