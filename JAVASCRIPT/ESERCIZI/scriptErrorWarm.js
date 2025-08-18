@@ -1,3 +1,17 @@
+//es. try - catch
+
+try {
+  errorFunction(); // funzione inesistente per generare un errore
+} catch (error) {
+  console.error("Errore controllato:", error.message);
+}
+
+//es. errore semplice con try e catch
+
+
+
+
+//es. error e warn
 function sum (a, b) {
     return a + b;
 }
