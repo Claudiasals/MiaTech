@@ -58,7 +58,7 @@ const LettereMinuscole = (string) => {
   try {
     if (string === "") {
       throw new Error("La stringa non può essere vuota"); // ERRORE GENERICO
-    }
+    } //NON CHIARISSIMO TROW
     // Operazione su una stringa: trasformo la stringa in maiuscolo
     let lettereMaiuscole = string.toUpperCase(); 
     /*Se il valore non è una stringa JS non trova il metodo toUpperCase() e genera un errore.*/
@@ -73,6 +73,9 @@ LettereMinuscole("ciao");   // js esegue CIAO
 LettereMinuscole(123);    //ERRORE DI TIPO
 // js trova errore perché non ha le virgolette e quindi non è una stringa.
 LettereMinuscole("");  //ERRORE GENERICO: stringa vuota
+
+//ES. FINALLY
+
 
 
 
