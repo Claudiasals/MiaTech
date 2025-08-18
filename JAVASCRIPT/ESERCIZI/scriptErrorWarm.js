@@ -7,6 +7,26 @@ try {
 }
 
 //es. errore semplice con try e catch
+/* Gestione di un errore semplice:
+Creare uno script che utilizzi un blocco try per eseguire una divisione 
+e un blocco catch per gestire un errore se il divisore è zero. 
+Stampare un messaggio di errore nella console se viene sollevata un'eccezione. */
+
+  try {
+    function divisione(a, b) {
+
+      return a / b;
+    }
+  } catch (error) {
+    if (b === 0) {
+      return "Errore: impossibile dividere per zero!";
+    }
+    console.error("Errore controllato:", error.message);
+  }
+
+divisione(10, 2);  // Risultato: 5
+divisione(8, 0);   // Errore controllato: Impossibile dividere per zero!
+
 
 
 
