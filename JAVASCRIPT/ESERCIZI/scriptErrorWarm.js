@@ -12,6 +12,7 @@ Creare uno script che utilizzi un blocco try per eseguire una divisione
 e un blocco catch per gestire un errore se il divisore è zero. 
 Stampare un messaggio di errore nella console se viene sollevata un'eccezione. */
 
+/* ERRORE RETURN CATCH FUORI DALLA FUNZIONE
   try {
     function divisione(a, b) {
 
@@ -23,9 +24,12 @@ Stampare un messaggio di errore nella console se viene sollevata un'eccezione. *
     }
     console.error("Errore controllato:", error.message);
   }
+ 
 
 divisione(10, 2);  // Risultato: 5
 divisione(8, 0);   // Errore controllato: Impossibile dividere per zero!
+
+*/
 
 //CORREZIONE TRY E CATCH
 function divisione(a, b) { //creo funzione divisione
@@ -40,6 +44,9 @@ function divisione(a, b) { //creo funzione divisione
     console.error("Errore controllato:", error.message);
   }
 }
+divisione(10, 2);  
+divisione(8, 0);
+divisione(4, 2); 
 
 //ES. GESTIONE DI PIù ERRORI10
 /* Gestione di più tipi di errori:
@@ -49,19 +56,23 @@ Stampare un messaggio di errore appropriato nella console. */
 
 const LettereMinuscole = (string) => {
   try {
+    if (string === "") {
+      throw new Error("La stringa non può essere vuota"); // ERRORE GENERICO
+    }
     // Operazione su una stringa: trasformo la stringa in maiuscolo
     let lettereMaiuscole = string.toUpperCase(); 
     /*Se il valore non è una stringa JS non trova il metodo toUpperCase() e genera un errore.*/
     console.log("Risultato:", lettereMaiuscole);
   } catch (error) {
     console.error("Errore:", error.message); 
-    //error.message → è una proprietà dell’oggetto errore che contiene il messaggio dell’errore generato da JavaScript.
+    //error.message è una PROPRIETA' dell’oggetto errore che contiene il messaggio dell’errore generato da JavaScript.
   }
 };
 
 LettereMinuscole("ciao");   // js esegue CIAO
-LettereMinuscole(123);    // js trova errore perché non ha le virgolette e quindi non è una stringa.
-
+LettereMinuscole(123);    //ERRORE DI TIPO
+// js trova errore perché non ha le virgolette e quindi non è una stringa.
+LettereMinuscole("");  //ERRORE GENERICO: stringa vuota
 
 
 
