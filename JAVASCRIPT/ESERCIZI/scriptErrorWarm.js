@@ -177,3 +177,30 @@ try {
   division(8, 0);  // Errore, Operazione completata
 
 
+  //ES. FINALLY
+/* Uso di finally per eseguire codice indipendentemente dal risultato.
+Creare uno script che utilizzi un blocco try, catch e finally per gestire un errore 
+e stampare un messaggio che indica che l'operazione è stata completata, indipendentemente dal risultato. */
+
+  function somma(a, b) {
+    try {
+      // Se i parametri sono negativi blocco la funzione e stampo messaggio di errore
+      if (a < 0 || b < 0) { // || SIGNIFICA OPPURE
+        throw new Error("Non sono ammessi numeri negativi");
+      }
+      // DICIAMO A JS CHE OPERAZIONE FARE E CREIAMO LA VAR CHE SALVA I RISULTATI DELL'OPERAZIONE PER POTERLO RIUTILIZZARE
+      let risultato = a + b;
+      console.log("Risultato:", risultato); // STAMPIAMO
+      return risultato;
+    } catch (errore) {
+      // Gestisco l'errore se si verifica
+      console.error("Errore:", errore.message);
+    } finally {
+      // Questo codice viene eseguito sempre
+      console.log("Operazione è stata completata");
+    }
+  }
+  
+  somma(5, 7);   
+  somma(3, -2);  
+
