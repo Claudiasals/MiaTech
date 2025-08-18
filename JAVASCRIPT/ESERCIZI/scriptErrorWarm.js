@@ -27,6 +27,19 @@ Stampare un messaggio di errore nella console se viene sollevata un'eccezione. *
 divisione(10, 2);  // Risultato: 5
 divisione(8, 0);   // Errore controllato: Impossibile dividere per zero!
 
+//CORREZIONE TRY E CATCH
+function divisione(a, b) { //creo funzione divisione
+  try {
+    if (b === 0) {
+      throw new Error("Impossibile dividere per zero"); //errore se divisore è zero
+    }
+    let risultato = a / b;
+    console.log("Risultato:", risultato); //stampo risultato
+    return risultato;
+  } catch (error) { //messggio di errore con catch se /0
+    console.error("Errore controllato:", error.message);
+  }
+}
 
 
 
