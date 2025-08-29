@@ -25,3 +25,21 @@ one(5, 2, function(result){
 });
 //function(result){ ... } → è il callback, 
 //cioè una funzione anonima che viene passata come parametro.
+
+
+//callback annidate
+function prima(valore1, valore2, parFunz){
+    parFunz (valore1 + valore2);
+}
+
+prima(4, 2, function(risultato1){
+    console.log("Risultato addizione: ", risultato1)
+})
+
+function seconda(prima, risultato1, somma){
+    somma (prima + risultato1);
+}
+
+seconda(2, 3, function(risultato2){
+    console.log("Risultato addizione: ", risultato2)
+})
