@@ -68,7 +68,7 @@ finallyPromise()
 
 //ES. CATENA DI PROMISE CON IF ELSE
 
-// Funzione che restituisce una promessa che si risolve dopo 1 secondo con un numero
+// Funzione che restituisce una promise che si risolve dopo 1 secondo con un numero
 function getNumber() {
     return new Promise(function (resolve) {
         setTimeout(function () {
@@ -77,7 +77,7 @@ function getNumber() {
     });
 }
 
-// Catena di promesse
+// Catena di promise
 getNumber()
     .then(function (num) {
 
@@ -91,5 +91,43 @@ getNumber()
     .then(function (result) { 
         //l'ultimo then riceve il valore del penultimo e quindi il "result"
         console.log("Risultato finale:", result);
+        
     });
 
+
+    //GESTIONE ERRORE CON CATCH
+
+function number() {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            
+            // codice di js standard per generare un numero casuale tra 0 e 9
+            let numeroCasuale = Math.floor(Math.random() * 10);
+
+            console.log("Numero casuale generato dalla funzione:", numeroCasuale); 
+
+            if (numeroCasuale >= 5) {
+                resolve(numeroCasuale); // successo
+            } else {
+                reject("Numero troppo piccolo: " + numeroCasuale); // insuccesso
+            }
+        }, 1000);
+    });
+}
+
+// Catena di promesse
+number()
+    .then(function(num) {
+        // Controlla se il numero è pari o dispari
+        if (num % 2 === 0) {
+            return num * 2; // se pari, moltiplica per 2
+        } else {
+            return num + 3; // se dispari, aggiungi 3
+        }
+    })
+    .then(function(result) {
+        console.log("Risultato finale:", result); // stampa il risultato finale
+    })
+    .catch(function(error) {
+        console.error("Errore:", error); // stampa eventuale errore
+    });
