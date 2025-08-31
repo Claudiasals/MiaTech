@@ -1,5 +1,5 @@
 let attendiCaricamento = new Promise(function (myResolve, myReject) {
-    let ok = true;
+    let ok = false;
 
     // operazioni che richiedono tempi incerti di elaborazione
     if (ok) {
