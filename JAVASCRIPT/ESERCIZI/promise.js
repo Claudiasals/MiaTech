@@ -147,3 +147,26 @@ errorePromessa()
     .catch(function (error) {
         console.error("Messaggio di errore:", error);
     });
+
+
+//ES. RIFIUTO DA VALORE BOOLEANO
+function promiseBoo(valoreBooleano) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (valoreBooleano) {
+                resolve("Risolta con successo!");
+            } else {
+                reject("Rifiutata!");
+            }
+        }, 1000); //
+    });
+}
+
+// Chiamata della funzione con then e catch
+promiseBoo(false)
+    .then(function (messaggio) {
+        console.log("Successo:", messaggio);
+    })
+    .catch(function (errore) {
+        console.error("Errore:", errore);
+    });
