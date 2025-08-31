@@ -27,3 +27,11 @@ attendiCaricamento.then(
 );
 
 
+//aggiungo catch
+attendiCaricamento
+    .then(risultato => {
+        console.log(risultato);
+    })
+    .catch(errore => {
+        console.error("Errore:", errore);
+    });
