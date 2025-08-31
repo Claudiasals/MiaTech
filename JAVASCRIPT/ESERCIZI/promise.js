@@ -88,23 +88,23 @@ getNumber()
             return num + 3; // prendi il valore e aggiungi 3
         }
     })
-    .then(function (result) { 
+    .then(function (result) {
         //l'ultimo then riceve il valore del penultimo e quindi il "result"
         console.log("Risultato finale:", result);
-        
+
     });
 
 
-    //GESTIONE ERRORE CON CATCH
+//GESTIONE ERRORE CON CATCH
 
 function number() {
-    return new Promise(function(resolve, reject) {
-        setTimeout(function() {
-            
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+
             // codice di js standard per generare un numero casuale tra 0 e 9
             let numeroCasuale = Math.floor(Math.random() * 10);
 
-            console.log("Numero casuale generato dalla funzione:", numeroCasuale); 
+            console.log("Numero casuale generato dalla funzione:", numeroCasuale);
 
             if (numeroCasuale >= 5) {
                 resolve(numeroCasuale); // successo
@@ -117,7 +117,7 @@ function number() {
 
 // Catena di promesse
 number()
-    .then(function(num) {
+    .then(function (num) {
         // Controlla se il numero è pari o dispari
         if (num % 2 === 0) {
             return num * 2; // se pari, moltiplica per 2
@@ -125,9 +125,25 @@ number()
             return num + 3; // se dispari, aggiungi 3
         }
     })
-    .then(function(result) {
+    .then(function (result) {
         console.log("Risultato finale:", result); // stampa il risultato finale
     })
-    .catch(function(error) {
+    .catch(function (error) {
         console.error("Errore:", error); // stampa eventuale errore
+    });
+
+
+//es. promise rifiutata: gestione errori catch
+// Funzione che restituisce una promessa rifiutata
+function errorePromessa() {
+    return new Promise(function (resolve, reject) {
+        // Rifiutiamo subito la promessa con un messaggio
+        reject("Si è verificato un errore!");
+    });
+}
+
+// Gestione dell'errore con catch
+errorePromessa()
+    .catch(function (error) {
+        console.error("Messaggio di errore:", error);
     });
