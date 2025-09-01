@@ -1,43 +1,36 @@
-let attendiCaricamento = new Promise(function (myResolve, myReject) {
-    let ok = false;
+//ES.1 promise semplice 
 
-    // operazioni che richiedono tempi incerti di elaborazione
-    if (ok) {
-        myResolve("Caricato con successo");
-    } else {
-        myReject("Caricamento fallito");
-    }
+let attendiCaricamento = new Promise(function (myResolve, myReject) {
+
+    setTimeout(() => {
+        let ok = true;
+
+        // operazioni che richiedono tempi incerti di elaborazione
+        if (ok) {
+            myResolve("Caricato con successo");
+        } else {
+            myReject("Caricamento fallito");
+        }
+    }, 2000);
 });
 
 // utilizzo la promise
-attendiCaricamento.then(
-    function (risultato) {
+attendiCaricamento
+    .then(function (risultato) {
         console.log(risultato);
-    },
-    function (errore) {
+    })
+    .catch(function (errore) {
         console.error(errore);
-    }
-);
+    });
 
 
-//oppure metodo compatto con arrow function
+/*oppure metodo compatto con arrow function
+
 attendiCaricamento.then(
     risultato => console.log(risultato),
     errore => console.error(errore)
 );
-
-
-//aggiungo catch
-attendiCaricamento
-    .then(risultato => {
-        console.log(risultato);
-    })
-    .catch(errore => {
-        console.error("Errore:", errore);
-    });
-
-
-
+*/
 
 //ES.FINALLY
 
@@ -176,8 +169,8 @@ promiseBoo(false)
 //ES. gGESTIONE ERRIRI IN UNA CATENA DI PROMISE
 
 function casualPromise() {
-    return new Promise(function(resolve, reject) { //PROMISE CHE PUò RISOLVERSI O ESSERE RIFIUTATA
-        setTimeout(function() {
+    return new Promise(function (resolve, reject) { //PROMISE CHE PUò RISOLVERSI O ESSERE RIFIUTATA
+        setTimeout(function () {
             let casualNumber = Math.random() * 10; // .RANDOM GENERA UN NUERO CASUALE TRA 0 E 0,99. X 10 SERVE X AVE UN NUM DA 1 A 10
             console.log("Numero generato:", casualNumber);
 
@@ -192,21 +185,21 @@ function casualPromise() {
 
 // Catena di promesse con gestione degli errori
 casualPromise()
-    .then(function(num) {
+    .then(function (num) {
         console.log("Primo then:", num);
         return num * 2; // moltiplica per 2
     })
-    .then(function(numRaddoppiato) {
+    .then(function (numRaddoppiato) {
         console.log("Secondo then:", numRaddoppiato);
         if (numRaddoppiato > 15) {
             throw "Errore: numero troppo grande dopo il raddoppio!"; // errore volontario
         }
         return numRaddoppiato + 3; // aggiungi 3
     })
-    .then(function(risultatoFinale) {
+    .then(function (risultatoFinale) {
         console.log("Risultato finale:", risultatoFinale);
     })
-    .catch(function(error) {
+    .catch(function (error) {
         // Gestisce QUALSIASI errore che avviene nella catena
         console.error("Errore catturato:", error);
     });
@@ -235,32 +228,32 @@ di input si saranno risolte, restituendo un array con i risultati di ciascuna
 promessa nell'ordine originale. */
 
 function promise1() {
-    return new Promise(function(resolve) {
-        setTimeout(function() {
+    return new Promise(function (resolve) {
+        setTimeout(function () {
             resolve("Risultato promise1");
-        }, 1000); 
+        }, 1000);
     });
 }
 
 function promise2() {
-    return new Promise(function(resolve) {
-        setTimeout(function() {
+    return new Promise(function (resolve) {
+        setTimeout(function () {
             resolve("Risultato promise2");
-        }, 2000); 
+        }, 2000);
     });
 }
 
 //Eseguo entrambe le promesse in parallelo con promise.all
 Promise.all([promise1(), promise2()])
-    .then(function(results) {
+    .then(function (results) {
         console.log("Entrambe le promesse sono risolte:");
         console.log(results); // stmpo un array con i risultati 
     })
-    .catch(function(error) {
+    .catch(function (error) {
         console.error("Errore in una delle promesse:", error);
     });
 
-    /* Promise.all è un metodo che prende un array di promesse e restituisce una nuova promise.
+/* Promise.all è un metodo che prende un array di promesse e restituisce una nuova promise.
 La nuova promise si risolve solo quando tutte le promise dell’array sono risolte.
 Se anche solo una promise viene rifiutata (reject), la promise di Promise.all viene rifiutata subito e si va nel .catch(). */
 
@@ -274,12 +267,12 @@ Mentre .all restituisce i risultati di tutte le promises. */
 
 function promessaConRitardo(valore, ritardo) {
     return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(`Risultato: ${valore} (dopo ${ritardo}ms)`);
-      }, ritardo);
+        setTimeout(() => {
+            resolve(`Risultato: ${valore} (dopo ${ritardo}ms)`);
+        }, ritardo);
     });
-  }
-  /* Funzione che restituisce una promessa che si risolve dopo un certo tempo. 
+}
+/* Funzione che restituisce una promessa che si risolve dopo un certo tempo. 
 La funzione non restituisce un valore immediato (come "Ciao"), ma una Promise, 
 cioè un oggetto che rappresenta un'operazione asincrona che ora non è ancora 
 finita, ma che finirà in futuro. 
@@ -294,16 +287,16 @@ In questo caso se la promise viene rosolta con successo stamperemo:
 `Risultato: ${valore} (dopo ${ritardo}ms -> Risultato: Promessa 2 (dopo 1000ms)
 */
 
-  // Creiamo due promesse con tempi di risoluzione diversi
-  const promessa1 = promessaConRitardo("Promessa 1", 2000); // 2 secondi
-  const promessa2 = promessaConRitardo("Promessa 2", 1000); // 1 secondo
-  
-  // Utilizziamo Promise.race per ottenere il risultato di una promise, 
-  // quella che per prima viene risolta con successo
-  Promise.race([promessa1, promessa2])
+// Creiamo due promesse con tempi di risoluzione diversi
+const promessa1 = promessaConRitardo("Promessa 1", 2000); // 2 secondi
+const promessa2 = promessaConRitardo("Promessa 2", 1000); // 1 secondo
+
+// Utilizziamo Promise.race per ottenere il risultato di una promise, 
+// quella che per prima viene risolta con successo
+Promise.race([promessa1, promessa2])
     .then((risultato) => {
-      console.log("Prima promessa risolta!", risultato);
+        console.log("Prima promessa risolta!", risultato);
     })
     .catch((errore) => {
-      console.error("Errore:", errore);
+        console.error("Errore:", errore);
     });
