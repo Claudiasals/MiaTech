@@ -300,3 +300,63 @@ Promise.race([promessa1, promessa2])
     .catch((errore) => {
         console.error("Errore:", errore);
     });
+
+
+
+
+//ES. PROMISE .allSettled
+/*
+Promise.allSettled serve per eseguire più promesse in parallelo 
+e attendere che tutte siano completate, indipendentemente dal fatto 
+che siano state risolte o rifiutate.
+Con Promise.all se anche una sola promessa viene rifiutata, l’intero all fallisce.
+Con Promise.allSettled ottieni sempre un risultato per ogni promessa, 
+sia che sia fulfilled (risolta) o rejected (rifiutata).
+*/
+
+// Funzione 1: promessa risolta dopo 1 secondo
+function promessa1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promessa 1 completata");
+        }, 1000);
+    });
+}
+
+// Funzione 2: promessa risolta dopo 2 secondi
+function promessa2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promessa 2 completata");
+        }, 2000);
+    });
+}
+
+// Funzione 3: promessa rifiutata dopo 1.5 secondi
+function promessa3() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("Promessa 3 fallita");
+        }, 1500);
+    });
+}
+
+// Esecuzione di tutte le promesse in parallelo
+Promise.allSettled([promessa1(), promessa2(), promessa3()])
+    .then((risultati) => {
+        risultati.forEach((risultato, index) => {
+            if (risultato.status === "fulfilled") {
+                console.log(`Promessa ${index + 1}: ✅ ${risultato.value}`);
+            } else {
+                console.log(`Promessa ${index + 1}: ❌ ${risultato.reason}`);
+            }
+        });
+    });
+
+/* 
+Qui stiamo chiamando le tre funzioni che restituiscono promesse.
+Tutte e tre iniziano a “lavorare” in parallelo, ognuna con il suo setTimeout 
+o operazione asincrona. Promise.allSettled aspetta che tutte e tre siano completate, 
+sia che siano risolte (resolve) sia che siano rifiutate (reject). 
+Alla fine, Promise.allSettled restituisce una nuova promessa.
+*/
