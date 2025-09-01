@@ -263,3 +263,47 @@ Promise.all([promise1(), promise2()])
     /* Promise.all è un metodo che prende un array di promesse e restituisce una nuova promise.
 La nuova promise si risolve solo quando tutte le promise dell’array sono risolte.
 Se anche solo una promise viene rifiutata (reject), la promise di Promise.all viene rifiutata subito e si va nel .catch(). */
+
+
+
+//ES. PROMISE.RACE
+/* .race Restituisce solo il risultato (o errore) della prima promessa completata. 
+Mentre .all restituisce i risultati di tutte le promises. */
+
+
+
+function promessaConRitardo(valore, ritardo) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(`Risultato: ${valore} (dopo ${ritardo}ms)`);
+      }, ritardo);
+    });
+  }
+  /* Funzione che restituisce una promessa che si risolve dopo un certo tempo. 
+La funzione non restituisce un valore immediato (come "Ciao"), ma una Promise, 
+cioè un oggetto che rappresenta un'operazione asincrona che ora non è ancora 
+finita, ma che finirà in futuro. 
+
+In JavaScript, una promessa può essere in uno di questi stati: 
+
+pending → in attesa
+fulfilled (risolta) → è andata a buon fine
+rejected (rifiutata) → è fallita
+
+In questo caso se la promise viene rosolta con successo stamperemo:
+`Risultato: ${valore} (dopo ${ritardo}ms -> Risultato: Promessa 2 (dopo 1000ms)
+*/
+
+  // Creiamo due promesse con tempi di risoluzione diversi
+  const promessa1 = promessaConRitardo("Promessa 1", 2000); // 2 secondi
+  const promessa2 = promessaConRitardo("Promessa 2", 1000); // 1 secondo
+  
+  // Utilizziamo Promise.race per ottenere il risultato di una promise, 
+  // quella che per prima viene risolta con successo
+  Promise.race([promessa1, promessa2])
+    .then((risultato) => {
+      console.log("Prima promessa risolta!", risultato);
+    })
+    .catch((errore) => {
+      console.error("Errore:", errore);
+    });
