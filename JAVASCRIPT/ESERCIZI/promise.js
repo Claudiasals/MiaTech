@@ -225,3 +225,41 @@ Chiamo resolve(numeroCasuale) o reject("Errore…")
 Quando la promessa si risolve o rifiuta
 -Viene eseguito il .then() se resolve()
 -Viene eseguito il .catch() se reject() che gestisce l'errore*/
+
+
+//ES. PROMISE.ALL
+/* Promise.all() è un metodo JavaScript statico che prende un array di promesse 
+(o un qualsiasi iterabile di promesse) e restituisce una nuova promessa. 
+Questa nuova promessa si risolverà solo quando tutte le promesse nell'array 
+di input si saranno risolte, restituendo un array con i risultati di ciascuna 
+promessa nell'ordine originale. */
+
+function promise1() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            resolve("Risultato promise1");
+        }, 1000); 
+    });
+}
+
+function promise2() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            resolve("Risultato promise2");
+        }, 2000); 
+    });
+}
+
+//Eseguo entrambe le promesse in parallelo con promise.all
+Promise.all([promise1(), promise2()])
+    .then(function(results) {
+        console.log("Entrambe le promesse sono risolte:");
+        console.log(results); // stmpo un array con i risultati 
+    })
+    .catch(function(error) {
+        console.error("Errore in una delle promesse:", error);
+    });
+
+    /* Promise.all è un metodo che prende un array di promesse e restituisce una nuova promise.
+La nuova promise si risolve solo quando tutte le promise dell’array sono risolte.
+Se anche solo una promise viene rifiutata (reject), la promise di Promise.all viene rifiutata subito e si va nel .catch(). */
