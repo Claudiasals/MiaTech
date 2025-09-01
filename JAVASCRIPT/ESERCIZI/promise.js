@@ -1,3 +1,15 @@
+/*
+PROMISE:
+- PROMISE SEMPLICE
+- .FINALLY
+- CATENA DI PROMISE
+- GESTIONE DI ERRORI CON .CATCH
+- RIFIUTO SU BOOLEANI
+- PROMISE.ALL
+- PROMISE-RACE
+- PROMICE.ALLSETTLED
+*/
+
 //ES.1 promise semplice 
 
 let attendiCaricamento = new Promise(function (myResolve, myReject) {
