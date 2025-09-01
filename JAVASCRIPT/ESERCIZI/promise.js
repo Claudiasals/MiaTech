@@ -170,3 +170,58 @@ promiseBoo(false)
     .catch(function (errore) {
         console.error("Errore:", errore);
     });
+
+
+
+//ES. gGESTIONE ERRIRI IN UNA CATENA DI PROMISE
+
+function casualPromise() {
+    return new Promise(function(resolve, reject) { //PROMISE CHE PUò RISOLVERSI O ESSERE RIFIUTATA
+        setTimeout(function() {
+            let casualNumber = Math.random() * 10; // .RANDOM GENERA UN NUERO CASUALE TRA 0 E 0,99. X 10 SERVE X AVE UN NUM DA 1 A 10
+            console.log("Numero generato:", casualNumber);
+
+            if (casualNumber >= 5) {
+                resolve(casualNumber); // promise risolta
+            } else {
+                reject("Errore: numero troppo piccolo (" + casualNumber + ")"); // promessa rifiutata
+            }
+        }, 1000); //SETTIMEOUT DI 1 SECONDO
+    });
+}
+
+// Catena di promesse con gestione degli errori
+casualPromise()
+    .then(function(num) {
+        console.log("Primo then:", num);
+        return num * 2; // moltiplica per 2
+    })
+    .then(function(numRaddoppiato) {
+        console.log("Secondo then:", numRaddoppiato);
+        if (numRaddoppiato > 15) {
+            throw "Errore: numero troppo grande dopo il raddoppio!"; // errore volontario
+        }
+        return numRaddoppiato + 3; // aggiungi 3
+    })
+    .then(function(risultatoFinale) {
+        console.log("Risultato finale:", risultatoFinale);
+    })
+    .catch(function(error) {
+        // Gestisce QUALSIASI errore che avviene nella catena
+        console.error("Errore catturato:", error);
+    });
+
+
+/* Chiamo casualPromise()
+La funzione crea subito una promis, ma non esegue ancora resolve o reject.
+Dentro la promessa c’è setTimeout(..., 1000) che serve a simulare l'attesa di un'altra azione come la ricezione di dati
+Questo dice: “aspetta 1 secondo, poi esegui la funzione interna”.Quindi per 1 secondo non succede nulla.
+Dopo 1 secondo:
+-Viene eseguito il codice dentro setTimeout:
+-Genera numeroCasuale
+-Stampo console.log("Numero generato:", numeroCasuale) → questo è il primo output
+-poi controlla se il numero è ≥5 o <5
+Chiamo resolve(numeroCasuale) o reject("Errore…")
+Quando la promessa si risolve o rifiuta
+-Viene eseguito il .then() se resolve()
+-Viene eseguito il .catch() se reject() che gestisce l'errore*/
