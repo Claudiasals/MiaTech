@@ -11,12 +11,15 @@ PROMISE:
 */
 
 //ES.1 promise semplice 
-
+/*
+Simulare un caricamento o un’operazione che può avere successo o fallire.
+La condizione if (ok): decide se la Promise va risolta o rifiutata, 
+cioè se il caricamento è riuscito o no.
+*/
+let ok = true;
 let attendiCaricamento = new Promise(function (myResolve, myReject) {
 
     setTimeout(() => {
-        let ok = true;
-
         // operazioni che richiedono tempi incerti di elaborazione
         if (ok) {
             myResolve("Caricato con successo");
@@ -25,6 +28,8 @@ let attendiCaricamento = new Promise(function (myResolve, myReject) {
         }
     }, 2000);
 });
+
+console.log("PROVA", ok);
 
 // utilizzo la promise
 attendiCaricamento
@@ -43,6 +48,7 @@ attendiCaricamento.then(
     errore => console.error(errore)
 );
 */
+
 
 //ES.FINALLY
 
@@ -108,6 +114,7 @@ function number() {
 
             // codice di js standard per generare un numero casuale tra 0 e 9
             let numeroCasuale = Math.floor(Math.random() * 10);
+            // Math.floor() arrotonda per difetto all’intero più vicino, per non avere un numero decimale.
 
             console.log("Numero casuale generato dalla funzione:", numeroCasuale);
 
@@ -178,12 +185,13 @@ promiseBoo(false)
 
 
 
-//ES. gGESTIONE ERRIRI IN UNA CATENA DI PROMISE
+//ES. GESTIONE ERRORI IN UNA CATENA DI PROMISE
 
 function casualPromise() {
     return new Promise(function (resolve, reject) { //PROMISE CHE PUò RISOLVERSI O ESSERE RIFIUTATA
         setTimeout(function () {
-            let casualNumber = Math.random() * 10; // .RANDOM GENERA UN NUERO CASUALE TRA 0 E 0,99. X 10 SERVE X AVE UN NUM DA 1 A 10
+            let casualNumber = Math.random() * 10; // .RANDOM GENERA UN NUERO CASUALE TRA 0 E 0,99. 
+            // X 10 SERVE X AVE UN NUM DA 1 A 10
             console.log("Numero generato:", casualNumber);
 
             if (casualNumber >= 5) {
@@ -327,7 +335,7 @@ sia che sia fulfilled (risolta) o rejected (rifiutata).
 */
 
 // Funzione 1: promessa risolta dopo 1 secondo
-function promessa1() {
+function promessa10() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("Promessa 1 completata");
@@ -336,7 +344,7 @@ function promessa1() {
 }
 
 // Funzione 2: promessa risolta dopo 2 secondi
-function promessa2() {
+function promessa20() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("Promessa 2 completata");
@@ -345,7 +353,7 @@ function promessa2() {
 }
 
 // Funzione 3: promessa rifiutata dopo 1.5 secondi
-function promessa3() {
+function promessa30() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             reject("Promessa 3 fallita");
@@ -354,7 +362,7 @@ function promessa3() {
 }
 
 // Esecuzione di tutte le promesse in parallelo
-Promise.allSettled([promessa1(), promessa2(), promessa3()])
+Promise.allSettled([promessa10(), promessa20(), promessa30()])
     .then((risultati) => {
         risultati.forEach((risultato, index) => {
             if (risultato.status === "fulfilled") {
