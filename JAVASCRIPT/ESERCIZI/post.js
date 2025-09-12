@@ -23,3 +23,26 @@ body → il contenuto da inviare, convertito in stringa JSON.
 
 
 
+// ES. RICHIESTA POST
+// Eseguire una richiesta POST
+// Creare una funzione che utilizzi fetch per eseguire una richiesta POST a un'API pubblica, 
+// inviando alcuni dati nel corpo della richiesta, e stampare i dati restituiti nella console.
+
+//richiesta post
+fetch ("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        nome: "Claudia",
+        cognome: "Salsini",
+        età: 34
+    })
+})
+
+
+
+.then(response => response.json()) //trasformo la risposta di fetch (una promise) in dati json
+.then(posts => console.log(posts))
+.catch(errore => console.log(errore)) 
