@@ -34,3 +34,12 @@ Errori generati nel .then → ad esempio se scrivi data.users.map(...) e data.us
 Errore di parsing JSON → se chiami .json() su qualcosa che non è JSON valido.
 In tutti questi casi, .catch(err => ...) viene chiamato automaticamente, 
 e err contiene l’oggetto errore reale. */
+
+
+
+
+// GESTIONE DEGLI ERRORI CON ASYNC E AWAIT
+// Creare una funzione asincrona che utilizzi fetch per eseguire una richiesta GET 
+// a un'API pubblica e gestire eventuali errori utilizzando try e catch. 
+// Stampare i dati restituiti o il messaggio di errore nella console.
+
