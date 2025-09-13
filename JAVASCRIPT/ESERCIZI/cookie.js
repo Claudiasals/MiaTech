@@ -23,6 +23,7 @@ const d = new Date();
 
 d.setTime(d.getTime() + 24*60*60*1000);
 → Imposta la scadenza del cookie a 24 ore nel futuro (oggi + 1 giorno).
+IMPORTANTE: l'unico modo per cancellare un cookie è anticipare la data di scadenza al giorno precedente
 
 getTime() restituisce i millisecondi correnti.
 
