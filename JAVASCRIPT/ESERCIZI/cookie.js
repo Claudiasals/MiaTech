@@ -64,7 +64,8 @@ function setCookie(name, value, days) {
 
     d.setTime(d.getTime() + (days*24*60*60*1000)); 
     // aggiunge al timestamp corrente il numero di millisecondi corrispondente a 'days' giorni
-    // (1 giorno = 24 ore * 60 minuti * 60 secondi * 1000 millisecondi)
+    // (1 giorno = 24 ore * 60 minuti * 60 secondi * 1000 millisecondi) 
+    // * 1000 millisecondi serve per convertire la scadenza in millisecondi
 
     const expires = "expires=" + d.toUTCString(); 
     // converte la data in formato UTC compatibile con i cookie
