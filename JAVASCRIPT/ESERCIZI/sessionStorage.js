@@ -43,3 +43,29 @@ elementButton.addEventListener("click", function() {
         elementPizza.innerText = pizzaName;
     }
 });
+
+// ES. SESSION STORAGE
+
+// seleziono il bottone html
+const elementButton1 = document.getElementById("button-user");
+
+// seleziono l'elemento html dove apparirà il mio username dopo essere stato salvato nello storage
+const elementUser = document.getElementById("username");
+
+// recupero il dato inserito che si trova nello storage attraverso la sua chiave
+const userId = sessionStorage.getItem("userId") || "";
+
+// mostriamo l'user nell'elemento che abbiamo selezionato con la const elementPassword
+elementUser.innerText = username;
+console.log("Valore iniziale del session storage:", userId);
+
+// aggiungo l'evento al bottone che abbiamo seezionato
+elementButton1.addEventListener("click", function() {
+    const userId = prompt("Scegli il tuo nome:");
+    if (userId) {
+        sessionStorage.setItem("username", userId) //salvo il valore di userId nella chiave "username"
+        elementUser.innerText = userId;
+        console.log("Valore salvato nel session storage: ", userId);
+
+    }
+}) 
