@@ -8,3 +8,16 @@ Esempio: "#id" per id, ".classe" per classi, "tag" per tag HTML. */
 
 // seleziono l'elemento con id="list"
 const lista = document.querySelector("#list");
+
+// modifica paragrafo con innerText
+
+const button = document.getElementById("button")
+
+button.addEventListener("click", function() {
+
+    paragrafo.innerText = ("NUOVO PARAGRAFO");
+});
+
+
+
+
