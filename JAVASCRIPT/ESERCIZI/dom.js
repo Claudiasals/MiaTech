@@ -19,5 +19,19 @@ button.addEventListener("click", function() {
 });
 
 
+// modifico lo style del paragrafo
+// 1. seleziono il bottone che cliccherà l'utente per modificare il paragrafo
+const style = document.querySelector("#styleButton");
+// 2. creo l'evento sul bottone con la proprietà "style"
+style.addEventListener("click", function() {
+        paragrafo.style.backgroundColor = "lightblue"; // Cambio il colore di sfondo
+        paragrafo.style.fontSize = "24px"; // Cambio la dimensione del font
+});
 
-
+/* 
+Ogni elemento DOM ha delle proprietà che corrispondono a cose che possiamo leggere o modificare.
+.style è a sua volta un oggetto che contiene tutte le proprietà CSS dell’elemento.
+con style possiamo accedere a tutte le porprietà css, solo che useremo la CamelCase al posto del trattino.
+sintassi --> nomeElemento.style.proprietàDelCss
+Style è una proprietà dell'oggetto dom proprio come innerText.
+*/
