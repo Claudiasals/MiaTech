@@ -44,28 +44,70 @@ elementButton.addEventListener("click", function() {
     }
 });
 
-// ES. SESSION STORAGE
 
-// seleziono il bottone html
+
+// ES. SESSION STORAGE
+/*
+// Seleziono il bottone HTML con id "button-user"
 const elementButton1 = document.getElementById("button-user");
 
-// seleziono l'elemento html dove apparirà il mio username dopo essere stato salvato nello storage
+// Seleziono l'elemento HTML dove apparirà il mio username
 const elementUser = document.getElementById("username");
 
-// recupero il dato inserito che si trova nello storage attraverso la sua chiave
+// Recupero dal sessionStorage il valore salvato con chiave "userId"
+// Se non esiste, uso una stringa vuota come default
 const userId = sessionStorage.getItem("userId") || "";
 
-// mostriamo l'user nell'elemento che abbiamo selezionato con la const elementPassword
-elementUser.innerText = username;
+// Mostro subito l'user nella pagina (se già presente nel sessionStorage)
+elementUser.innerText = userId;
 console.log("Valore iniziale del session storage:", userId);
 
-// aggiungo l'evento al bottone che abbiamo seezionato
+// Aggiungo un "listener" al bottone: quando viene cliccato esegue la funzione
 elementButton1.addEventListener("click", function() {
+    // Chiedo all'utente di inserire il proprio nome
     const userId = prompt("Scegli il tuo nome:");
+    
+    // Se l'utente inserisce qualcosa (non null e non stringa vuota)
     if (userId) {
-        sessionStorage.setItem("username", userId) //salvo il valore di userId nella chiave "username"
+        // Salvo il valore nel sessionStorage con la chiave "userId"
+        sessionStorage.setItem("userId", userId);
+        
+        // Aggiorno il contenuto del paragrafo con il nuovo username
         elementUser.innerText = userId;
-        console.log("Valore salvato nel session storage: ", userId);
-
+        
+        // Stampo nella console il valore salvato
+        console.log("Valore salvato nel session storage:", userId);
     }
-}) 
+});
+
+*/
+
+// ESERCIZIO SESSION STORAGE 
+
+// seleziono bottone
+const elementButton2 = document.getElementById("button-user");
+// seleziono elemento testo
+const elementUser = document.getElementById("username");
+//recupera user da storage
+const userId = sessionStorage.getItem("username") ||"";
+//mostra user in pagina
+elementUser.innerText = userId;
+console.log(userId); //stampo
+// aggiungo evento al bottone
+elementButton2.addEventListener("click", function() {
+    const userIdNew = prompt("Inserisci il tuo nome utente");
+    sessionStorage.setItem("username", userIdNew);
+    elementUser.innerText = userIdNew;
+    console.log("Nome utente: ", userIdNew)
+})
+
+// funzione di rimozione
+// seleziono bottone
+const removeButton = document.getElementById("remove")
+removeButton.addEventListener("click", function() { // evebto su bottone con funzione
+sessionStorage.removeItem("username"); // elimino da chiave
+elementUser.innerText = ""; // aggiorno contenuto
+console.log("user rimosso dallo storage");
+});
+
+
