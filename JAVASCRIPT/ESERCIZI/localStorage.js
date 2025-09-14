@@ -74,6 +74,7 @@ console.log("Valore iniziale dal localStorage:", userId);
 
 // aggiungo l'evento al bottone
 elementSaveButton.addEventListener("click", function() {
+    // "click" è un tipo di evento predefinito.
     // chiedo all'utente che nome vuole usare
     const userId = prompt("Inserisci il tuo nome utente: ");
     if (userId) {
