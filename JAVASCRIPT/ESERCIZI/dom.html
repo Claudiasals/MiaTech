@@ -1,0 +1,30 @@
+<!-- Esercizio 1: Oggetto Document: Crea un HTML con paragrafo 
+ e stampa l'oggetto document.
+ 
+ document = DOM (Document Object Model), ovvero la rappresentazione ad oggetti di una pagina HTML:
+- Ogni elemento HTML (<p>, <div>, <button>, ecc.) diventa un oggetto nel DOM.
+- in qst modo JavaScript può leggere, modificare o aggiungere elementi alla pagina in modo dinamico.
+ -->
+
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetto Document</title>
+</head>
+<body>
+
+    <p id="paragraph">Questo è un paragrafo di esempio.</p>
+
+    <script>
+        // Stampa l'oggetto document in console
+        console.log(document);
+
+        // Puoi anche accedere al paragrafo
+        console.log(document.getElementById("demo"));
+    </script>
+
+</body>
+</html>
