@@ -1,5 +1,5 @@
 //SINTASSI BASE 
-fetch("https://miosito.com/risorse", {
+fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",                     // tipo di richiesta
     headers: {
         "Content-Type": "application/json" // tipo di dati inviati
