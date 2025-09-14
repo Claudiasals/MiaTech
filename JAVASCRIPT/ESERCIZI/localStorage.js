@@ -1,7 +1,7 @@
 //LOCAL STORAGE
 
 // Seleziona dal DOM il bottone con id "set-button"
-const elementButton = document.getElementById("set-button");
+const elementButton = document.getElementById("btn");
 
 // Seleziona dal DOM l'elemento con id "pizza"
 const elementPizza = document.getElementById("pizza");
