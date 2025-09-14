@@ -29,6 +29,9 @@ body → il contenuto da inviare, convertito in stringa JSON.
 // inviando alcuni dati nel corpo della richiesta, e stampare i dati restituiti nella console.
 
 //richiesta post
+
+const elementDate = document.getElementById("result");
+
 fetch ("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     headers: {
@@ -41,8 +44,18 @@ fetch ("https://jsonplaceholder.typicode.com/posts", {
     })
 })
 
-
-
 .then(response => response.json()) //trasformo la risposta di fetch (una promise) in dati json
-.then(posts => console.log(posts))
+.then(posts => {
+    console.log(posts);
+    elementDate.innerText = JSON.stringify(posts, null, 2);
+    //JSON.stringify Serve perché posts è un oggetto JavaScript, e per scriverlo come testo in pagina deve diventare stringa.
+/*
+I parametri di JSON.stringify:
+posts → l’oggetto da trasformare in stringa.
+null → è il parametro replacer, che serve se vuoi filtrare alcune proprietà. Qui non vogliamo filtrarle, quindi mettiamo null.
+2 → indica il numero di spazi per l’indentazione. Serve solo per rendere la stringa leggibile, con rientri e a capo.
+*/
+})
+
 .catch(errore => console.log(errore)) 
+
