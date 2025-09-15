@@ -35,3 +35,14 @@ con style possiamo accedere a tutte le porprietà css, solo che useremo la Camel
 sintassi --> nomeElemento.style.proprietàDelCss
 Style è una proprietà dell'oggetto dom proprio come innerText.
 */
+
+// ggiungo un botton e con innerText
+// Seleziono il paragrafo
+const newButton = document.querySelector("#addButton");
+newButton.addEventListener("click", function() {
+// Modifico il contenuto HTML del paragrafo e creo un pulsante nuovo
+paragrafo.innerHTML = ` 
+    Testo modificato! <br>
+    <button id="new-button">NEW BUTTON</button>
+`; // utilizzare backticks per unire testo e codice html
+});
