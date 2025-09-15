@@ -36,7 +36,7 @@ sintassi --> nomeElemento.style.proprietàDelCss
 Style è una proprietà dell'oggetto dom proprio come innerText.
 */
 
-// ggiungo un botton e con innerText
+// Aggiungo un botton e con innerText
 // Seleziono il paragrafo
 const newButton = document.querySelector("#addButton");
 newButton.addEventListener("click", function() {
@@ -47,6 +47,7 @@ paragrafo.innerHTML = `
 `; // utilizzare backticks per unire testo e codice html
 });
 
+// creo una lista non ordinata con js
 const newList = document.getElementById("listButton")
 newList.addEventListener("click", function() {
     const nuovoElemento = document.createElement("ul"); // creo un <ul> (posso creare qualsiasi elemento HTML)
@@ -54,3 +55,22 @@ newList.addEventListener("click", function() {
     document.getElementById("paragraph").appendChild(nuovoElemento); // aggiungo la lista al paragrafo 
 
 })
+
+
+// ------- DA CORREGGERE -----------!!!!!!!!!!!!!!
+
+// aggiungo 5 li alla lista
+const listItem = document.getElementById("addItem")
+listItem.addEventListener("click", function() {
+    const nuoviItem = document.createElement("li");
+    nuovoItem.innerText = "nuovo elemento in lista";
+    document.getElementById("paragraph.ul")
+
+
+for (let i = 1; i <= 5; i++) {
+    const li = document.createElement("li");
+    li.innerText = "Elemento " + i;
+    ulElement.appendChild(li);
+}
+
+});
