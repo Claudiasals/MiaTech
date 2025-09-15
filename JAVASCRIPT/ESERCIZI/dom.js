@@ -46,3 +46,11 @@ paragrafo.innerHTML = `
     <button id="new-button">NEW BUTTON</button>
 `; // utilizzare backticks per unire testo e codice html
 });
+
+const newList = document.getElementById("listButton")
+newList.addEventListener("click", function() {
+    const nuovoElemento = document.createElement("ul"); // creo un <ul> (posso creare qualsiasi elemento HTML)
+    nuovoElemento.innerText = "lista aggiunta"; // testo che apparirà
+    document.getElementById("paragraph").appendChild(nuovoElemento); // aggiungo la lista al paragrafo 
+
+})
