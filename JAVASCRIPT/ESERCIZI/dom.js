@@ -88,15 +88,12 @@ const form = document.getElementById("myForm");
 // Aggiungo un listener per l'evento "submit" del form
 form.addEventListener("submit", function(event) {
 
-    /* Prendo il valore inserito dall'utente nell'input con id "nome"
+    /* Prendo il valore inserito dall'utente nell'input con id "nome" e "cognome"
      e tolgo eventuali spazi bianchi all'inizio e alla fine con .trim()
      che è fondamentale perché se l'utente inserisce solo spazi
      senza testo il campo non verrebbe considerato vuoto
      e il form verrebbe inviato comunque */
     const nome = document.getElementById("nome").value.trim();
-
-    // Prendo il valore inserito dall'utente nell'input con id "cognome"
-    // e tolgo eventuali spazi bianchi all'inizio e alla fine
     const cognome = document.getElementById("cognome").value.trim();
 
     // Controllo se almeno uno dei due campi è vuoto
