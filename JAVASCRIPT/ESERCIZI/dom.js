@@ -76,3 +76,38 @@ for (let i = 1; i <= 5; i++) {
 
 });
 
+/* ESERCIZIO 9: Crea un form con 2 input di testo: nome e cognome. 
+Crea un bottone di submit del form. 
+Gestisci l'evento submit in modo che prima che venga inviato un form 
+mostri un alert se i campi non sono compilati, 
+se sono compilati potrà eseguire il submit del form. */
+
+// Seleziono il form dalla pagina usando il suo id "myForm"
+const form = document.getElementById("myForm");
+
+// Aggiungo un listener per l'evento "submit" del form
+form.addEventListener("submit", function(event) {
+
+    /* Prendo il valore inserito dall'utente nell'input con id "nome"
+     e tolgo eventuali spazi bianchi all'inizio e alla fine con .trim()
+     che è fondamentale perché se l'utente inserisce solo spazi
+     senza testo il campo non verrebbe considerato vuoto
+     e il form verrebbe inviato comunque */
+    const nome = document.getElementById("nome").value.trim();
+
+    // Prendo il valore inserito dall'utente nell'input con id "cognome"
+    // e tolgo eventuali spazi bianchi all'inizio e alla fine
+    const cognome = document.getElementById("cognome").value.trim();
+
+    // Controllo se almeno uno dei due campi è vuoto
+    if (nome === "" || cognome === "") {
+        // Mostro un messaggio di alert all'utente
+        alert("Per favore, compila tutti i campi!");
+
+        // Blocca l'invio del form: senza questa riga il form verrebbe comunque inviato
+        event.preventDefault();
+    }
+
+    // Se entrambi i campi sono compilati (non vuoti),
+    // il form verrà inviato normalmente al server
+});
